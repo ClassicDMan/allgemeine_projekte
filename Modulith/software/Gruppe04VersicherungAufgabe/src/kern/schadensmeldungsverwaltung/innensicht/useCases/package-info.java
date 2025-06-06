@@ -1,0 +1,1 @@
+package kern.schadensmeldungsverwaltung.innensicht.useCases;

@@ -1,0 +1,1 @@
+package persistence.produktverwaltung.innensicht.memory;
