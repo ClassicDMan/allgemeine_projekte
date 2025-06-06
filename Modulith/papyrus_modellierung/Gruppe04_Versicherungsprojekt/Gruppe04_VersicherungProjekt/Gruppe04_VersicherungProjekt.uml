@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_fP9rQI80Ee-qT9xlHJs62g" name="Gruppe04_VersicherungProjekt">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_fR6MAI80Ee-qT9xlHJs62g">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Component" xmi:id="_44UlgI80Ee-qT9xlHJs62g" name="Komponent">
+    <packagedElement xmi:type="uml:Package" xmi:id="_1Dl6MI81Ee-qT9xlHJs62g" name="Fachliches Datenmodell">
+      <packagedElement xmi:type="uml:Class" xmi:id="_OsT8oI89Ee-qT9xlHJs62g" name="Versichertendaten" visibility="public">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_9HY34I89Ee-qT9xlHJs62g" name="versichertennummer" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_HZahUI8-Ee-qT9xlHJs62g" name="name" visibility="private" type="_WPYQAI8-Ee-qT9xlHJs62g"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_xOzq4I8-Ee-qT9xlHJs62g" name="adresse" visibility="private" type="_zyiL4I8-Ee-qT9xlHJs62g"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_aN3skI9DEe-qT9xlHJs62g" name="emailAdresse" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_VDSMII9FEe-qT9xlHJs62g" name="telefonnummer" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_q3bfopGPEe-N2o3w762SWw" name="versicherungspolice" type="_DFNnkI9GEe-qT9xlHJs62g" aggregation="composite" association="_q3a4kJGPEe-N2o3w762SWw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_q3cGsZGPEe-N2o3w762SWw" value="*"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_WPYQAI8-Ee-qT9xlHJs62g" name="VersichertennameT">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_kgwq8I8-Ee-qT9xlHJs62g" name="nachname" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_m6AaQI8-Ee-qT9xlHJs62g" name="vorname" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_zyiL4I8-Ee-qT9xlHJs62g" name="AdresseT">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_-mcaYI8-Ee-qT9xlHJs62g" name="ort" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_KmdPoI8_Ee-qT9xlHJs62g" name="postleitzahl" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_NSZRcI8_Ee-qT9xlHJs62g" name="strasse" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_RYOeYI8_Ee-qT9xlHJs62g" name="strassennummer" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_DFNnkI9GEe-qT9xlHJs62g" name="Versicherungspolice" visibility="public">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_HeRSgI9GEe-qT9xlHJs62g" name="policenummer" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_O86OUI9GEe-qT9xlHJs62g" name="versicherungsart" visibility="private" type="_TXY1kI9GEe-qT9xlHJs62g"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_3z5O4I9GEe-qT9xlHJs62g" name="Versicherungbeginn" visibility="private" type="_5_2JEI9GEe-qT9xlHJs62g"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Kq9bgI9HEe-qT9xlHJs62g" name="Versicherungsende" visibility="private" type="_5_2JEI9GEe-qT9xlHJs62g"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_atr4QI9HEe-qT9xlHJs62g" name="praemienhoehe" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_gG0gII9HEe-qT9xlHJs62g" name="zugehoerigeProdukte" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GWnsEJeYEe-oi9cIiwB8kw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3qTBkJeXEe-oi9cIiwB8kw" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_LpljkJGPEe-N2o3w762SWw" name="versicherungsprodukt" type="_34T_YI9HEe-qT9xlHJs62g" aggregation="shared" association="_LphSIJGPEe-N2o3w762SWw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YXpK8Ja7Ee-E4YXrPxnwiA" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_DQMVUZhWEe-uFMUbyHAqgQ" name="schadenmeldung" type="_jmSMcI9OEe-qT9xlHJs62g" aggregation="composite" association="_DQLHMJhWEe-uFMUbyHAqgQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DQM8YJhWEe-uFMUbyHAqgQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DQM8YZhWEe-uFMUbyHAqgQ" value="*"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_TXY1kI9GEe-qT9xlHJs62g" name="VersicherungsarttypT">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_nakQAI9GEe-qT9xlHJs62g" name="Kfz" visibility="private"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_pP-ScI9GEe-qT9xlHJs62g" name="Haftpflicht" visibility="private"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_rJgm8I9GEe-qT9xlHJs62g" name="Hausrat" visibility="private"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5_2JEI9GEe-qT9xlHJs62g" name="DatumT">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_-007AI9GEe-qT9xlHJs62g" name="tag" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_CaCuMI9HEe-qT9xlHJs62g" name="monat" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_EkudEI9HEe-qT9xlHJs62g" name="jahr" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_34T_YI9HEe-qT9xlHJs62g" name="Versicherungsprodukt" visibility="public">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_CgVG8I9IEe-qT9xlHJs62g" name="produktnummer" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_F6ncgI9IEe-qT9xlHJs62g" name="bezeichnung" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_JpHHgI9IEe-qT9xlHJs62g" name="beschreibung" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_SF2qUI9IEe-qT9xlHJs62g" name="bedingungen" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_TrSj4ZhYEe-uFMUbyHAqgQ" name="versicherungspolice" type="_DFNnkI9GEe-qT9xlHJs62g" association="_TrRVwJhYEe-uFMUbyHAqgQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TrSj4phYEe-uFMUbyHAqgQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TrSj45hYEe-uFMUbyHAqgQ" value="*"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jmSMcI9OEe-qT9xlHJs62g" name="Schadenmeldung" visibility="public">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_mVrx8I9OEe-qT9xlHJs62g" name="schadennummer" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_xlbA0I9OEe-qT9xlHJs62g" name="schadensdatum" visibility="private" type="_5_2JEI9GEe-qT9xlHJs62g"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_01ylYI9OEe-qT9xlHJs62g" name="schadenshoehe" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_4XgYoI9OEe-qT9xlHJs62g" name="schadensstatus" visibility="private" type="_7hSNAI9OEe-qT9xlHJs62g"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_fWjto5hXEe-uFMUbyHAqgQ" name="versicherungspolice" type="_DFNnkI9GEe-qT9xlHJs62g" association="_fWjtoJhXEe-uFMUbyHAqgQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_7hSNAI9OEe-qT9xlHJs62g" name="StatusTypT">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="__9B_kI9OEe-qT9xlHJs62g" name="offen" visibility="private"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Cq23wI9PEe-qT9xlHJs62g" name="in Bearbeitung" visibility="private"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_FGJOcI9PEe-qT9xlHJs62g" name="abgeschlossen" visibility="private"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_LphSIJGPEe-N2o3w762SWw" name="enthält" memberEnd="_LpljkJGPEe-N2o3w762SWw _LpmxsZGPEe-N2o3w762SWw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LpjuYJGPEe-N2o3w762SWw" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LpjuYZGPEe-N2o3w762SWw" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_LpmxsZGPEe-N2o3w762SWw" name="versicherungspolice" type="_DFNnkI9GEe-qT9xlHJs62g" association="_LphSIJGPEe-N2o3w762SWw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_q3a4kJGPEe-N2o3w762SWw" name="besitzt" memberEnd="_q3bfopGPEe-N2o3w762SWw _q3cGspGPEe-N2o3w762SWw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_q3bfoJGPEe-N2o3w762SWw" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_q3bfoZGPEe-N2o3w762SWw" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_q3cGspGPEe-N2o3w762SWw" name="versichertendaten" type="_OsT8oI89Ee-qT9xlHJs62g" association="_q3a4kJGPEe-N2o3w762SWw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_DQLHMJhWEe-uFMUbyHAqgQ" name="hat" memberEnd="_DQMVUZhWEe-uFMUbyHAqgQ _DQM8YphWEe-uFMUbyHAqgQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_DQLHMZhWEe-uFMUbyHAqgQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_DQMVUJhWEe-uFMUbyHAqgQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_DQM8YphWEe-uFMUbyHAqgQ" name="versicherungspolice" type="_DFNnkI9GEe-qT9xlHJs62g" association="_DQLHMJhWEe-uFMUbyHAqgQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_fWjtoJhXEe-uFMUbyHAqgQ" name="ordnet zu" memberEnd="_fWjto5hXEe-uFMUbyHAqgQ _fWjtpphXEe-uFMUbyHAqgQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fWjtoZhXEe-uFMUbyHAqgQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fWjtophXEe-uFMUbyHAqgQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_fWjtpphXEe-uFMUbyHAqgQ" name="schadenmeldung" type="_jmSMcI9OEe-qT9xlHJs62g" association="_fWjtoJhXEe-uFMUbyHAqgQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_TrRVwJhYEe-uFMUbyHAqgQ" name="gehört zu" memberEnd="_TrSj4ZhYEe-uFMUbyHAqgQ _TrTK8JhYEe-uFMUbyHAqgQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TrR80JhYEe-uFMUbyHAqgQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TrSj4JhYEe-uFMUbyHAqgQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_TrTK8JhYEe-uFMUbyHAqgQ" name="versicherungsprodukt" type="_34T_YI9HEe-qT9xlHJs62g" association="_TrRVwJhYEe-uFMUbyHAqgQ"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_6UpkII81Ee-qT9xlHJs62g" name="Dialogmodell">
+      <packagedElement xmi:type="uml:Class" xmi:id="_XLRN8JFWEe-fdZWsUPlR2Q" name="Versichertenverwaltung">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_ZE05IJFtEe-epeD4DVBENw">
+          <body>Dieser Dialog ermöglicht dem Versicherungsagenten den Zugriff auf alle wichtigen Funktionen zur Pflege der Versicherten&#xD;
+- 
+
+Versicherten suchen und Details anzeigen
+&#xD;
+- Neuen Versicherten hinzufügen
+&#xD;
+- Daten eines bestehenden Versicherten bearbeiten oder diesen löschen, sofern dies zulässig ist
+.
+
+
+
+
+</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_brq3AJFWEe-fdZWsUPlR2Q" name="Versicherungspoliceerstellung">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_fCfxcJFtEe-epeD4DVBENw">
+          <body>Dieser Dialog ermoeglicht die Erstellung einer neuen Versicherungspolice für einen Versicherten.</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_eJ0UcJFWEe-fdZWsUPlR2Q" name="Versicherungspolicekuendigung">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_h-54MJFtEe-epeD4DVBENw">
+          <body>Dieser Dialog wird verwendet, um eine bestehende Police eines Versicherten zu kuendigen, sofern keine offenen Schadensmeldungen vorliegen.</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_hrnAMJFWEe-fdZWsUPlR2Q" name="Produktverwaltung">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_bAU8gJFtEe-epeD4DVBENw">
+          <body>In diesem Dialog kann der Versicherungsagent die Versicherungsprodukte verwalten. Der Versicherungsagent hat die Möglichkeit, ein neues Versicherungsprodukt anzulegen, wenn es neue Angebote gibt, &#xD;
+sowie bestehende Produkte zu bearbeiten oder zu löschen, sofern sie keiner aktiven Police zugeordnet sind.</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_oVmL8JFWEe-fdZWsUPlR2Q" name="Schadensmeldungsaenderung">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_k3yJ0JFtEe-epeD4DVBENw">
+          <body>Dieser Dialog ermoeglicht es dem Schadensachbearbeiter, eine vorhandene Schadensmeldung, die mit bestimmten Versicherungspolice verknüpft ist zu aendern, solange der Schadensfall nicht abgeschlossen ist.</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_sm4a8JFWEe-fdZWsUPlR2Q" name="Schadensmeldungseintrag">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_nRVbIJFtEe-epeD4DVBENw">
+          <body>In diesem Dialog kann der Schadensachbearbeiter eine neue Schadensmeldung fuer eine bestehende Police eintragen.</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_whpnYJFWEe-fdZWsUPlR2Q" name="Schadenverwaltung">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_oL0tcJFtEe-epeD4DVBENw">
+          <body>Ueber diesen Dialog kann der Schadensachbearbeiter die bestehenden Schadensmeldungen verwalten. Er kann:&#xD;
+&#xD;&#xD;
+- Eine neue Schadensmeldung für eine Police anlegen.&#xD;&#xD;
+- Bestehende Schadensmeldungen suchen, bearbeiten und die Kundeninformationen anzeigen.</body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_p1QycpFXEe-fdZWsUPlR2Q" name="kontaktinformation" type="_BLRFAJFXEe-fdZWsUPlR2Q" association="_p1QLYJFXEe-fdZWsUPlR2Q">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_p1RZgJFXEe-fdZWsUPlR2Q"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_p1RZgZFXEe-fdZWsUPlR2Q" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_lIi0YpiZEe-H3v2d4e_knA" name="schadensmeldungseintrag" type="_sm4a8JFWEe-fdZWsUPlR2Q" association="_lIiNUJiZEe-H3v2d4e_knA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lIi0Y5iZEe-H3v2d4e_knA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lIi0ZJiZEe-H3v2d4e_knA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_l1s1UpiZEe-H3v2d4e_knA" name="schadensmeldungsaenderung" type="_oVmL8JFWEe-fdZWsUPlR2Q" association="_l1sOQJiZEe-H3v2d4e_knA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_l1s1U5iZEe-H3v2d4e_knA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_l1s1VJiZEe-H3v2d4e_knA" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_BLRFAJFXEe-fdZWsUPlR2Q" name="Kontaktinformation">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_pCMUwJFtEe-epeD4DVBENw">
+          <body>Dieser Dialog zeigt die Kontaktinformationen des Versicherten an, der mit einer Schadensmeldung verknüpft ist.</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_hIP_AJFXEe-fdZWsUPlR2Q" memberEnd="_hIRNIZFXEe-fdZWsUPlR2Q _hIRNJJFXEe-fdZWsUPlR2Q">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hIQmEJFXEe-fdZWsUPlR2Q" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_hIRNIJFXEe-fdZWsUPlR2Q" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_hIRNJJFXEe-fdZWsUPlR2Q" name="versichrtenverwaltung" type="_TOTcYJiZEe-H3v2d4e_knA" association="_hIP_AJFXEe-fdZWsUPlR2Q"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_p1QLYJFXEe-fdZWsUPlR2Q" memberEnd="_p1QycpFXEe-fdZWsUPlR2Q _p1RZgpFXEe-fdZWsUPlR2Q">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_p1QycJFXEe-fdZWsUPlR2Q" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_p1QycZFXEe-fdZWsUPlR2Q" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_p1RZgpFXEe-fdZWsUPlR2Q" name="schadensmeldungspflege" type="_whpnYJFWEe-fdZWsUPlR2Q" association="_p1QLYJFXEe-fdZWsUPlR2Q"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_do3ZwJh4Ee-qW_mMq4KlGQ" name="Hauptmenumaske">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_rVdsoJh4Ee-qW_mMq4KlGQ">
+          <body>Das Hauptmenü bietet sowohl dem Versicherungsagenten als auch dem Schadensachbearbeiter einen zentralen Einstiegspunkt ins System, von dem aus verschiedene Verwaltungsfunktionen zugänglich sind.&#xD;
+&#xD;&#xD;
+Nach dem Login erkennt das System, ob der Benutzer ein Versicherungsagent oder ein Schadensachbearbeiter ist. &#xD;&#xD;
+Das Hauptmenü zeigt dann abhängig von der Benutzerrolle die entsprechenden Hauptoptionen an:&#xD;
+&#xD;&#xD;
+Versicherungsagent: Zugriff auf Versichertenverwaltung, Policeverwaltung und Produktverwaltung.&#xD;
+Schadensachbearbeiter: Zugriff auf Schadenverwaltung.&#xD;
+&#xD;&#xD;
+So stellt das System sicher, dass jeder Benutzer nur die für seine Rolle bestimmten Verwaltungsfunktionen im Hauptmenü angezeigt bekommt.</body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_jC6AkJh4Ee-qW_mMq4KlGQ" name="versichrtenverwaltung" type="_XLRN8JFWEe-fdZWsUPlR2Q" association="_jC4LYJh4Ee-qW_mMq4KlGQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jC6AkZh4Ee-qW_mMq4KlGQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jC6noJh4Ee-qW_mMq4KlGQ" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_jwQ10ph4Ee-qW_mMq4KlGQ" name="schadensmeldungspflege" type="_whpnYJFWEe-fdZWsUPlR2Q" association="_jwPnsJh4Ee-qW_mMq4KlGQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jwQ105h4Ee-qW_mMq4KlGQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jwRc4Jh4Ee-qW_mMq4KlGQ" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_o-PJApiYEe-H3v2d4e_knA" name="versicherungsproduktverwaltung" type="_hrnAMJFWEe-fdZWsUPlR2Q" association="_o-N64JiYEe-H3v2d4e_knA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_o-PJA5iYEe-H3v2d4e_knA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_o-PJBJiYEe-H3v2d4e_knA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Xa9DApiZEe-H3v2d4e_knA" name="policeverwaltung" type="_TOTcYJiZEe-H3v2d4e_knA" association="_Xa8b8JiZEe-H3v2d4e_knA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Xa9DA5iZEe-H3v2d4e_knA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Xa9DBJiZEe-H3v2d4e_knA" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_jC4LYJh4Ee-qW_mMq4KlGQ" memberEnd="_jC6AkJh4Ee-qW_mMq4KlGQ _jC6noZh4Ee-qW_mMq4KlGQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jC5ZgJh4Ee-qW_mMq4KlGQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jC5ZgZh4Ee-qW_mMq4KlGQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_jC6noZh4Ee-qW_mMq4KlGQ" name="hauptmenumaske" type="_do3ZwJh4Ee-qW_mMq4KlGQ" association="_jC4LYJh4Ee-qW_mMq4KlGQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_jwPnsJh4Ee-qW_mMq4KlGQ" memberEnd="_jwQ10ph4Ee-qW_mMq4KlGQ _jwRc4Zh4Ee-qW_mMq4KlGQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jwQ10Jh4Ee-qW_mMq4KlGQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jwQ10Zh4Ee-qW_mMq4KlGQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_jwRc4Zh4Ee-qW_mMq4KlGQ" name="hauptmenumaske" type="_do3ZwJh4Ee-qW_mMq4KlGQ" association="_jwPnsJh4Ee-qW_mMq4KlGQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_5lFb8JiXEe-H3v2d4e_knA" memberEnd="_5lJGUJiXEe-H3v2d4e_knA _5lJtYZiXEe-H3v2d4e_knA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5lIfQJiXEe-H3v2d4e_knA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5lIfQZiXEe-H3v2d4e_knA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_5lJtYZiXEe-H3v2d4e_knA" name="versichertenverwaltung" type="_TOTcYJiZEe-H3v2d4e_knA" association="_5lFb8JiXEe-H3v2d4e_knA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_o-N64JiYEe-H3v2d4e_knA" memberEnd="_o-PJApiYEe-H3v2d4e_knA _o-PJBZiYEe-H3v2d4e_knA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o-PJAJiYEe-H3v2d4e_knA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_o-PJAZiYEe-H3v2d4e_knA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_o-PJBZiYEe-H3v2d4e_knA" name="hauptmenumaske" type="_do3ZwJh4Ee-qW_mMq4KlGQ" association="_o-N64JiYEe-H3v2d4e_knA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_TOTcYJiZEe-H3v2d4e_knA" name="Policeverwaltung">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_-mRL8JiZEe-H3v2d4e_knA">
+          <body>In diesem Dialog kann der Versicherungsagent die Verwaltung der Versicherungspolicen durchführen. &#xD;
+Der Versicherungsagent hat die Möglichkeit, eine neue Versicherungspolice anzulegen, bestehende Policen zu bearbeiten oder zu kündigen, sofern keine offene Schadensmeldung vorliegt.</body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_5lJGUJiXEe-H3v2d4e_knA" name="versicherungspolicekuendigung" type="_eJ0UcJFWEe-fdZWsUPlR2Q" association="_5lFb8JiXEe-H3v2d4e_knA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5lJGUZiXEe-H3v2d4e_knA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5lJtYJiXEe-H3v2d4e_knA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_hIRNIZFXEe-fdZWsUPlR2Q" name="versichrtensuche" type="_brq3AJFWEe-fdZWsUPlR2Q" association="_hIP_AJFXEe-fdZWsUPlR2Q">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hIRNIpFXEe-fdZWsUPlR2Q"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hIRNI5FXEe-fdZWsUPlR2Q" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Xa8b8JiZEe-H3v2d4e_knA" memberEnd="_Xa9DApiZEe-H3v2d4e_knA _Xa9qEJiZEe-H3v2d4e_knA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Xa9DAJiZEe-H3v2d4e_knA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Xa9DAZiZEe-H3v2d4e_knA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_Xa9qEJiZEe-H3v2d4e_knA" name="hauptmenumaske" type="_do3ZwJh4Ee-qW_mMq4KlGQ" association="_Xa8b8JiZEe-H3v2d4e_knA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_lIiNUJiZEe-H3v2d4e_knA" memberEnd="_lIi0YpiZEe-H3v2d4e_knA _lIjbcJiZEe-H3v2d4e_knA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_lIi0YJiZEe-H3v2d4e_knA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_lIi0YZiZEe-H3v2d4e_knA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_lIjbcJiZEe-H3v2d4e_knA" name="schadenverwaltung" type="_whpnYJFWEe-fdZWsUPlR2Q" association="_lIiNUJiZEe-H3v2d4e_knA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_l1sOQJiZEe-H3v2d4e_knA" memberEnd="_l1s1UpiZEe-H3v2d4e_knA _l1s1VZiZEe-H3v2d4e_knA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_l1s1UJiZEe-H3v2d4e_knA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_l1s1UZiZEe-H3v2d4e_knA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_l1s1VZiZEe-H3v2d4e_knA" name="schadenverwaltung" type="_whpnYJFWEe-fdZWsUPlR2Q" association="_l1sOQJiZEe-H3v2d4e_knA"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_-7sAsI81Ee-qT9xlHJs62g" name="Verhaltensmodell">
+      <packagedElement xmi:type="uml:Actor" xmi:id="_1mpGAI-7Ee-s2-v21d6FiA" name="Versicherungsagent"/>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_8xhYUI-7Ee-s2-v21d6FiA" name="Schadensachbearbeiter"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_uixvwI-9Ee-s2-v21d6FiA" name="Versicherungssystem">
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_6Fox0JEkEe-9X_Upib2wag" name="Versicherungsprodukte pflegen">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_W6g94JGSEe-N2o3w762SWw">
+            <body>Kurzbeschreibung: Der Versicherungsagent kann die Daten eines Versicherungsprodukts erstellen, ändern, einsehen oder löschen, um das Produktangebot zu pflegen und den Marktanforderungen anzupassen. &#xD;
+Dabei kann der Versicherungsagent eine Versicherungspolice im System aufrufen, falls das Versicherungsprodukt mit einer Police verknüpft ist, um zu prüfen, ob das Produkt aktiv genutzt wird. &#xD;
+- Eine Löschung ist nur möglich, wenn das Produkt keiner aktiven Police zugeordnet ist.&#xD;
+&#xD;
+Vorbedingung: Das Versicherungsprodukt ist im System vorhanden. &#xD;
+- Das Produkt kann nur gelöscht werden, wenn es keiner aktiven Police zugeordnet ist.&#xD;
+&#xD;
+Nachbedingung: Änderungen am Versicherungsprodukt sind gespeichert. &#xD;
+- Falls das Produkt mindestens einer aktiven Police zugeordnet ist und dennoch gelöscht werden soll, gibt das System eine Fehlermeldung aus und verhindert die Löschung.&#xD;
+&#xD;
+</body>
+          </ownedComment>
+          <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_Lqni8ZhhEe-uFMUbyHAqgQ" name="ändern oder löschen"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_LXTt8JElEe-KFef-jLN8eA" name="Versicherungspolice kuendigen">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_suT20JGREe-N2o3w762SWw">
+            <body>Kurzbeschreibung: Der Versicherungsagent kann eine Versicherungspolice kündigen, sofern für diese keine offenen Schadensmeldungen vorliegen. &#xD;
+Dazu sucht der Versicherungsagent zunächst den Versicherten im System, um die zugehörige Police zur Kündigung auszuwählen.&#xD;
+
+&#xD;
+
+Vorbedingung: Die Police ist im System gespeichert, und es bestehen keine offenen Schadensmeldungen für diese Police.
+
+&#xD;
+&#xD;
+Nachbedingung: Die Police ist erfolgreich gekündigt.</body>
+          </ownedComment>
+          <ownedBehavior xmi:type="uml:Activity" xmi:id="_PuhFsJGcEe-UI_9r2fxeJw" name="Versicherungspolice kuendigen" node="_kwmYYJGcEe-UI_9r2fxeJw _oD0coJGcEe-UI_9r2fxeJw _vmvbgJGcEe-UI_9r2fxeJw _KNolIJGeEe-UI_9r2fxeJw _Wa-EsJGeEe-UI_9r2fxeJw _o6xn4JGeEe-UI_9r2fxeJw _q2KWgJGeEe-UI_9r2fxeJw _tKl3QJGeEe-UI_9r2fxeJw _gFWp4JGfEe-UI_9r2fxeJw _rCHSYJGfEe-UI_9r2fxeJw _tRCjIJhlEe-uFMUbyHAqgQ" group="_dkwcwJGcEe-UI_9r2fxeJw _emSyQJGcEe-UI_9r2fxeJw">
+            <edge xmi:type="uml:ControlFlow" xmi:id="_xBBg0JGfEe-UI_9r2fxeJw" inPartition="_dkwcwJGcEe-UI_9r2fxeJw" target="_oD0coJGcEe-UI_9r2fxeJw" source="_kwmYYJGcEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_yuyDIJGfEe-UI_9r2fxeJw" target="_vmvbgJGcEe-UI_9r2fxeJw" source="_oD0coJGcEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_-GzrUJGfEe-UI_9r2fxeJw" inPartition="_emSyQJGcEe-UI_9r2fxeJw" target="_Wa-EsJGeEe-UI_9r2fxeJw" source="_KNolIJGeEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="__a0Q4JGfEe-UI_9r2fxeJw" name="Ja" inPartition="_emSyQJGcEe-UI_9r2fxeJw" target="_o6xn4JGeEe-UI_9r2fxeJw" source="_Wa-EsJGeEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_BWD1kJGgEe-UI_9r2fxeJw" name="Nein" target="_tKl3QJGeEe-UI_9r2fxeJw" source="_Wa-EsJGeEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_JdhE4JGgEe-UI_9r2fxeJw" inPartition="_emSyQJGcEe-UI_9r2fxeJw" target="_q2KWgJGeEe-UI_9r2fxeJw" source="_o6xn4JGeEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_KujO8JGgEe-UI_9r2fxeJw" target="_gFWp4JGfEe-UI_9r2fxeJw" source="_tKl3QJGeEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_yUbr0Ja1Ee-E4YXrPxnwiA" inPartition="_emSyQJGcEe-UI_9r2fxeJw" target="_rCHSYJGfEe-UI_9r2fxeJw" source="_gFWp4JGfEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_y2FgEJhlEe-uFMUbyHAqgQ" target="_tRCjIJhlEe-uFMUbyHAqgQ" source="_vmvbgJGcEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_0kx2gJhlEe-uFMUbyHAqgQ" target="_KNolIJGeEe-UI_9r2fxeJw" source="_tRCjIJhlEe-uFMUbyHAqgQ"/>
+            <group xmi:type="uml:ActivityPartition" xmi:id="_dkwcwJGcEe-UI_9r2fxeJw" name="User" node="_kwmYYJGcEe-UI_9r2fxeJw _oD0coJGcEe-UI_9r2fxeJw _tKl3QJGeEe-UI_9r2fxeJw _tRCjIJhlEe-uFMUbyHAqgQ" edge="_xBBg0JGfEe-UI_9r2fxeJw"/>
+            <group xmi:type="uml:ActivityPartition" xmi:id="_emSyQJGcEe-UI_9r2fxeJw" name="System" node="_vmvbgJGcEe-UI_9r2fxeJw _KNolIJGeEe-UI_9r2fxeJw _Wa-EsJGeEe-UI_9r2fxeJw _o6xn4JGeEe-UI_9r2fxeJw _gFWp4JGfEe-UI_9r2fxeJw _rCHSYJGfEe-UI_9r2fxeJw _q2KWgJGeEe-UI_9r2fxeJw" edge="_-GzrUJGfEe-UI_9r2fxeJw __a0Q4JGfEe-UI_9r2fxeJw _JdhE4JGgEe-UI_9r2fxeJw _yUbr0Ja1Ee-E4YXrPxnwiA"/>
+            <node xmi:type="uml:InitialNode" xmi:id="_kwmYYJGcEe-UI_9r2fxeJw" name="Start" outgoing="_xBBg0JGfEe-UI_9r2fxeJw" inPartition="_dkwcwJGcEe-UI_9r2fxeJw"/>
+            <node xmi:type="uml:CallBehaviorAction" xmi:id="_oD0coJGcEe-UI_9r2fxeJw" name="Versichrten auswaehlen" incoming="_xBBg0JGfEe-UI_9r2fxeJw" outgoing="_yuyDIJGfEe-UI_9r2fxeJw" inPartition="_dkwcwJGcEe-UI_9r2fxeJw" behavior="_QKwdIJGZEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_n0zrEJGuEe-dgvqlE55qNQ">
+                <body>Der Versicherungsagent sieht eine Tabelle von Versicherten und wählt einen aus. &#xD;
+Der Versicherungsagent kann auch eine Suchfunktion nutzen, um die Liste der Versicherten zu filtern und den gewünschten Versicherten zu finden. Im Einzelnen sind dies:&#xD;
+&#xD;
+- Nummer des Versicherten --> Versichertendaten.versichertennummer (der Nummer ist erforderlich, da sie ausreicht, um den ausgewählten Versicherten zu finden) *&#xD;
+- Name des Versicherten --> Versichertendaten.name&#xD;
+- Adresse der Versicherten --> Versichertendaten.adresse&#xD;
+- Email der Versicherten --> Versichertendaten.emailAdresse&#xD;
+- Telefonnummer der Versicherten --> Versichertendaten.telefonnummer</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_vmvbgJGcEe-UI_9r2fxeJw" name="Policedaten anzeigen" incoming="_yuyDIJGfEe-UI_9r2fxeJw" outgoing="_y2FgEJhlEe-uFMUbyHAqgQ" inPartition="_emSyQJGcEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_3W444JGuEe-dgvqlE55qNQ">
+                <body>Das System zeigt die Versicherungspolicen des ausgewählten Versicherten an.&#xD;
+Policennummer --> Versicherungspolice.policennummer
+&#xD;
+Versicherungsart --> Versicherungspolice.versicherungsart
+&#xD;
+Versicherungsbeginn --> Versicherungspolice.versicherungsbeginn
+&#xD;
+Versicherungsende --> Versicherungspolice.versicherungsende
+&#xD;
+Prämienhöhe --> Versicherungspolice.prämienhöhe&#xD;
+Zugehörige Produkte --> Versicherungspolice.zugehörigeProdukte</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_KNolIJGeEe-UI_9r2fxeJw" name="Schadensmeldung pruefen" incoming="_0kx2gJhlEe-uFMUbyHAqgQ" outgoing="_-GzrUJGfEe-UI_9r2fxeJw" inPartition="_emSyQJGcEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_CFrW0JGvEe-dgvqlE55qNQ">
+                <body>Das System prüft, ob zu dieser Police offene Schadensmeldungen vorliegen.&#xD;
+Das System etabliert eine Beziehung zwischen der Entität Versicherungpolice und der Entität Schadensmeldung</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:DecisionNode" xmi:id="_Wa-EsJGeEe-UI_9r2fxeJw" name="gibt es offenen Schadensmeldung?" incoming="_-GzrUJGfEe-UI_9r2fxeJw" outgoing="__a0Q4JGfEe-UI_9r2fxeJw _BWD1kJGgEe-UI_9r2fxeJw" inPartition="_emSyQJGcEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_exxtIJOXEe-ZQ-NSWA5C4Q">
+                <body>Schadenstatus -> Schadensmeldung.schadensstatus == &quot;offen&quot; -> True/False ?</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_o6xn4JGeEe-UI_9r2fxeJw" name="Fehler melden" incoming="__a0Q4JGfEe-UI_9r2fxeJw" outgoing="_JdhE4JGgEe-UI_9r2fxeJw" inPartition="_emSyQJGcEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_DlVLsJGvEe-dgvqlE55qNQ">
+                <body>Das System zeigt eine Fehlermeldung an und der Prozess endet</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:FlowFinalNode" xmi:id="_q2KWgJGeEe-UI_9r2fxeJw" name="Ende" incoming="_JdhE4JGgEe-UI_9r2fxeJw" inPartition="_emSyQJGcEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_hXb_AJGuEe-dgvqlE55qNQ">
+                <body></body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_tKl3QJGeEe-UI_9r2fxeJw" name="Kuendigung bestaetigen" incoming="_BWD1kJGgEe-UI_9r2fxeJw" outgoing="_KujO8JGgEe-UI_9r2fxeJw" inPartition="_dkwcwJGcEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_FIxUYJGvEe-dgvqlE55qNQ">
+                <body>Der Versicherungsagent bestätigt die Kündigung</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_gFWp4JGfEe-UI_9r2fxeJw" name="Kuendigung ausloesen" incoming="_KujO8JGgEe-UI_9r2fxeJw" outgoing="_yUbr0Ja1Ee-E4YXrPxnwiA" inPartition="_emSyQJGcEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_NizhcJGvEe-dgvqlE55qNQ">
+                <body>Das System markiert die Police als gekündigt, genauer:&#xD;
+Versicherungsende --> Versicherungspolice.versicherungsende = aktuelles Datum&#xD;
+und der Prozess endet</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:FlowFinalNode" xmi:id="_rCHSYJGfEe-UI_9r2fxeJw" name="Ende" incoming="_yUbr0Ja1Ee-E4YXrPxnwiA" inPartition="_emSyQJGcEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_dUeCoJhuEe-uFMUbyHAqgQ">
+                <body>Das Prozess endet</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:CallBehaviorAction" xmi:id="_tRCjIJhlEe-uFMUbyHAqgQ" name="Police auswaehlen" incoming="_y2FgEJhlEe-uFMUbyHAqgQ" outgoing="_0kx2gJhlEe-uFMUbyHAqgQ" inPartition="_dkwcwJGcEe-UI_9r2fxeJw" behavior="_aw-UQJGhEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_HS7wAJhsEe-uFMUbyHAqgQ">
+                <body>Der Versicherungsagent sieht eine Tabelle von Versicherungspolicen und wählt einen aus. &#xD;
+Versicherungsagent kann auch eine Suchfunktion nutzen, um die Liste der Policen zu filtern und den gewünschten Police zu finden. Im Einzelnen sind dies:&#xD;
+&#xD;
+Policennummer --> Versicherungspolice.policennummer
+ (der Nummer ist erforderlich, da sie ausreicht, um den ausgewählten Versicherten zu finden) *&#xD;
+Versicherungsart --> Versicherungspolice.versicherungsart
+&#xD;
+Versicherungsbeginn --> Versicherungspolice.versicherungsbeginn
+&#xD;
+Versicherungsende --> Versicherungspolice.versicherungsende
+&#xD;
+Zugehörige Produkte --> Versicherungspolice.zugehörigeProdukte</body>
+              </ownedComment>
+            </node>
+          </ownedBehavior>
+          <include xmi:type="uml:Include" xmi:id="_1k9mgJElEe-dRrwiFoAp1A" addition="_wyNCIJElEe-dRrwiFoAp1A"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_f8NVYJElEe-dRrwiFoAp1A" name="Versicherungspolice anlegen">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_gfz5oJGREe-N2o3w762SWw">
+            <body>Kurzbeschreibung: Der Versicherungsagent legt eine neue Versicherungspolice für einen bereits im System registrierten Versicherten an. &#xD;&#xD;
+Hierzu muss der Versicherungsagent zunächst den Versicherten im System suchen, um die Police für ihn erstellen zu können.&#xD;&#xD;
+&#xD;&#xD;
+Vorbedingung: Der Versicherte muss bereits im System registriert sein.&#xD;&#xD;
+&#xD;
+Nachbedingung: Die neue Police ist erfolgreich im System gespeichert.</body>
+          </ownedComment>
+          <ownedBehavior xmi:type="uml:Activity" xmi:id="_RZNcAJGTEe-UI_9r2fxeJw" name="Versicherungspolice anlegen" node="_GVhvUJGXEe-UI_9r2fxeJw _OEwr4JGXEe-UI_9r2fxeJw _QBPmsJGXEe-UI_9r2fxeJw _Sm7PgJGXEe-UI_9r2fxeJw _Xk_sAJGXEe-UI_9r2fxeJw _c-dOkJGYEe-UI_9r2fxeJw __iqCcJGYEe-UI_9r2fxeJw _k-e40JGbEe-UI_9r2fxeJw _nqSXwJGbEe-UI_9r2fxeJw _FLFaEJhpEe-uFMUbyHAqgQ" group="_9zUvoJGUEe-UI_9r2fxeJw __HHSwJGUEe-UI_9r2fxeJw">
+            <edge xmi:type="uml:ControlFlow" xmi:id="_MTVVEJGYEe-UI_9r2fxeJw" inPartition="_9zUvoJGUEe-UI_9r2fxeJw" target="__iqCcJGYEe-UI_9r2fxeJw" source="_GVhvUJGXEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_jAi3YJGZEe-UI_9r2fxeJw" target="_QBPmsJGXEe-UI_9r2fxeJw" source="_OEwr4JGXEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_LNn_UJGaEe-UI_9r2fxeJw" name="Nein" inPartition="__HHSwJGUEe-UI_9r2fxeJw" target="_Sm7PgJGXEe-UI_9r2fxeJw" source="_c-dOkJGYEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_kYz1YJGaEe-UI_9r2fxeJw" inPartition="__HHSwJGUEe-UI_9r2fxeJw" target="_c-dOkJGYEe-UI_9r2fxeJw" source="_QBPmsJGXEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="__ETAkJGaEe-UI_9r2fxeJw" target="_FLFaEJhpEe-uFMUbyHAqgQ" source="_Sm7PgJGXEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_KRcOcJGbEe-UI_9r2fxeJw" name="Ja" inPartition="__HHSwJGUEe-UI_9r2fxeJw" target="_Xk_sAJGXEe-UI_9r2fxeJw" source="_c-dOkJGYEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_pqWyEJGbEe-UI_9r2fxeJw" inPartition="__HHSwJGUEe-UI_9r2fxeJw" target="_nqSXwJGbEe-UI_9r2fxeJw" source="_k-e40JGbEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_jiI8MJa1Ee-E4YXrPxnwiA" inPartition="__HHSwJGUEe-UI_9r2fxeJw" target="_k-e40JGbEe-UI_9r2fxeJw" source="_Xk_sAJGXEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_TGtroJhiEe-uFMUbyHAqgQ" inPartition="_9zUvoJGUEe-UI_9r2fxeJw" target="_FLFaEJhpEe-uFMUbyHAqgQ" source="__iqCcJGYEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_ctGhoJhjEe-uFMUbyHAqgQ" inPartition="_9zUvoJGUEe-UI_9r2fxeJw" target="_OEwr4JGXEe-UI_9r2fxeJw" source="_FLFaEJhpEe-uFMUbyHAqgQ"/>
+            <group xmi:type="uml:ActivityPartition" xmi:id="_9zUvoJGUEe-UI_9r2fxeJw" name="User" node="_GVhvUJGXEe-UI_9r2fxeJw _OEwr4JGXEe-UI_9r2fxeJw __iqCcJGYEe-UI_9r2fxeJw _FLFaEJhpEe-uFMUbyHAqgQ" edge="_MTVVEJGYEe-UI_9r2fxeJw _TGtroJhiEe-uFMUbyHAqgQ _ctGhoJhjEe-uFMUbyHAqgQ"/>
+            <group xmi:type="uml:ActivityPartition" xmi:id="__HHSwJGUEe-UI_9r2fxeJw" name="System" node="_QBPmsJGXEe-UI_9r2fxeJw _Sm7PgJGXEe-UI_9r2fxeJw _Xk_sAJGXEe-UI_9r2fxeJw _c-dOkJGYEe-UI_9r2fxeJw _k-e40JGbEe-UI_9r2fxeJw _nqSXwJGbEe-UI_9r2fxeJw" edge="_LNn_UJGaEe-UI_9r2fxeJw _kYz1YJGaEe-UI_9r2fxeJw _KRcOcJGbEe-UI_9r2fxeJw _pqWyEJGbEe-UI_9r2fxeJw _jiI8MJa1Ee-E4YXrPxnwiA"/>
+            <node xmi:type="uml:InitialNode" xmi:id="_GVhvUJGXEe-UI_9r2fxeJw" name="Start" outgoing="_MTVVEJGYEe-UI_9r2fxeJw" inPartition="_9zUvoJGUEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_U4ljkJGsEe-dgvqlE55qNQ">
+                <body>Versicherungsagent startet den Prozess und klickt auf Versicherungpolice anlegen</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_OEwr4JGXEe-UI_9r2fxeJw" name="Policedaten eingeben" incoming="_ctGhoJhjEe-uFMUbyHAqgQ" outgoing="_jAi3YJGZEe-UI_9r2fxeJw" inPartition="_9zUvoJGUEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_PebLgJGtEe-dgvqlE55qNQ">
+                <body>Der Versicherungsagent gibt die Daten der neuen Versicherungspolice ein:&#xD;
+Policennummer --> Versicherungspolice.policennummer&#xD;
+Versicherungsart --> Versicherungspolice.versicherungsart&#xD;
+
+Versicherungsbeginn --> Versicherungspolice.versicherungsbeginn&#xD;
+Versicherungsende --> Versicherungspolice.versicherungsende&#xD;
+Prämienhöhe --> Versicherungspolice.prämienhöhe&#xD;
+</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_QBPmsJGXEe-UI_9r2fxeJw" name="Policedaten pruefen" incoming="_jAi3YJGZEe-UI_9r2fxeJw" outgoing="_kYz1YJGaEe-UI_9r2fxeJw" inPartition="__HHSwJGUEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_SbR-MJGtEe-dgvqlE55qNQ">
+                <body>Das System überprüft die eingegebenen Daten, um sicherzustellen, dass sie korrekt und vollständig sind.&#xD;
+</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_Sm7PgJGXEe-UI_9r2fxeJw" name="Fehler Hinweis anzeigen" incoming="_LNn_UJGaEe-UI_9r2fxeJw" outgoing="__ETAkJGaEe-UI_9r2fxeJw" inPartition="__HHSwJGUEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_hgC94JGtEe-dgvqlE55qNQ">
+                <body>Wenn die eingegebenen Daten nicht korrekt sind, zeigt das System dem Versicherungsagenten einen Hinweis, der angibt, wo der Fehler liegt. &#xD;
+Der Versicherungsagent hat die Möglichkeit, den Fehler zu korrigieren. Zum Beispiel, wenn die eingegebenen Daten nicht im UTF-8-Format sind &#xD;
+oder wenn bei der angegebenen Prämienhöhe mehr als ein Komma hintereinander verwendet wird.</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_Xk_sAJGXEe-UI_9r2fxeJw" name="Daten speichern" incoming="_KRcOcJGbEe-UI_9r2fxeJw" outgoing="_jiI8MJa1Ee-E4YXrPxnwiA" inPartition="__HHSwJGUEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_o3qrsJGtEe-dgvqlE55qNQ">
+                <body>Nachdem alle Daten korrekt eingegeben wurden, speichert das System die Versicherungspolice in der Datenbank.&#xD;
+Alle zuvor eingegebenen Attribute der Klasse Versicherungspolice werden gespeichert, genauer:&#xD;
+Policennummer --> Versicherungspolice.policennummer&#xD;
+Versicherungsart --> Versicherungspolice.versicherungsart&#xD;
+
+Versicherungsbeginn --> Versicherungspolice.versicherungsbeginn&#xD;
+Versicherungsende --> Versicherungspolice.versicherungsende&#xD;
+Prämienhöhe --> Versicherungspolice.prämienhöhe&#xD;
+Das System etabliert eine Beziehung zwischen der Entität Versicherungpolice und der Entität Versichertendaten.&#xD;
+Das System etabliert eine Beziehung zwischen der Entität Versicherungpolice und der Entität Versicherungsprodukte.</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:DecisionNode" xmi:id="_c-dOkJGYEe-UI_9r2fxeJw" name="Daten Ok?" incoming="_kYz1YJGaEe-UI_9r2fxeJw" outgoing="_LNn_UJGaEe-UI_9r2fxeJw _KRcOcJGbEe-UI_9r2fxeJw" inPartition="__HHSwJGUEe-UI_9r2fxeJw"/>
+            <node xmi:type="uml:CallBehaviorAction" xmi:id="__iqCcJGYEe-UI_9r2fxeJw" name="Versichrten auswaehlen" incoming="_MTVVEJGYEe-UI_9r2fxeJw" outgoing="_TGtroJhiEe-uFMUbyHAqgQ" inPartition="_9zUvoJGUEe-UI_9r2fxeJw" behavior="_QKwdIJGZEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_cTB74JGsEe-dgvqlE55qNQ">
+                <body>Der Versicherungsagent sieht eine Tabelle von Versicherten und wählt einen aus. &#xD;
+Der Versicherungsagent kann auch eine Suchfunktion nutzen, um die Liste der Versicherten zu filtern und den gewünschten Versicherten zu finden. Im Einzelnen sind dies:&#xD;
+&#xD;
+- Nummer des Versicherten --> Versichertendaten.versichertennummer (der Nummer ist erforderlich, da sie ausreicht, um den ausgewählten Versicherten zu finden) *&#xD;
+- Name des Versicherten --> Versichertendaten.name&#xD;
+- Adresse der Versicherten --> Versichertendaten.adresse&#xD;
+- Email der Versicherten --> Versichertendaten.emailAdresse&#xD;
+- Telefonnummer der Versicherten --> Versichertendaten.telefonnummer</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_k-e40JGbEe-UI_9r2fxeJw" name="Details anzeigen" incoming="_jiI8MJa1Ee-E4YXrPxnwiA" outgoing="_pqWyEJGbEe-UI_9r2fxeJw" inPartition="__HHSwJGUEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_KK0HYJGuEe-dgvqlE55qNQ">
+                <body>Das System zeigt dem Versicherungsagenten die Details der neu angelegten Versicherungspolice an.&#xD;
+Policennummer --> Versicherungspolice.policennummer
+&#xD;
+Versicherungsart --> Versicherungspolice.versicherungsart
+&#xD;
+Versicherungsbeginn --> Versicherungspolice.versicherungsbeginn
+&#xD;
+Versicherungsende --> Versicherungspolice.versicherungsende
+&#xD;
+Prämienhöhe --> Versicherungspolice.prämienhöhe
+&#xD;
+aktivePolice --> Versicherungspolice.isActive</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:FlowFinalNode" xmi:id="_nqSXwJGbEe-UI_9r2fxeJw" name="Ende" incoming="_pqWyEJGbEe-UI_9r2fxeJw" inPartition="__HHSwJGUEe-UI_9r2fxeJw"/>
+            <node xmi:type="uml:MergeNode" xmi:id="_FLFaEJhpEe-uFMUbyHAqgQ" incoming="_TGtroJhiEe-uFMUbyHAqgQ __ETAkJGaEe-UI_9r2fxeJw" outgoing="_ctGhoJhjEe-uFMUbyHAqgQ" inPartition="_9zUvoJGUEe-UI_9r2fxeJw"/>
+          </ownedBehavior>
+          <include xmi:type="uml:Include" xmi:id="_zCRtgJhbEe-uFMUbyHAqgQ" addition="_wyNCIJElEe-dRrwiFoAp1A"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_sdfEoJElEe-dRrwiFoAp1A" name="Versicherten pflegen">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_Gxu8cJGSEe-N2o3w762SWw">
+            <body>Kurzbeschreibung: Der Versicherungsagent kann die Daten eines Versicherten pflegen (erstellen, ändern, lesen oder den Versicherten löschen).&#xD;
+&#xD;
+Vorbedingung: Der Versicherten Daten sind vorhanden und im System regestriert.&#xD;
+&#xD;
+Nachbedingung: Die Änderungen sind im System gespeichert.</body>
+          </ownedComment>
+          <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_ar3RYJhdEe-uFMUbyHAqgQ" name="ändern oder löschen"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_wyNCIJElEe-dRrwiFoAp1A" name="Versicherten suchen">
+          <ownedBehavior xmi:type="uml:Activity" xmi:id="_QKwdIJGZEe-UI_9r2fxeJw" name="Versicherten suchen"/>
+          <extend xmi:type="uml:Extend" xmi:id="_ar2DQJhdEe-uFMUbyHAqgQ" extendedCase="_sdfEoJElEe-dRrwiFoAp1A" extensionLocation="_ar3RYJhdEe-uFMUbyHAqgQ"/>
+          <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_qaAAkJiREe-H3v2d4e_knA" name="beim Kuendigen einer Police"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_GTKCIJEmEe-dRrwiFoAp1A" name="Schadensmeldung pflegen">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_sPRU8JGSEe-N2o3w762SWw">
+            <body>Der Schadensachbearbeiter kann eine Schadensmeldung für eine spezifische Versicherungspolice anlegen oder ändern, um die Verwaltung von Schadensfällen zu ermöglichen.&#xD;
+Dabei muss der Schadensachbearbeiter zunächst die entsprechende Versicherungspolice auswählen.&#xD;
+- Sollte der Schadensachbearbeiter versuchen, eine Schadensmeldung zu ändern, die den Status „abgeschlossen“ hat, wird das System die Änderung nicht zulassen und eine Fehlermeldung ausgeben.&#xD;
+&#xD;
+Vorbedingung: &#xD;
+- Die zugehörige Versicherungspolice ist im System vorhanden und aktiv.&#xD;
+- Die Schadensmeldung ist entweder neu oder im Status „offen“ oder „in Bearbeitung“.&#xD;
+&#xD;
+Nachbedingung: &#xD;
+- Die neue Schadensmeldung wird der gewählten Versicherungspolice zugeordnet und erfolgreich im System gespeichert, oder die Änderungen an einer bestehenden Schadensmeldung werden übernommen.&#xD;
+- Bei einer Schadensmeldung mit dem Status „abgeschlossen“ wird eine Änderung nicht durchgeführt, und der Schadensachbearbeiter erhält eine entsprechende Fehlermeldung.</body>
+          </ownedComment>
+          <ownedBehavior xmi:type="uml:Activity" xmi:id="_c3kp0JGgEe-UI_9r2fxeJw" name="Schadensmeldung pflegen" node="_qrXJ0JGgEe-UI_9r2fxeJw _r12nAJGgEe-UI_9r2fxeJw _6VoDQJGgEe-UI_9r2fxeJw _VPgPwJGhEe-UI_9r2fxeJw _qPs2oJGiEe-UI_9r2fxeJw _AnQugJGjEe-UI_9r2fxeJw _NR8RYJGjEe-UI_9r2fxeJw _gNXZkJGjEe-UI_9r2fxeJw _lewasJGjEe-UI_9r2fxeJw _z06A4JGjEe-UI_9r2fxeJw _8nepwJGjEe-UI_9r2fxeJw _kKRekJGkEe-UI_9r2fxeJw _1wYZoJGkEe-UI_9r2fxeJw _6iSCYJGkEe-UI_9r2fxeJw _D1GRkJGlEe-UI_9r2fxeJw _GbPNYJGlEe-UI_9r2fxeJw _hvTbgJGlEe-UI_9r2fxeJw _0McFMJGlEe-UI_9r2fxeJw _3o0sgJGlEe-UI_9r2fxeJw _YqyRkJGmEe-UI_9r2fxeJw _QMOXkJGrEe-dgvqlE55qNQ _iPi6YJJsEe-2HJClzUbP0Q _yGwDoJJsEe-2HJClzUbP0Q __Gjh8JJsEe-2HJClzUbP0Q _sHR-YJhoEe-uFMUbyHAqgQ _28WDcJhoEe-uFMUbyHAqgQ _zVoFUJhxEe-uFMUbyHAqgQ" group="_lH2d8JGgEe-UI_9r2fxeJw _l8dKsJGgEe-UI_9r2fxeJw">
+            <edge xmi:type="uml:ControlFlow" xmi:id="_pmuVoJGjEe-UI_9r2fxeJw" name="Nein" inPartition="_l8dKsJGgEe-UI_9r2fxeJw" target="_lewasJGjEe-UI_9r2fxeJw" source="_gNXZkJGjEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_qSX6sJGjEe-UI_9r2fxeJw" target="_28WDcJhoEe-uFMUbyHAqgQ" source="_lewasJGjEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_uAxfEJGjEe-UI_9r2fxeJw" inPartition="_l8dKsJGgEe-UI_9r2fxeJw" target="_gNXZkJGjEe-UI_9r2fxeJw" source="_NR8RYJGjEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="__HfvcJGjEe-UI_9r2fxeJw" inPartition="_lH2d8JGgEe-UI_9r2fxeJw" target="_6VoDQJGgEe-UI_9r2fxeJw" source="_r12nAJGgEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="__7k3wJGjEe-UI_9r2fxeJw" name="anlegen" inPartition="_lH2d8JGgEe-UI_9r2fxeJw" target="_VPgPwJGhEe-UI_9r2fxeJw" source="_6VoDQJGgEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_DMHbcJGkEe-UI_9r2fxeJw" name="aendern" inPartition="_lH2d8JGgEe-UI_9r2fxeJw" target="_qPs2oJGiEe-UI_9r2fxeJw" source="_6VoDQJGgEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_HxhgUJGkEe-UI_9r2fxeJw" inPartition="_lH2d8JGgEe-UI_9r2fxeJw" target="_28WDcJhoEe-uFMUbyHAqgQ" source="_VPgPwJGhEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_KY6ZUJGkEe-UI_9r2fxeJw" target="_NR8RYJGjEe-UI_9r2fxeJw" source="_AnQugJGjEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_Poe1gJGkEe-UI_9r2fxeJw" name="Ja" inPartition="_l8dKsJGgEe-UI_9r2fxeJw" target="_z06A4JGjEe-UI_9r2fxeJw" source="_gNXZkJGjEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_UEwMgJGkEe-UI_9r2fxeJw" inPartition="_l8dKsJGgEe-UI_9r2fxeJw" target="_8nepwJGjEe-UI_9r2fxeJw" source="_z06A4JGjEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_qU9pwJGlEe-UI_9r2fxeJw" name="Ja" inPartition="_l8dKsJGgEe-UI_9r2fxeJw" target="_D1GRkJGlEe-UI_9r2fxeJw" source="_6iSCYJGkEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_-n9o4JGlEe-UI_9r2fxeJw" target="_kKRekJGkEe-UI_9r2fxeJw" source="_qPs2oJGiEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_DTarYJGmEe-UI_9r2fxeJw" inPartition="_l8dKsJGgEe-UI_9r2fxeJw" target="_6iSCYJGkEe-UI_9r2fxeJw" source="_1wYZoJGkEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_EEYOQJGmEe-UI_9r2fxeJw" name="Nein" inPartition="_l8dKsJGgEe-UI_9r2fxeJw" target="_hvTbgJGlEe-UI_9r2fxeJw" source="_6iSCYJGkEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_KhhQ0JGmEe-UI_9r2fxeJw" inPartition="_l8dKsJGgEe-UI_9r2fxeJw" target="_0McFMJGlEe-UI_9r2fxeJw" source="_hvTbgJGlEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_MjdTYJGmEe-UI_9r2fxeJw" inPartition="_l8dKsJGgEe-UI_9r2fxeJw" target="_3o0sgJGlEe-UI_9r2fxeJw" source="_0McFMJGlEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_TPd4YJGmEe-UI_9r2fxeJw" inPartition="_lH2d8JGgEe-UI_9r2fxeJw" target="_r12nAJGgEe-UI_9r2fxeJw" source="_qrXJ0JGgEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_a4MkUJGmEe-UI_9r2fxeJw" inPartition="_l8dKsJGgEe-UI_9r2fxeJw" target="_YqyRkJGmEe-UI_9r2fxeJw" source="_D1GRkJGlEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_3HxGcJJsEe-2HJClzUbP0Q" inPartition="_l8dKsJGgEe-UI_9r2fxeJw" target="_yGwDoJJsEe-2HJClzUbP0Q" source="_iPi6YJJsEe-2HJClzUbP0Q"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_I8If8JJtEe-2HJClzUbP0Q" target="_iPi6YJJsEe-2HJClzUbP0Q" source="_GbPNYJGlEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_LJAnMJJtEe-2HJClzUbP0Q" name="Nein" inPartition="_l8dKsJGgEe-UI_9r2fxeJw" target="__Gjh8JJsEe-2HJClzUbP0Q" source="_yGwDoJJsEe-2HJClzUbP0Q"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_NeYjIJJtEe-2HJClzUbP0Q" target="_sHR-YJhoEe-uFMUbyHAqgQ" source="__Gjh8JJsEe-2HJClzUbP0Q"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_Q05zAJJtEe-2HJClzUbP0Q" name="Ja" target="_QMOXkJGrEe-dgvqlE55qNQ" source="_yGwDoJJsEe-2HJClzUbP0Q"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_UKYhEJJtEe-2HJClzUbP0Q" target="_1wYZoJGkEe-UI_9r2fxeJw" source="_QMOXkJGrEe-dgvqlE55qNQ"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_TdiogJhoEe-uFMUbyHAqgQ" inPartition="_lH2d8JGgEe-UI_9r2fxeJw" target="_AnQugJGjEe-UI_9r2fxeJw" source="_28WDcJhoEe-uFMUbyHAqgQ"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_z28YwJhoEe-uFMUbyHAqgQ" inPartition="_lH2d8JGgEe-UI_9r2fxeJw" target="_GbPNYJGlEe-UI_9r2fxeJw" source="_sHR-YJhoEe-uFMUbyHAqgQ"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_-xLioJhxEe-uFMUbyHAqgQ" target="_zVoFUJhxEe-uFMUbyHAqgQ" source="_kKRekJGkEe-UI_9r2fxeJw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_Aj0k8JhyEe-uFMUbyHAqgQ" inPartition="_lH2d8JGgEe-UI_9r2fxeJw" target="_sHR-YJhoEe-uFMUbyHAqgQ" source="_zVoFUJhxEe-uFMUbyHAqgQ"/>
+            <group xmi:type="uml:ActivityPartition" xmi:id="_lH2d8JGgEe-UI_9r2fxeJw" name="User" node="_qrXJ0JGgEe-UI_9r2fxeJw _r12nAJGgEe-UI_9r2fxeJw _6VoDQJGgEe-UI_9r2fxeJw _VPgPwJGhEe-UI_9r2fxeJw _qPs2oJGiEe-UI_9r2fxeJw _AnQugJGjEe-UI_9r2fxeJw _GbPNYJGlEe-UI_9r2fxeJw _QMOXkJGrEe-dgvqlE55qNQ _sHR-YJhoEe-uFMUbyHAqgQ _28WDcJhoEe-uFMUbyHAqgQ _zVoFUJhxEe-uFMUbyHAqgQ" edge="__HfvcJGjEe-UI_9r2fxeJw __7k3wJGjEe-UI_9r2fxeJw _DMHbcJGkEe-UI_9r2fxeJw _TPd4YJGmEe-UI_9r2fxeJw _z28YwJhoEe-uFMUbyHAqgQ _HxhgUJGkEe-UI_9r2fxeJw _TdiogJhoEe-uFMUbyHAqgQ _Aj0k8JhyEe-uFMUbyHAqgQ"/>
+            <group xmi:type="uml:ActivityPartition" xmi:id="_l8dKsJGgEe-UI_9r2fxeJw" name="System" node="_NR8RYJGjEe-UI_9r2fxeJw _gNXZkJGjEe-UI_9r2fxeJw _lewasJGjEe-UI_9r2fxeJw _z06A4JGjEe-UI_9r2fxeJw _8nepwJGjEe-UI_9r2fxeJw _kKRekJGkEe-UI_9r2fxeJw _1wYZoJGkEe-UI_9r2fxeJw _6iSCYJGkEe-UI_9r2fxeJw _D1GRkJGlEe-UI_9r2fxeJw _hvTbgJGlEe-UI_9r2fxeJw _0McFMJGlEe-UI_9r2fxeJw _3o0sgJGlEe-UI_9r2fxeJw _YqyRkJGmEe-UI_9r2fxeJw _iPi6YJJsEe-2HJClzUbP0Q _yGwDoJJsEe-2HJClzUbP0Q __Gjh8JJsEe-2HJClzUbP0Q" edge="_pmuVoJGjEe-UI_9r2fxeJw _uAxfEJGjEe-UI_9r2fxeJw _Poe1gJGkEe-UI_9r2fxeJw _UEwMgJGkEe-UI_9r2fxeJw _qU9pwJGlEe-UI_9r2fxeJw _DTarYJGmEe-UI_9r2fxeJw _EEYOQJGmEe-UI_9r2fxeJw _KhhQ0JGmEe-UI_9r2fxeJw _MjdTYJGmEe-UI_9r2fxeJw _a4MkUJGmEe-UI_9r2fxeJw _3HxGcJJsEe-2HJClzUbP0Q _LJAnMJJtEe-2HJClzUbP0Q"/>
+            <node xmi:type="uml:InitialNode" xmi:id="_qrXJ0JGgEe-UI_9r2fxeJw" name="Start" outgoing="_TPd4YJGmEe-UI_9r2fxeJw" inPartition="_lH2d8JGgEe-UI_9r2fxeJw"/>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_r12nAJGgEe-UI_9r2fxeJw" name="Aktion auswaehlen" incoming="_TPd4YJGmEe-UI_9r2fxeJw" outgoing="__HfvcJGjEe-UI_9r2fxeJw" inPartition="_lH2d8JGgEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_cTyCcJGvEe-dgvqlE55qNQ">
+                <body>Der Schadenssachbearbeiter wählt einer der beider Aktionen:&#xD;
+&#xD;
+- Schadensmeldung anlegen: Der Schadenssachbearbeiter legt eine neue Schadensmeldung zu einer Versicherungspolice an. &#xD;
+Dabei werden die Schadensdaten eingegeben und das System überprüft diese.&#xD;
+&#xD;
+- Schadensmeldung ändern: Der Schadenssachbearbeiter möchte eine bestehende Schadensmeldung ändern.&#xD;
+Dabei wird sichergestellt, dass die Meldung nicht bereits abgeschlossen ist, da abgeschlossene Schadensmeldungen nicht mehr geändert werden dürfen.</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:DecisionNode" xmi:id="_6VoDQJGgEe-UI_9r2fxeJw" name="anlegen oder aendern?" incoming="__HfvcJGjEe-UI_9r2fxeJw" outgoing="__7k3wJGjEe-UI_9r2fxeJw _DMHbcJGkEe-UI_9r2fxeJw" inPartition="_lH2d8JGgEe-UI_9r2fxeJw"/>
+            <node xmi:type="uml:CallBehaviorAction" xmi:id="_VPgPwJGhEe-UI_9r2fxeJw" name="Police auswaehlen" incoming="__7k3wJGjEe-UI_9r2fxeJw" outgoing="_HxhgUJGkEe-UI_9r2fxeJw" inPartition="_lH2d8JGgEe-UI_9r2fxeJw" behavior="_aw-UQJGhEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_n7OmsJGvEe-dgvqlE55qNQ">
+                <body>Der Schadenssachbearbeiter sieht eine Tabelle von Versicherungspolicen und wählt einen aus. &#xD;
+Schadenssachbearbeiter kann auch eine Suchfunktion nutzen, um die Liste der Policen zu filtern und den gewünschten Police zu finden. Im Einzelnen sind dies:&#xD;
+&#xD;
+Policennummer --> Versicherungspolice.policennummer
+ (der Nummer ist erforderlich, da sie ausreicht, um den ausgewählten Versicherten zu finden) *&#xD;
+Versicherungsart --> Versicherungspolice.versicherungsart
+&#xD;
+Versicherungsbeginn --> Versicherungspolice.versicherungsbeginn
+&#xD;
+Versicherungsende --> Versicherungspolice.versicherungsende
+&#xD;
+Zugehörige Produkte --> Versicherungspolice.zugehörigeProdukte&#xD;
+</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:CallBehaviorAction" xmi:id="_qPs2oJGiEe-UI_9r2fxeJw" name="Police auswaehlen" incoming="_DMHbcJGkEe-UI_9r2fxeJw" outgoing="_-n9o4JGlEe-UI_9r2fxeJw" inPartition="_lH2d8JGgEe-UI_9r2fxeJw" behavior="_aw-UQJGhEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_nIP1IJGwEe-dgvqlE55qNQ">
+                <body>Der Schadenssachbearbeiter sieht eine Tabelle von Versicherungspolicen und wählt einen aus. &#xD;
+Schadenssachbearbeiter kann auch eine Suchfunktion nutzen, um die Liste der Policen zu filtern und den gewünschten Police zu finden. Im Einzelnen sind dies:&#xD;
+&#xD;
+Policennummer --> Versicherungspolice.policennummer
+ (der Nummer ist erforderlich, da sie ausreicht, um den ausgewählten Versicherten zu finden) *&#xD;
+Versicherungsart --> Versicherungspolice.versicherungsart
+&#xD;
+Versicherungsbeginn --> Versicherungspolice.versicherungsbeginn
+&#xD;
+Versicherungsende --> Versicherungspolice.versicherungsende
+&#xD;
+Zugehörige Produkte --> Versicherungspolice.zugehörigeProdukte</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_AnQugJGjEe-UI_9r2fxeJw" name="Schadensdaten eingeben" incoming="_TdiogJhoEe-uFMUbyHAqgQ" outgoing="_KY6ZUJGkEe-UI_9r2fxeJw" inPartition="_lH2d8JGgEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_xvNpQJGvEe-dgvqlE55qNQ">
+                <body>Der Schadensachbearbeiter gibt die Daten ein, genauer:&#xD;
+Schadennummer --> Schadensmeldung.schadennummer --> das wird vom System ‎Automatisch generiert.‎&#xD;
+&#xD;
+Der Sachbearbeiter gibt die Details des Schadensfalls ein:‎&#xD;
+Schadensdatum --> Schadensmeldung.schadensdatum‎&#xD;
+Schadenshöhe --> Schadensmeldung.schadenshöhe‎&#xD;
+Schadenstatus --> Schadensmeldung.schadensstatus‎&#xD;
+</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_NR8RYJGjEe-UI_9r2fxeJw" name="Daten pruefen" incoming="_KY6ZUJGkEe-UI_9r2fxeJw" outgoing="_uAxfEJGjEe-UI_9r2fxeJw" inPartition="_l8dKsJGgEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_zYetIJGvEe-dgvqlE55qNQ">
+                <body>Das System überprüft, ob die eingegebenen Daten vollständig und korrekt sind</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:DecisionNode" xmi:id="_gNXZkJGjEe-UI_9r2fxeJw" name="Daten OK?" incoming="_uAxfEJGjEe-UI_9r2fxeJw" outgoing="_pmuVoJGjEe-UI_9r2fxeJw _Poe1gJGkEe-UI_9r2fxeJw" inPartition="_l8dKsJGgEe-UI_9r2fxeJw"/>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_lewasJGjEe-UI_9r2fxeJw" name="Hinweis anzeigen" incoming="_pmuVoJGjEe-UI_9r2fxeJw" outgoing="_qSX6sJGjEe-UI_9r2fxeJw" inPartition="_l8dKsJGgEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_6diEQJGvEe-dgvqlE55qNQ">
+                <body>Wenn die eingegebenen Daten nicht korrekt sind, zeigt das System dem Schadenssachbearbeiter einen Hinweis, der angibt, wo der Fehler liegt. &#xD;
+Der Schadenssachbearbeiter hat die Möglichkeit, den Fehler zu korrigieren. Zum Beispiel, wenn die eingegebenen Daten nicht im UTF-8-Format sind &#xD;
+oder wenn bei der angegebenen Schadenshöhe ‎mehr als ein Komma hintereinander verwendet wird.</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_z06A4JGjEe-UI_9r2fxeJw" name="Daten speichern" incoming="_Poe1gJGkEe-UI_9r2fxeJw" outgoing="_UEwMgJGkEe-UI_9r2fxeJw" inPartition="_l8dKsJGgEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_8bygsJGvEe-dgvqlE55qNQ">
+                <body>Sobald die Daten korrekt eingegeben wurden, speichert das System die Schadensmeldung.&#xD;
+Alle zuvor eingegebenen Attribute der Klasse Schadensmeldung werden gespeichert&#xD;
+&#xD;
+Das System etabliert eine Beziehung zwischen der Entität Versicherungpolice und der Entität Schadensmeldung</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:FlowFinalNode" xmi:id="_8nepwJGjEe-UI_9r2fxeJw" name="Ende" incoming="_UEwMgJGkEe-UI_9r2fxeJw" inPartition="_l8dKsJGgEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_MIqpQJGwEe-dgvqlE55qNQ">
+                <body>Der Prozess endet, nachdem die Daten erfolgreich gespeichert wurden</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_kKRekJGkEe-UI_9r2fxeJw" name="Schadensfaelle anzeigen" incoming="_-n9o4JGlEe-UI_9r2fxeJw" outgoing="_-xLioJhxEe-uFMUbyHAqgQ" inPartition="_l8dKsJGgEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_0lv8EJGwEe-dgvqlE55qNQ">
+                <body>Das System zeigt eine Liste der Schadensfälle an, die mit der Police verknüpft sind:&#xD;
+Schadennummer --> Schadensmeldung.schadennummer&#xD;
+
+Schadensdatum --> Schadensmeldung.schadensdatum&#xD;
+
+Schadenshöhe --> Schadensmeldung.schadenshöhe&#xD;
+
+Schadenstatus --> Schadensmeldung.schadensstatus</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_1wYZoJGkEe-UI_9r2fxeJw" name="Status pruefen" incoming="_UKYhEJJtEe-2HJClzUbP0Q" outgoing="_DTarYJGmEe-UI_9r2fxeJw" inPartition="_l8dKsJGgEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_NAoWkJGxEe-dgvqlE55qNQ">
+                <body>Das System prüft den Status der Schadensmeldung&#xD;
+Schadenstatus --> 	Schadensmeldung.schadensstatus == abgeschlossen</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:DecisionNode" xmi:id="_6iSCYJGkEe-UI_9r2fxeJw" name="Status abgeschlossen ?" incoming="_DTarYJGmEe-UI_9r2fxeJw" outgoing="_qU9pwJGlEe-UI_9r2fxeJw _EEYOQJGmEe-UI_9r2fxeJw" inPartition="_l8dKsJGgEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_7fYjwJJoEe-2HJClzUbP0Q">
+                <body>Schadenstatus 	-> 	Schadensmeldung.schadensstatus == abgeschlossen  -> True/False ?</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_D1GRkJGlEe-UI_9r2fxeJw" name="Fehler melden" incoming="_qU9pwJGlEe-UI_9r2fxeJw" outgoing="_a4MkUJGmEe-UI_9r2fxeJw" inPartition="_l8dKsJGgEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_aZAF4JGxEe-dgvqlE55qNQ">
+                <body>Das System gibt eine Fehlermeldung aus und die Änderungen sind nicht zulässig und werden nicht übernommen&#xD;
+Schadenstatus -> Schadensmeldung.schadensstatus = abgeschlossen&#xD;
+Der Schadenssachbearbeiter darf keine Änderungen vornehmen</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_GbPNYJGlEe-UI_9r2fxeJw" name="Schadensdaten eingeben" incoming="_z28YwJhoEe-uFMUbyHAqgQ" outgoing="_I8If8JJtEe-2HJClzUbP0Q" inPartition="_lH2d8JGgEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="__agfIJGwEe-dgvqlE55qNQ">
+                <body>Der Sachbearbeiter ändert die Schadensdaten&#xD;
+Schadennummer --> Schadensmeldung.schadennummer --> das kann der Sachbearbeiter nicht ändern, weil es vom System Automatisch generiert wurde.&#xD;
+&#xD;
+
+Neues Schadensdatum--> Schadensmeldung.schadensdatum&#xD;
+
+Neue Schadenshöhe--> Schadensmeldung.schadenshöhe&#xD;
+Neue 
+Schadenstatus --> Schadensmeldung.schadensstatus&#xD;
+&#xD;
+</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_hvTbgJGlEe-UI_9r2fxeJw" name="Daten speichern" incoming="_EEYOQJGmEe-UI_9r2fxeJw" outgoing="_KhhQ0JGmEe-UI_9r2fxeJw" inPartition="_l8dKsJGgEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_e3VSYJGxEe-dgvqlE55qNQ">
+                <body>Das System speichert die geänderten Daten der Schadensmeldung&#xD;
+Schadennummer --> Schadensmeldung.schadennummer --> das kann der Sachbearbeiter nicht ändern, weil es vom System automatisch generiert wurde.&#xD;
+&#xD;
+Neue 
+Schadensdatum --> Schadensmeldung.schadensdatum&#xD;
+Neue 
+Schadenshöhe --> Schadensmeldung.schadenshöhe &#xD;
+Neue 
+Schadenstatus --> Schadensmeldung.schadensstatus&#xD;
+- Alle geänderten Attribute der Klasse Schadensmeldung werden übernommen.
+&#xD;
+&#xD;
+Das System etabliert eine Beziehung zwischen der Entität Versicherungpolice und der Entität Schadensmeldung&#xD;
+</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_0McFMJGlEe-UI_9r2fxeJw" name="Details anzeigen" incoming="_KhhQ0JGmEe-UI_9r2fxeJw" outgoing="_MjdTYJGmEe-UI_9r2fxeJw" inPartition="_l8dKsJGgEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_xsEjwJGxEe-dgvqlE55qNQ">
+                <body>Das System zeigt dem Sachbearbeiter die geänderte Daten:&#xD;
+&#xD;
+Schadennummer --> Schadensmeldung.schadennummer (nicht geändert, das es vom System automatisch generiert wurde)&#xD;
+&#xD;
+Neue 
+Schadensdatum --> Schadensmeldung.schadensdatum&#xD;
+
+Neue Schadenshöhe --> Schadensmeldung.schadenshöhe&#xD;
+Neue 
+Schadenstatus --> Schadensmeldung.schadensstatus</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:FlowFinalNode" xmi:id="_3o0sgJGlEe-UI_9r2fxeJw" name="Ende" incoming="_MjdTYJGmEe-UI_9r2fxeJw" inPartition="_l8dKsJGgEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_yAbDIJGxEe-dgvqlE55qNQ">
+                <body>Der Prozess endet, nachdem die Änderungen erfolgreich gespeichert wurden</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:FlowFinalNode" xmi:id="_YqyRkJGmEe-UI_9r2fxeJw" name="Ende" incoming="_a4MkUJGmEe-UI_9r2fxeJw" inPartition="_l8dKsJGgEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_czdWIJGxEe-dgvqlE55qNQ">
+                <body>Das Prozess endet.</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_QMOXkJGrEe-dgvqlE55qNQ" name="Aenderung bestaetigen" incoming="_Q05zAJJtEe-2HJClzUbP0Q" outgoing="_UKYhEJJtEe-2HJClzUbP0Q" inPartition="_lH2d8JGgEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_FrmpwJGxEe-dgvqlE55qNQ">
+                <body>Der Sachbearbeiter bestätigt die Änderungen</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_iPi6YJJsEe-2HJClzUbP0Q" name="Daten pruefen" incoming="_I8If8JJtEe-2HJClzUbP0Q" outgoing="_3HxGcJJsEe-2HJClzUbP0Q" inPartition="_l8dKsJGgEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_UCCCYJOWEe-ZQ-NSWA5C4Q">
+                <body>Das System überprüft, ob die eingegebenen Daten vollständig und korrekt sind</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:DecisionNode" xmi:id="_yGwDoJJsEe-2HJClzUbP0Q" name="Daten OK?" incoming="_3HxGcJJsEe-2HJClzUbP0Q" outgoing="_LJAnMJJtEe-2HJClzUbP0Q _Q05zAJJtEe-2HJClzUbP0Q" inPartition="_l8dKsJGgEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_G2FkAJJuEe-2HJClzUbP0Q">
+                <body>sind die eingegebene Daten korrekt ?</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:OpaqueAction" xmi:id="__Gjh8JJsEe-2HJClzUbP0Q" name="Hinweis anzeigen" incoming="_LJAnMJJtEe-2HJClzUbP0Q" outgoing="_NeYjIJJtEe-2HJClzUbP0Q" inPartition="_l8dKsJGgEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_chn40JJtEe-2HJClzUbP0Q">
+                <body>Wenn die eingegebenen Daten nicht korrekt sind, zeigt das System dem Schadenssachbearbeiter einen Hinweis, der angibt, wo der Fehler liegt. &#xD;
+Der Schadenssachbearbeiter hat die Möglichkeit, den Fehler zu korrigieren. Zum Beispiel, wenn die eingegebenen Daten nicht im UTF-8-Format sind &#xD;
+oder wenn bei der angegebenen Schadenshöhe ‎mehr als ein Komma hintereinander verwendet wird.</body>
+              </ownedComment>
+            </node>
+            <node xmi:type="uml:MergeNode" xmi:id="_sHR-YJhoEe-uFMUbyHAqgQ" incoming="_NeYjIJJtEe-2HJClzUbP0Q _Aj0k8JhyEe-uFMUbyHAqgQ" outgoing="_z28YwJhoEe-uFMUbyHAqgQ" inPartition="_lH2d8JGgEe-UI_9r2fxeJw"/>
+            <node xmi:type="uml:MergeNode" xmi:id="_28WDcJhoEe-uFMUbyHAqgQ" incoming="_HxhgUJGkEe-UI_9r2fxeJw _qSX6sJGjEe-UI_9r2fxeJw" outgoing="_TdiogJhoEe-uFMUbyHAqgQ" inPartition="_lH2d8JGgEe-UI_9r2fxeJw"/>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_zVoFUJhxEe-uFMUbyHAqgQ" name="Schadensmeldung auswählen" incoming="_-xLioJhxEe-uFMUbyHAqgQ" outgoing="_Aj0k8JhyEe-uFMUbyHAqgQ" inPartition="_lH2d8JGgEe-UI_9r2fxeJw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_5fNSsJhxEe-uFMUbyHAqgQ">
+                <body>Der Schadenssachbearbeiter sieht eine Tabelle von Schadensmeldungen die mit der ausgewählten Versicherungspolice verknüpft sind und wählt einen aus, um sie zu ändern.</body>
+              </ownedComment>
+            </node>
+          </ownedBehavior>
+          <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="__wh4EJh3Ee-uFMUbyHAqgQ" name="anlegen oder aendern"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_IrCfgJEmEe-dRrwiFoAp1A" name="Kontaktinformationen einsehen">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_3Azk4JGSEe-N2o3w762SWw">
+            <body>Der Schadensachbearbeiter kann die Kontaktinformationen des Kunden einsehen, die mit einer bestimmten Schadensmeldung verknüpft sind, um den Kunden bezüglich der Schadensabwicklung zu kontaktieren. &#xD;
+Hierzu wählt der Schadensachbearbeiter die Schadensmeldung aus, die mit dem bestehenden Versicherten verknüpft ist, um die Kontaktdaten einsehen zu können.&#xD;
+&#xD;
+Vorbedingung: &#xD;
+- Die Schadensmeldung muss bereits im System existieren und aktiv sein.&#xD;
+- Der Schadensachbearbeiter hat die Berechtigung, auf die Kontaktdaten des Kunden zuzugreifen.&#xD;
+&#xD;
+Nachbedingung: Die Kontaktinformationen des Kunden werden erfolgreich angezeigt, oder es wird eine Fehlermeldung ausgegeben, wenn keine Informationen verfügbar sind.
+</body>
+          </ownedComment>
+          <include xmi:type="uml:Include" xmi:id="_z3yHQJhdEe-uFMUbyHAqgQ" addition="_GTKCIJEmEe-dRrwiFoAp1A"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_M-OzAJEmEe-dRrwiFoAp1A" name="Versicherungspolice suchen">
+          <ownedBehavior xmi:type="uml:Activity" xmi:id="_aw-UQJGhEe-UI_9r2fxeJw" name="Versicherungspolice suchen"/>
+          <extend xmi:type="uml:Extend" xmi:id="_Lqni8JhhEe-uFMUbyHAqgQ" extendedCase="_6Fox0JEkEe-9X_Upib2wag" extensionLocation="_Lqni8ZhhEe-uFMUbyHAqgQ"/>
+          <extend xmi:type="uml:Extend" xmi:id="__wgp8Jh3Ee-uFMUbyHAqgQ" extendedCase="_GTKCIJEmEe-dRrwiFoAp1A" extensionLocation="__wh4EJh3Ee-uFMUbyHAqgQ"/>
+          <extend xmi:type="uml:Extend" xmi:id="_qZ9kUJiREe-H3v2d4e_knA" extendedCase="_wyNCIJElEe-dRrwiFoAp1A" extensionLocation="_qaAAkJiREe-H3v2d4e_knA"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_ptrgMJhcEe-uFMUbyHAqgQ" memberEnd="_ptsuUZhcEe-uFMUbyHAqgQ _ptsuUphcEe-uFMUbyHAqgQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ptrgMZhcEe-uFMUbyHAqgQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ptsuUJhcEe-uFMUbyHAqgQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_ptsuUZhcEe-uFMUbyHAqgQ" name="kontaktinformationen einsehen" type="_IrCfgJEmEe-dRrwiFoAp1A" association="_ptrgMJhcEe-uFMUbyHAqgQ"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_ptsuUphcEe-uFMUbyHAqgQ" name="schadensachbearbeiter" type="_8xhYUI-7Ee-s2-v21d6FiA" association="_ptrgMJhcEe-uFMUbyHAqgQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_rv_9QJhcEe-uFMUbyHAqgQ" memberEnd="_rwAkUphcEe-uFMUbyHAqgQ _rwBLYJhcEe-uFMUbyHAqgQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rwAkUJhcEe-uFMUbyHAqgQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rwAkUZhcEe-uFMUbyHAqgQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_rwAkUphcEe-uFMUbyHAqgQ" name="schadensmeldung pflegen" type="_GTKCIJEmEe-dRrwiFoAp1A" association="_rv_9QJhcEe-uFMUbyHAqgQ"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_rwBLYJhcEe-uFMUbyHAqgQ" name="schadensachbearbeiter" type="_8xhYUI-7Ee-s2-v21d6FiA" association="_rv_9QJhcEe-uFMUbyHAqgQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_u0zLAJhcEe-uFMUbyHAqgQ" memberEnd="_u0zyEphcEe-uFMUbyHAqgQ _u0zyE5hcEe-uFMUbyHAqgQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_u0zyEJhcEe-uFMUbyHAqgQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_u0zyEZhcEe-uFMUbyHAqgQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_u0zyEphcEe-uFMUbyHAqgQ" name="versicherten pflegen" type="_sdfEoJElEe-dRrwiFoAp1A" association="_u0zLAJhcEe-uFMUbyHAqgQ"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_u0zyE5hcEe-uFMUbyHAqgQ" name="versicherungsagent" type="_1mpGAI-7Ee-s2-v21d6FiA" association="_u0zLAJhcEe-uFMUbyHAqgQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_vpMcYJhcEe-uFMUbyHAqgQ" memberEnd="_vpNDcphcEe-uFMUbyHAqgQ _vpNDc5hcEe-uFMUbyHAqgQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vpNDcJhcEe-uFMUbyHAqgQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vpNDcZhcEe-uFMUbyHAqgQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_vpNDcphcEe-uFMUbyHAqgQ" name="versicherungspolice anlegen" type="_f8NVYJElEe-dRrwiFoAp1A" association="_vpMcYJhcEe-uFMUbyHAqgQ"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_vpNDc5hcEe-uFMUbyHAqgQ" name="versicherungsagent" type="_1mpGAI-7Ee-s2-v21d6FiA" association="_vpMcYJhcEe-uFMUbyHAqgQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_wQrTIJhcEe-uFMUbyHAqgQ" memberEnd="_wQrTI5hcEe-uFMUbyHAqgQ _wQr6MJhcEe-uFMUbyHAqgQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wQrTIZhcEe-uFMUbyHAqgQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wQrTIphcEe-uFMUbyHAqgQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_wQrTI5hcEe-uFMUbyHAqgQ" name="versicherungspolice kuendigen" type="_LXTt8JElEe-KFef-jLN8eA" association="_wQrTIJhcEe-uFMUbyHAqgQ"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_wQr6MJhcEe-uFMUbyHAqgQ" name="versicherungsagent" type="_1mpGAI-7Ee-s2-v21d6FiA" association="_wQrTIJhcEe-uFMUbyHAqgQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_y7fTkJhcEe-uFMUbyHAqgQ" memberEnd="_y7f6ophcEe-uFMUbyHAqgQ _y7ghsJhcEe-uFMUbyHAqgQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_y7f6oJhcEe-uFMUbyHAqgQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_y7f6oZhcEe-uFMUbyHAqgQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_y7f6ophcEe-uFMUbyHAqgQ" name="versicherungsprodukte pflegen" type="_6Fox0JEkEe-9X_Upib2wag" association="_y7fTkJhcEe-uFMUbyHAqgQ"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_y7ghsJhcEe-uFMUbyHAqgQ" name="versicherungsagent" type="_1mpGAI-7Ee-s2-v21d6FiA" association="_y7fTkJhcEe-uFMUbyHAqgQ"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_dYBTYI9OEe-qT9xlHJs62g">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dYFk0I9OEe-qT9xlHJs62g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>

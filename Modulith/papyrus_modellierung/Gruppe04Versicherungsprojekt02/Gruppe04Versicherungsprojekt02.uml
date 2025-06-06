@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Entwurfsmodell_Profil="http:///schemas/Entwurfsmodell_Profil/_XTIikDDqEeyvRsku6PdG4Q/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/Entwurfsmodell_Profil/_XTIikDDqEeyvRsku6PdG4Q/1 ../../Entwurfsmodell_Profil/Entwurfsmodell_Profil.profile.uml#_XTKXwDDqEeyvRsku6PdG4Q">
+  <uml:Model xmi:id="_HPBRwK9UEe-4nqbYHuLA4w" name="Gruppe04Versicherungsprojekt02" URI="">
+    <packagedElement xmi:type="uml:Package" xmi:id="_KO01UK9VEe-4nqbYHuLA4w" name="Dialog">
+      <packagedElement xmi:type="uml:Component" xmi:id="_vmjLMLI-Ee-kF_6Oyf7PhQ" name="Dlg Versichertenverwaltung">
+        <packagedElement xmi:type="uml:Class" xmi:id="_3JFIALN8Ee-Cg9mjz9Sc7A" name="Versichertendatenpflege">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_OY_CMLdkEe-kCZtvOV9ZHw" name="versichertenSuchenUndAnzeigen"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9szTsLN8Ee-Cg9mjz9Sc7A" name="VersichertenSuche">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_QRL58LdkEe-kCZtvOV9ZHw" name="versichertenSuchen"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Component" xmi:id="_6f1eAK-CEe-4nqbYHuLA4w" name="Dlg Policeverwaltung">
+        <packagedElement xmi:type="uml:Class" xmi:id="_Ro334LAMEe-KW4eGVCwEcA" name="Policedatenpflegen">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_eDrtcLQXEe-e052ElzSM3g" name="policeSucheUndAnzeige"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_e_3o4LQXEe-e052ElzSM3g" name="policeKuendigen"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_mqpPQLdkEe-kCZtvOV9ZHw" name="policeAnlegen"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Tr3DULAMEe-KW4eGVCwEcA" name="PoliceSucheUndAnzeige">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_1VnO4LdkEe-kCZtvOV9ZHw" name="policeSuchenUndAnzeigen"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_WT-VELAMEe-KW4eGVCwEcA" name="PoliceKuendige">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_1eo8ALQXEe-e052ElzSM3g" name="policeKuendigen"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_DidY8LNQEe-Cg9mjz9Sc7A" name="IPoliceAnlegen" client="_6f1eAK-CEe-4nqbYHuLA4w" supplier="_WVT-kLKNEe-kF_6Oyf7PhQ"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_L9j9ALNQEe-Cg9mjz9Sc7A" name="IPoliceLoeschen" client="_6f1eAK-CEe-4nqbYHuLA4w" supplier="_cpHe8LKNEe-kF_6Oyf7PhQ"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_P4yccLNQEe-Cg9mjz9Sc7A" name="IPoliceAendern" client="_6f1eAK-CEe-4nqbYHuLA4w" supplier="_gespYLKNEe-kF_6Oyf7PhQ"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_TZZccLNQEe-Cg9mjz9Sc7A" name="IPoliceSuchen" client="_6f1eAK-CEe-4nqbYHuLA4w" supplier="_lBqeQLKNEe-kF_6Oyf7PhQ"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_c7e2sLNQEe-Cg9mjz9Sc7A" name="IPoliceverwaltungFactory" client="_6f1eAK-CEe-4nqbYHuLA4w" supplier="_m30uoLKNEe-kF_6Oyf7PhQ"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_4IMYcLN4Ee-Cg9mjz9Sc7A" name="VersichertenSuche">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_ZwMyELdkEe-kCZtvOV9ZHw" name="policeSuchen"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_ppMEALdkEe-kCZtvOV9ZHw" name="PoliceAnlegen">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_yQgfILdkEe-kCZtvOV9ZHw" name="policeAnlegen"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_HvNqcLh4Ee-Ca7TsvuDn6Q" client="_6f1eAK-CEe-4nqbYHuLA4w" supplier="__j5NwK-CEe-4nqbYHuLA4w"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Component" xmi:id="_Lz7cAK-DEe-4nqbYHuLA4w" name="Dlg Produktverwaltung">
+        <packagedElement xmi:type="uml:Class" xmi:id="_N04zQK_oEe-KW4eGVCwEcA" name="Produktdatenpflegen">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5P1BsLdkEe-kCZtvOV9ZHw" name="produktAnlegen"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_6arEMLdkEe-kCZtvOV9ZHw" name="produktAendern"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_7XGQMLdkEe-kCZtvOV9ZHw" name="produktLoeschen"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_8LuLELdkEe-kCZtvOV9ZHw" name="produktSuchen"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_0HdXgLACEe-KW4eGVCwEcA" name="ProduktAendern">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_AZoV8LdlEe-kCZtvOV9ZHw" name="produktAendern"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_h4974LAEEe-KW4eGVCwEcA" name="ProduktLoeschen">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_CM3OILdlEe-kCZtvOV9ZHw" name="produktLoeschen"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_RoW5ILI-Ee-kF_6Oyf7PhQ" name="ProduktSuche">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_DLk5ILdlEe-kCZtvOV9ZHw" name="produktSuchen"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_vGs34LN6Ee-Cg9mjz9Sc7A" name="ProduktAnlegen">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_ELIRoLdlEe-kCZtvOV9ZHw" name="produktSuchen"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_FW2E4Lh4Ee-Ca7TsvuDn6Q" client="_Lz7cAK-DEe-4nqbYHuLA4w" supplier="_tHVYcLEaEe-G7d-DB-t4QQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_an758LQEEe-e052ElzSM3g" memberEnd="_an7587QEEe-e052ElzSM3g _an9vILQEEe-e052ElzSM3g" navigableOwnedEnd="_an7587QEEe-e052ElzSM3g">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_an758bQEEe-e052ElzSM3g" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_an758rQEEe-e052ElzSM3g" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_an7587QEEe-e052ElzSM3g" name="produktsuche" type="_RoW5ILI-Ee-kF_6Oyf7PhQ" association="_an758LQEEe-e052ElzSM3g"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_an9vILQEEe-e052ElzSM3g" name="produktAendern" type="_0HdXgLACEe-KW4eGVCwEcA" association="_an758LQEEe-e052ElzSM3g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_baUZILQEEe-e052ElzSM3g" memberEnd="_baWOULQEEe-e052ElzSM3g _baXccLQEEe-e052ElzSM3g" navigableOwnedEnd="_baWOULQEEe-e052ElzSM3g">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_baVnQLQEEe-e052ElzSM3g" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_baVnQbQEEe-e052ElzSM3g" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_baWOULQEEe-e052ElzSM3g" name="produktsuche" type="_RoW5ILI-Ee-kF_6Oyf7PhQ" association="_baUZILQEEe-e052ElzSM3g"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_baXccLQEEe-e052ElzSM3g" name="produktloeschen" type="_h4974LAEEe-KW4eGVCwEcA" association="_baUZILQEEe-e052ElzSM3g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_b_UOULPdEe-e052ElzSM3g" memberEnd="_b_UOU7PdEe-e052ElzSM3g _b_U1YLPdEe-e052ElzSM3g" navigableOwnedEnd="_b_UOU7PdEe-e052ElzSM3g">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_b_UOUbPdEe-e052ElzSM3g" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_b_UOUrPdEe-e052ElzSM3g" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_b_UOU7PdEe-e052ElzSM3g" name="produktbearbeiten" type="_h4974LAEEe-KW4eGVCwEcA" association="_b_UOULPdEe-e052ElzSM3g"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_b_U1YLPdEe-e052ElzSM3g" name="produktsuche" type="_N04zQK_oEe-KW4eGVCwEcA" association="_b_UOULPdEe-e052ElzSM3g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_ny2lYLI-Ee-kF_6Oyf7PhQ" memberEnd="_ny3zgLI-Ee-kF_6Oyf7PhQ _ny3zgbI-Ee-kF_6Oyf7PhQ" navigableOwnedEnd="_ny3zgLI-Ee-kF_6Oyf7PhQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ny3McLI-Ee-kF_6Oyf7PhQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ny3McbI-Ee-kF_6Oyf7PhQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_ny3zgLI-Ee-kF_6Oyf7PhQ" name="police suchen" type="_6f1eAK-CEe-4nqbYHuLA4w" association="_ny2lYLI-Ee-kF_6Oyf7PhQ"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_ny3zgbI-Ee-kF_6Oyf7PhQ" name="police kuendigen" type="_Ro334LAMEe-KW4eGVCwEcA" association="_ny2lYLI-Ee-kF_6Oyf7PhQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_ZVa84LN6Ee-Cg9mjz9Sc7A" memberEnd="_ZVbj8rN6Ee-Cg9mjz9Sc7A _ZVcLALN6Ee-Cg9mjz9Sc7A" navigableOwnedEnd="_ZVbj8rN6Ee-Cg9mjz9Sc7A">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZVbj8LN6Ee-Cg9mjz9Sc7A" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZVbj8bN6Ee-Cg9mjz9Sc7A" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_ZVbj8rN6Ee-Cg9mjz9Sc7A" name="produktsuchen" type="_0HdXgLACEe-KW4eGVCwEcA" association="_ZVa84LN6Ee-Cg9mjz9Sc7A"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_ZVcLALN6Ee-Cg9mjz9Sc7A" name="produktdatenpflegen" type="_N04zQK_oEe-KW4eGVCwEcA" association="_ZVa84LN6Ee-Cg9mjz9Sc7A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_1Nxj0LN6Ee-Cg9mjz9Sc7A" memberEnd="_1NyK4rN6Ee-Cg9mjz9Sc7A _1Nyx8LN6Ee-Cg9mjz9Sc7A" navigableOwnedEnd="_1NyK4rN6Ee-Cg9mjz9Sc7A">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1NyK4LN6Ee-Cg9mjz9Sc7A" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1NyK4bN6Ee-Cg9mjz9Sc7A" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_1NyK4rN6Ee-Cg9mjz9Sc7A" name="produktanlegen" type="_vGs34LN6Ee-Cg9mjz9Sc7A" association="_1Nxj0LN6Ee-Cg9mjz9Sc7A"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_1Nyx8LN6Ee-Cg9mjz9Sc7A" name="produktdatenpflegen" type="_N04zQK_oEe-KW4eGVCwEcA" association="_1Nxj0LN6Ee-Cg9mjz9Sc7A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_AQsMwLN9Ee-Cg9mjz9Sc7A" memberEnd="_AQsz0rN9Ee-Cg9mjz9Sc7A _AQta4LN9Ee-Cg9mjz9Sc7A" navigableOwnedEnd="_AQsz0rN9Ee-Cg9mjz9Sc7A">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_AQsz0LN9Ee-Cg9mjz9Sc7A" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_AQsz0bN9Ee-Cg9mjz9Sc7A" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_AQsz0rN9Ee-Cg9mjz9Sc7A" name="versichertensuche" type="_9szTsLN8Ee-Cg9mjz9Sc7A" association="_AQsMwLN9Ee-Cg9mjz9Sc7A"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_AQta4LN9Ee-Cg9mjz9Sc7A" name="versichertenpflegen" type="_3JFIALN8Ee-Cg9mjz9Sc7A" association="_AQsMwLN9Ee-Cg9mjz9Sc7A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_w-MG4LPbEe-e052ElzSM3g" memberEnd="_w-NVALPbEe-e052ElzSM3g _w-NVAbPbEe-e052ElzSM3g" navigableOwnedEnd="_w-NVALPbEe-e052ElzSM3g">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_w-Mt8LPbEe-e052ElzSM3g" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_w-Mt8bPbEe-e052ElzSM3g" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_w-NVALPbEe-e052ElzSM3g" name="policesuche" type="_Tr3DULAMEe-KW4eGVCwEcA" association="_w-MG4LPbEe-e052ElzSM3g"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_w-NVAbPbEe-e052ElzSM3g" name="versichertensuche" type="_4IMYcLN4Ee-Cg9mjz9Sc7A" association="_w-MG4LPbEe-e052ElzSM3g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_3TIPsLPbEe-e052ElzSM3g" memberEnd="_3TJd0bPbEe-e052ElzSM3g _3TKE4LPbEe-e052ElzSM3g" navigableOwnedEnd="_3TJd0bPbEe-e052ElzSM3g">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3TIPsbPbEe-e052ElzSM3g" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3TJd0LPbEe-e052ElzSM3g" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_3TJd0bPbEe-e052ElzSM3g" name="policesuche" type="_Tr3DULAMEe-KW4eGVCwEcA" association="_3TIPsLPbEe-e052ElzSM3g"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_3TKE4LPbEe-e052ElzSM3g" name="policedatenpflegen" type="_Ro334LAMEe-KW4eGVCwEcA" association="_3TIPsLPbEe-e052ElzSM3g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_VJZ74LPcEe-e052ElzSM3g" memberEnd="_VJai8LPcEe-e052ElzSM3g _VJai8bPcEe-e052ElzSM3g" navigableOwnedEnd="_VJai8LPcEe-e052ElzSM3g">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_VJZ74bPcEe-e052ElzSM3g" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VJZ74rPcEe-e052ElzSM3g" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_VJai8LPcEe-e052ElzSM3g" name="policekuendigen" type="_WT-VELAMEe-KW4eGVCwEcA" association="_VJZ74LPcEe-e052ElzSM3g"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_VJai8bPcEe-e052ElzSM3g" name="policesuche" type="_Tr3DULAMEe-KW4eGVCwEcA" association="_VJZ74LPcEe-e052ElzSM3g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_ssom4LdkEe-kCZtvOV9ZHw" memberEnd="_ssqcELdkEe-kCZtvOV9ZHw _ssvUkLdkEe-kCZtvOV9ZHw" navigableOwnedEnd="_ssqcELdkEe-kCZtvOV9ZHw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ssp1ALdkEe-kCZtvOV9ZHw" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ssp1AbdkEe-kCZtvOV9ZHw" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_ssqcELdkEe-kCZtvOV9ZHw" name="policeanlegen" type="_ppMEALdkEe-kCZtvOV9ZHw" association="_ssom4LdkEe-kCZtvOV9ZHw"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_ssvUkLdkEe-kCZtvOV9ZHw" name="policedatenpflegen" type="_Ro334LAMEe-KW4eGVCwEcA" association="_ssom4LdkEe-kCZtvOV9ZHw"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_MCUzQK9VEe-4nqbYHuLA4w" name="Core">
+      <packagedElement xmi:type="uml:Component" xmi:id="__j5NwK-CEe-4nqbYHuLA4w" name="Core Policeverwaltung">
+        <packagedElement xmi:type="uml:Package" xmi:id="_l0h24LAiEe-KW4eGVCwEcA" name="Außensicht">
+          <packagedElement xmi:type="uml:Class" xmi:id="_mbS1kLKLEe-kF_6Oyf7PhQ" name="PoliceTO">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_ob760LKPEe-kF_6Oyf7PhQ" name="policenummer" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_unXs4LKQEe-kF_6Oyf7PhQ" name="versicherungsarttyp" visibility="private" type="_R9SHALKQEe-kF_6Oyf7PhQ"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_KnyDoLKREe-kF_6Oyf7PhQ" name="versicherungsbeginn" visibility="private" type="_6TTIgLKQEe-kF_6Oyf7PhQ"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_OBRvALKREe-kF_6Oyf7PhQ" name="versicherungsende" visibility="private" type="_6TTIgLKQEe-kF_6Oyf7PhQ"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_R-0ioLKREe-kF_6Oyf7PhQ" name="praemienhoehe" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_YSzCILKREe-kF_6Oyf7PhQ" name="zugehoerigeProdukte" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZueV8LKREe-kF_6Oyf7PhQ"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Zu7o8LKREe-kF_6Oyf7PhQ" value="*"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_nRhToLPjEe-e052ElzSM3g" name="istAktiv" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+            </ownedAttribute>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_fNjAsLPkEe-e052ElzSM3g" name="getPolicenummer"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_hZ48cLPkEe-e052ElzSM3g" name="getVersicherungsartTyp"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_lK-ocLPkEe-e052ElzSM3g" name="getVersicherungsbeginn"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_m5Nr4LPkEe-e052ElzSM3g" name="getVersicherungsende"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_opjBELPkEe-e052ElzSM3g" name="getPraemienhoehe"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_sOcrMLPkEe-e052ElzSM3g" name="getZugehoerigeProdukte"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_uEBFsLPkEe-e052ElzSM3g" name="getIstAktive"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_WVT-kLKNEe-kF_6Oyf7PhQ" name="IPoliceAnlegen"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_cpHe8LKNEe-kF_6Oyf7PhQ" name="IPoliceKuendigen"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_gespYLKNEe-kF_6Oyf7PhQ" name="IPoliceAendern"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_lBqeQLKNEe-kF_6Oyf7PhQ" name="IPoliceSuchen"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_m30uoLKNEe-kF_6Oyf7PhQ" name="IPoliceverwaltungFactory"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_G22UwLfYEe-gndMT2mHZCQ" name="IPolicedatenPflegen"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_oh74ULAiEe-KW4eGVCwEcA" name="Innensicht">
+          <packagedElement xmi:type="uml:Package" xmi:id="_z6QDILKNEe-kF_6Oyf7PhQ" name="Technisches Datenmodell">
+            <packagedElement xmi:type="uml:Class" xmi:id="_TDEVQLKOEe-kF_6Oyf7PhQ" name="Police">
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_A0GSsLfZEe-gndMT2mHZCQ" name="getPolicen"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_xrzgQLgMEe-F4pIvrHDnmQ" name="setStatus(gekündigt)"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Enumeration" xmi:id="_R9SHALKQEe-kF_6Oyf7PhQ" name="VersicherungsarttypT">
+              <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_dfaGYLKQEe-kF_6Oyf7PhQ" name="KFZ" visibility="private"/>
+              <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_g8hGcLKQEe-kF_6Oyf7PhQ" name="HAFTPFLICHT" visibility="private"/>
+              <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_i9Da0LKQEe-kF_6Oyf7PhQ" name="HAUSRAT" visibility="private"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:DataType" xmi:id="_6TTIgLKQEe-kF_6Oyf7PhQ" name="DatumT">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_-n_34LKQEe-kF_6Oyf7PhQ" name="tag" visibility="private">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_A6b0kLKREe-kF_6Oyf7PhQ" name="monat" visibility="private">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_D6nBALKREe-kF_6Oyf7PhQ" name="jahr" visibility="private">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+              </ownedAttribute>
+            </packagedElement>
+            <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_rvfawLh4Ee-Ca7TsvuDn6Q">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rvh3ALh4Ee-Ca7TsvuDn6Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <references xmi:type="ecore:EPackage" href="../../Entwurfsmodell_Profil/Entwurfsmodell_Profil.profile.uml#_XTKXwDDqEeyvRsku6PdG4Q"/>
+              </eAnnotations>
+              <appliedProfile xmi:type="uml:Profile" href="../../Entwurfsmodell_Profil/Entwurfsmodell_Profil.profile.uml#_wRj7YFAUEeuzMKD31bglTg"/>
+            </profileApplication>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_3qTNULKNEe-kF_6Oyf7PhQ" name="Use Cases">
+            <packagedElement xmi:type="uml:Class" xmi:id="_YioVQLKOEe-kF_6Oyf7PhQ" name="PoliceManager">
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_7eFFILdoEe-kCZtvOV9ZHw" name="LiefereAllePolicen"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_dK9LQLKOEe-kF_6Oyf7PhQ" name="PoliceverwaltungFactory">
+              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_2BKTALKSEe-kF_6Oyf7PhQ" client="_dK9LQLKOEe-kF_6Oyf7PhQ" supplier="_m30uoLKNEe-kF_6Oyf7PhQ" contract="_m30uoLKNEe-kF_6Oyf7PhQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_e5BPkLKOEe-kF_6Oyf7PhQ" name="PoliceAnlegen">
+              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_dgR-MLKSEe-kF_6Oyf7PhQ" client="_e5BPkLKOEe-kF_6Oyf7PhQ" supplier="_WVT-kLKNEe-kF_6Oyf7PhQ" contract="_WVT-kLKNEe-kF_6Oyf7PhQ"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_3cbNkLdoEe-kCZtvOV9ZHw" name="policeAnlegen"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_ghxWELKOEe-kF_6Oyf7PhQ" name="PoliceKuendigen">
+              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_ing9wLKSEe-kF_6Oyf7PhQ" client="_ghxWELKOEe-kF_6Oyf7PhQ" supplier="_cpHe8LKNEe-kF_6Oyf7PhQ" contract="_cpHe8LKNEe-kF_6Oyf7PhQ"/>
+              <ownedBehavior xmi:type="uml:Activity" xmi:id="_b4BxQLgUEe-F4pIvrHDnmQ" name="Versicherungspolice erfolgreich kündigen" classifierBehavior="_fuUtYLgUEe-F4pIvrHDnmQ">
+                <ownedBehavior xmi:type="uml:Interaction" xmi:id="_fuUtYLgUEe-F4pIvrHDnmQ" name="Versicherungspolice erfolgreich kündigen">
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_0heMMLgUEe-F4pIvrHDnmQ" name="" type="_iFIMsLgUEe-F4pIvrHDnmQ"/>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_FKS_obgVEe-F4pIvrHDnmQ" name="" type="_TDEVQLKOEe-kF_6Oyf7PhQ"/>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_NEHbkLgVEe-F4pIvrHDnmQ" name="" type="_YioVQLKOEe-kF_6Oyf7PhQ"/>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_RjCd8bgVEe-F4pIvrHDnmQ" name="" type="_hpsncLKOEe-kF_6Oyf7PhQ"/>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_WlcA0bgVEe-F4pIvrHDnmQ" name="" type="_ghxWELKOEe-kF_6Oyf7PhQ"/>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_a92ykLgVEe-F4pIvrHDnmQ" name="" type="_JIVPMLfYEe-gndMT2mHZCQ"/>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_FfRr8LgnEe-F4pIvrHDnmQ" name="" type="_iFIMsLgUEe-F4pIvrHDnmQ"/>
+                  <lifeline xmi:type="uml:Lifeline" xmi:id="_F1WHwLgVEe-F4pIvrHDnmQ" name="Police" represents="_FKS_obgVEe-F4pIvrHDnmQ"/>
+                  <lifeline xmi:type="uml:Lifeline" xmi:id="_NyKNULgVEe-F4pIvrHDnmQ" name="PoliceManager" represents="_NEHbkLgVEe-F4pIvrHDnmQ" coveredBy="_09LgsLgoEe-qZfO4ja4l8w _JI2v0LgpEe-qZfO4ja4l8w _09qo4LgoEe-qZfO4ja4l8w _JJVQ8bgpEe-qZfO4ja4l8w _09j7MLgoEe-qZfO4ja4l8w"/>
+                  <lifeline xmi:type="uml:Lifeline" xmi:id="_SlARQLgVEe-F4pIvrHDnmQ" name="PolicenSuchen" represents="_RjCd8bgVEe-F4pIvrHDnmQ" coveredBy="_V-ok4LgoEe-qZfO4ja4l8w _09K5oLgoEe-qZfO4ja4l8w _V_aA8LgoEe-qZfO4ja4l8w _09qo4bgoEe-qZfO4ja4l8w _V_TTQLgoEe-qZfO4ja4l8w"/>
+                  <lifeline xmi:type="uml:Lifeline" xmi:id="_XPaK4LgVEe-F4pIvrHDnmQ" name="PoliceKuendigen" represents="_WlcA0bgVEe-F4pIvrHDnmQ"/>
+                  <lifeline xmi:type="uml:Lifeline" xmi:id="_bikpMLgVEe-F4pIvrHDnmQ" name="Policedatenpflegen" represents="_a92ykLgVEe-F4pIvrHDnmQ" coveredBy="_JI2v0bgpEe-qZfO4ja4l8w _JJVQ8LgpEe-qZfO4ja4l8w _JJQ_gLgpEe-qZfO4ja4l8w"/>
+                  <lifeline xmi:type="uml:Lifeline" xmi:id="_HyE1ALgnEe-F4pIvrHDnmQ" name="User" represents="_FfRr8LgnEe-F4pIvrHDnmQ" coveredBy="_V-n90LgoEe-qZfO4ja4l8w _V_aA8bgoEe-qZfO4ja4l8w"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_09LgsLgoEe-qZfO4ja4l8w" name="Message21ReceiveEvent" covered="_NyKNULgVEe-F4pIvrHDnmQ" message="_09KSkLgoEe-qZfO4ja4l8w"/>
+                  <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_09j7MLgoEe-qZfO4ja4l8w" name="BehaviorExecutionSpecification24" covered="_NyKNULgVEe-F4pIvrHDnmQ" finish="_09qo4LgoEe-qZfO4ja4l8w" start="_09LgsLgoEe-qZfO4ja4l8w"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_V-n90LgoEe-qZfO4ja4l8w" name="Message14SendEvent" covered="_HyE1ALgnEe-F4pIvrHDnmQ" message="_V-hQILgoEe-qZfO4ja4l8w"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_V-ok4LgoEe-qZfO4ja4l8w" name="Message14ReceiveEvent" covered="_SlARQLgVEe-F4pIvrHDnmQ" message="_V-hQILgoEe-qZfO4ja4l8w"/>
+                  <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_V_TTQLgoEe-qZfO4ja4l8w" name="BehaviorExecutionSpecification17" covered="_SlARQLgVEe-F4pIvrHDnmQ" finish="_V_aA8LgoEe-qZfO4ja4l8w" start="_V-ok4LgoEe-qZfO4ja4l8w"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_JI2v0bgpEe-qZfO4ja4l8w" name="Message28ReceiveEvent" covered="_bikpMLgVEe-F4pIvrHDnmQ" message="_JI2IwLgpEe-qZfO4ja4l8w"/>
+                  <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_JJQ_gLgpEe-qZfO4ja4l8w" name="BehaviorExecutionSpecification31" covered="_bikpMLgVEe-F4pIvrHDnmQ" finish="_JJVQ8LgpEe-qZfO4ja4l8w" start="_JI2v0bgpEe-qZfO4ja4l8w"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_JI2v0LgpEe-qZfO4ja4l8w" name="Message28SendEvent" covered="_NyKNULgVEe-F4pIvrHDnmQ" message="_JI2IwLgpEe-qZfO4ja4l8w"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_09K5oLgoEe-qZfO4ja4l8w" name="Message21SendEvent" covered="_SlARQLgVEe-F4pIvrHDnmQ" message="_09KSkLgoEe-qZfO4ja4l8w"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_V_aA8LgoEe-qZfO4ja4l8w" name="Message19SendEvent" covered="_SlARQLgVEe-F4pIvrHDnmQ" message="_V_ZZ4LgoEe-qZfO4ja4l8w"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_JJVQ8LgpEe-qZfO4ja4l8w" name="Message33SendEvent" covered="_bikpMLgVEe-F4pIvrHDnmQ" message="_JJUp4LgpEe-qZfO4ja4l8w"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_09qo4LgoEe-qZfO4ja4l8w" name="Message26SendEvent" covered="_NyKNULgVEe-F4pIvrHDnmQ" message="_09qB0LgoEe-qZfO4ja4l8w"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_09qo4bgoEe-qZfO4ja4l8w" name="Message26ReceiveEvent" covered="_SlARQLgVEe-F4pIvrHDnmQ" message="_09qB0LgoEe-qZfO4ja4l8w"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_JJVQ8bgpEe-qZfO4ja4l8w" name="Message33ReceiveEvent" covered="_NyKNULgVEe-F4pIvrHDnmQ" message="_JJUp4LgpEe-qZfO4ja4l8w"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_V_aA8bgoEe-qZfO4ja4l8w" name="Message19ReceiveEvent" covered="_HyE1ALgnEe-F4pIvrHDnmQ" message="_V_ZZ4LgoEe-qZfO4ja4l8w"/>
+                  <message xmi:type="uml:Message" xmi:id="_V-hQILgoEe-qZfO4ja4l8w" name="Message14" receiveEvent="_V-ok4LgoEe-qZfO4ja4l8w" sendEvent="_V-n90LgoEe-qZfO4ja4l8w" signature="_w6UygLdoEe-kCZtvOV9ZHw"/>
+                  <message xmi:type="uml:Message" xmi:id="_V_ZZ4LgoEe-qZfO4ja4l8w" name="Message19" messageSort="reply" receiveEvent="_V_aA8bgoEe-qZfO4ja4l8w" sendEvent="_V_aA8LgoEe-qZfO4ja4l8w"/>
+                  <message xmi:type="uml:Message" xmi:id="_09KSkLgoEe-qZfO4ja4l8w" name="Message21" receiveEvent="_09LgsLgoEe-qZfO4ja4l8w" sendEvent="_09K5oLgoEe-qZfO4ja4l8w" signature="_w6UygLdoEe-kCZtvOV9ZHw"/>
+                  <message xmi:type="uml:Message" xmi:id="_09qB0LgoEe-qZfO4ja4l8w" name="Message26" messageSort="reply" receiveEvent="_09qo4bgoEe-qZfO4ja4l8w" sendEvent="_09qo4LgoEe-qZfO4ja4l8w"/>
+                  <message xmi:type="uml:Message" xmi:id="_JI2IwLgpEe-qZfO4ja4l8w" name="Message28" receiveEvent="_JI2v0bgpEe-qZfO4ja4l8w" sendEvent="_JI2v0LgpEe-qZfO4ja4l8w" signature="_bo6OcLfYEe-gndMT2mHZCQ"/>
+                  <message xmi:type="uml:Message" xmi:id="_JJUp4LgpEe-qZfO4ja4l8w" name="Message33" messageSort="reply" receiveEvent="_JJVQ8bgpEe-qZfO4ja4l8w" sendEvent="_JJVQ8LgpEe-qZfO4ja4l8w" signature="_bo6OcLfYEe-gndMT2mHZCQ"/>
+                </ownedBehavior>
+              </ownedBehavior>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_1kajELdoEe-kCZtvOV9ZHw" name="policeKuendigen"/>
+              <nestedClassifier xmi:type="uml:Actor" xmi:id="_iFIMsLgUEe-F4pIvrHDnmQ" name="User"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_hpsncLKOEe-kF_6Oyf7PhQ" name="PolicenSuchen">
+              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_r9nKcLKSEe-kF_6Oyf7PhQ" client="_hpsncLKOEe-kF_6Oyf7PhQ" supplier="_lBqeQLKNEe-kF_6Oyf7PhQ" contract="_lBqeQLKNEe-kF_6Oyf7PhQ"/>
+              <ownedBehavior xmi:type="uml:Activity" xmi:id="_Bjsf0LgqEe-qZfO4ja4l8w" name="Versicherungspolice erfolgreich suchen und anzeigen" classifierBehavior="_E6kVALgqEe-qZfO4ja4l8w">
+                <ownedBehavior xmi:type="uml:Interaction" xmi:id="_E6kVALgqEe-qZfO4ja4l8w" name="Versicherungspolice erfolgreich suchen und anzeigen">
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_LCUWYLgqEe-qZfO4ja4l8w" name="" type="_JvW5sLgqEe-qZfO4ja4l8w"/>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_YATPwLgqEe-qZfO4ja4l8w" name="" type="_hpsncLKOEe-kF_6Oyf7PhQ"/>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_ogx_gLgqEe-qZfO4ja4l8w" name="" type="_YioVQLKOEe-kF_6Oyf7PhQ"/>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_5-XQsLgqEe-qZfO4ja4l8w" name="" type="_JIVPMLfYEe-gndMT2mHZCQ"/>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_UyhPsLgrEe-qZfO4ja4l8w" name="" type="_TDEVQLKOEe-kF_6Oyf7PhQ"/>
+                  <lifeline xmi:type="uml:Lifeline" xmi:id="_LzgiwLgqEe-qZfO4ja4l8w" name="User" represents="_LCUWYLgqEe-qZfO4ja4l8w" coveredBy="_cibXILgqEe-qZfO4ja4l8w _civgMrgqEe-qZfO4ja4l8w"/>
+                  <lifeline xmi:type="uml:Lifeline" xmi:id="_Y99x4LgqEe-qZfO4ja4l8w" name="PolicenSuchen" represents="_YATPwLgqEe-qZfO4ja4l8w" coveredBy="_cib-MLgqEe-qZfO4ja4l8w _sGilQLgqEe-qZfO4ja4l8w _sG38crgqEe-qZfO4ja4l8w _civgMbgqEe-qZfO4ja4l8w _citrALgqEe-qZfO4ja4l8w"/>
+                  <lifeline xmi:type="uml:Lifeline" xmi:id="_pR9k0LgqEe-qZfO4ja4l8w" name="PoliceManager" represents="_ogx_gLgqEe-qZfO4ja4l8w" coveredBy="_sGjMULgqEe-qZfO4ja4l8w _L90DYLgsEe-qZfO4ja4l8w _sG38cbgqEe-qZfO4ja4l8w _L-ZSMrgsEe-qZfO4ja4l8w _sG2HQLgqEe-qZfO4ja4l8w"/>
+                  <lifeline xmi:type="uml:Lifeline" xmi:id="_WuudsLgrEe-qZfO4ja4l8w" name="Police" represents="_UyhPsLgrEe-qZfO4ja4l8w" coveredBy="_L90qcLgsEe-qZfO4ja4l8w _L-ZSMbgsEe-qZfO4ja4l8w _L-W18LgsEe-qZfO4ja4l8w"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_cibXILgqEe-qZfO4ja4l8w" name="Message5SendEvent" covered="_LzgiwLgqEe-qZfO4ja4l8w" message="_ciawELgqEe-qZfO4ja4l8w"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_cib-MLgqEe-qZfO4ja4l8w" name="Message5ReceiveEvent" covered="_Y99x4LgqEe-qZfO4ja4l8w" message="_ciawELgqEe-qZfO4ja4l8w"/>
+                  <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_citrALgqEe-qZfO4ja4l8w" name="BehaviorExecutionSpecification8" covered="_Y99x4LgqEe-qZfO4ja4l8w" finish="_civgMbgqEe-qZfO4ja4l8w" start="_cib-MLgqEe-qZfO4ja4l8w"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_sGilQLgqEe-qZfO4ja4l8w" name="Message14SendEvent" covered="_Y99x4LgqEe-qZfO4ja4l8w" message="_sGh-MLgqEe-qZfO4ja4l8w"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_sGjMULgqEe-qZfO4ja4l8w" name="Message14ReceiveEvent" covered="_pR9k0LgqEe-qZfO4ja4l8w" message="_sGh-MLgqEe-qZfO4ja4l8w"/>
+                  <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_sG2HQLgqEe-qZfO4ja4l8w" name="BehaviorExecutionSpecification17" covered="_pR9k0LgqEe-qZfO4ja4l8w" finish="_sG38cbgqEe-qZfO4ja4l8w" start="_sGjMULgqEe-qZfO4ja4l8w"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_L90DYLgsEe-qZfO4ja4l8w" name="Message24SendEvent" covered="_pR9k0LgqEe-qZfO4ja4l8w" message="_L9xnILgsEe-qZfO4ja4l8w"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_L90qcLgsEe-qZfO4ja4l8w" name="Message24ReceiveEvent" covered="_WuudsLgrEe-qZfO4ja4l8w" message="_L9xnILgsEe-qZfO4ja4l8w"/>
+                  <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_L-W18LgsEe-qZfO4ja4l8w" name="BehaviorExecutionSpecification27" covered="_WuudsLgrEe-qZfO4ja4l8w" finish="_L-ZSMbgsEe-qZfO4ja4l8w" start="_L90qcLgsEe-qZfO4ja4l8w"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_sG38cbgqEe-qZfO4ja4l8w" name="Message19SendEvent" covered="_pR9k0LgqEe-qZfO4ja4l8w" message="_sG38cLgqEe-qZfO4ja4l8w"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_L-ZSMbgsEe-qZfO4ja4l8w" name="Message29SendEvent" covered="_WuudsLgrEe-qZfO4ja4l8w" message="_L-ZSMLgsEe-qZfO4ja4l8w"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_sG38crgqEe-qZfO4ja4l8w" name="Message19ReceiveEvent" covered="_Y99x4LgqEe-qZfO4ja4l8w" message="_sG38cLgqEe-qZfO4ja4l8w"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_civgMbgqEe-qZfO4ja4l8w" name="Message10SendEvent" covered="_Y99x4LgqEe-qZfO4ja4l8w" message="_civgMLgqEe-qZfO4ja4l8w"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_civgMrgqEe-qZfO4ja4l8w" name="Message10ReceiveEvent" covered="_LzgiwLgqEe-qZfO4ja4l8w" message="_civgMLgqEe-qZfO4ja4l8w"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_L-ZSMrgsEe-qZfO4ja4l8w" name="Message29ReceiveEvent" covered="_pR9k0LgqEe-qZfO4ja4l8w" message="_L-ZSMLgsEe-qZfO4ja4l8w"/>
+                  <message xmi:type="uml:Message" xmi:id="_ciawELgqEe-qZfO4ja4l8w" name="Message5" receiveEvent="_cib-MLgqEe-qZfO4ja4l8w" sendEvent="_cibXILgqEe-qZfO4ja4l8w" signature="_w6UygLdoEe-kCZtvOV9ZHw"/>
+                  <message xmi:type="uml:Message" xmi:id="_civgMLgqEe-qZfO4ja4l8w" name="Versicherungspolice erfolgreich angezeigt" messageSort="reply" receiveEvent="_civgMrgqEe-qZfO4ja4l8w" sendEvent="_civgMbgqEe-qZfO4ja4l8w"/>
+                  <message xmi:type="uml:Message" xmi:id="_sGh-MLgqEe-qZfO4ja4l8w" name="Message14" receiveEvent="_sGjMULgqEe-qZfO4ja4l8w" sendEvent="_sGilQLgqEe-qZfO4ja4l8w" signature="_w6UygLdoEe-kCZtvOV9ZHw"/>
+                  <message xmi:type="uml:Message" xmi:id="_sG38cLgqEe-qZfO4ja4l8w" name="Message19" messageSort="reply" receiveEvent="_sG38crgqEe-qZfO4ja4l8w" sendEvent="_sG38cbgqEe-qZfO4ja4l8w" signature="_7eFFILdoEe-kCZtvOV9ZHw"/>
+                  <message xmi:type="uml:Message" xmi:id="_L9xnILgsEe-qZfO4ja4l8w" name="Message24" receiveEvent="_L90qcLgsEe-qZfO4ja4l8w" sendEvent="_L90DYLgsEe-qZfO4ja4l8w" signature="_A0GSsLfZEe-gndMT2mHZCQ"/>
+                  <message xmi:type="uml:Message" xmi:id="_L-ZSMLgsEe-qZfO4ja4l8w" name="Message29" messageSort="reply" receiveEvent="_L-ZSMrgsEe-qZfO4ja4l8w" sendEvent="_L-ZSMbgsEe-qZfO4ja4l8w" signature="_7eFFILdoEe-kCZtvOV9ZHw"/>
+                </ownedBehavior>
+              </ownedBehavior>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_w6UygLdoEe-kCZtvOV9ZHw" name="policeSuchenPerAttribute"/>
+              <nestedClassifier xmi:type="uml:Actor" xmi:id="_JvW5sLgqEe-qZfO4ja4l8w" name="User"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_iopjALKOEe-kF_6Oyf7PhQ" name="PoliceAendern">
+              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_wk-XILKSEe-kF_6Oyf7PhQ" client="_iopjALKOEe-kF_6Oyf7PhQ" supplier="_gespYLKNEe-kF_6Oyf7PhQ" contract="_gespYLKNEe-kF_6Oyf7PhQ"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_u4ig8LdoEe-kCZtvOV9ZHw" name="policeAendern"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_JIVPMLfYEe-gndMT2mHZCQ" name="PolicedatenPflegen">
+              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_PmBrYLfYEe-gndMT2mHZCQ" client="_JIVPMLfYEe-gndMT2mHZCQ" supplier="_G22UwLfYEe-gndMT2mHZCQ" contract="_G22UwLfYEe-gndMT2mHZCQ"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_ZfMv8LfYEe-gndMT2mHZCQ" name="policeSuchePerAttribute"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_bo6OcLfYEe-gndMT2mHZCQ" name="policeLoeschen"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_dN6dYLfYEe-gndMT2mHZCQ" name="policeAnlegen"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_fcueULfYEe-gndMT2mHZCQ" name="policeAendern"/>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_JUhbYLh4Ee-Ca7TsvuDn6Q" client="__j5NwK-CEe-4nqbYHuLA4w" supplier="_I05fEK-DEe-4nqbYHuLA4w"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Component" xmi:id="_tHVYcLEaEe-G7d-DB-t4QQ" name="Core Produktverwaltung">
+        <packagedElement xmi:type="uml:Package" xmi:id="_yDZCwLEaEe-G7d-DB-t4QQ" name="Außensicht">
+          <packagedElement xmi:type="uml:Class" xmi:id="_v2ZSMLGHEe-9XusasB5PEg" name="ProduktTO">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_DmGXALGIEe-9XusasB5PEg" name="produktnummer">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_JvWNMLGIEe-9XusasB5PEg" name="bezeichnung">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_MEjKALGIEe-9XusasB5PEg" name="beschreibung">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_OC4e8LGIEe-9XusasB5PEg" name="bedingung">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_iB3bYLdmEe-kCZtvOV9ZHw" name="getProduktnummer"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_i9_scLdmEe-kCZtvOV9ZHw" name="getBezeichnung"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_jzWAELdmEe-kCZtvOV9ZHw" name="getBeschreibung"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_kvk-0LdmEe-kCZtvOV9ZHw" name="getBedingung"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_aKRSELGJEe-9XusasB5PEg" name="IProduktLoeschen"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_dhlzMLGJEe-9XusasB5PEg" name="IProduktAendern"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_mOOMILGJEe-9XusasB5PEg" name="IProduktSuchen"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_obD3ILGJEe-9XusasB5PEg" name="IProduktverwaltungFactory" visibility="public"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_FceS0LdnEe-kCZtvOV9ZHw" name="IProduktAnlegen"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_ojYWQLfXEe-gndMT2mHZCQ" name="IProduktdatenPflegen"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_znB_wLEaEe-G7d-DB-t4QQ" name="Innensicht">
+          <packagedElement xmi:type="uml:Package" xmi:id="_61OEwLEaEe-G7d-DB-t4QQ" name="Technisches Datenmodell">
+            <packagedElement xmi:type="uml:Class" xmi:id="_D4sqcLGqEe-9XusasB5PEg" name="Produkt">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_XvsW0Lf8Ee-F4pIvrHDnmQ" name="produktnummer">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_a68x4Lf8Ee-F4pIvrHDnmQ" name="bezeichnung">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_cXaI0Lf8Ee-F4pIvrHDnmQ" name="beschreibung">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_eiQPwLf8Ee-F4pIvrHDnmQ" name="bedingungen">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedAttribute>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="__ndgcLfYEe-gndMT2mHZCQ" name="getProduktdaten"/>
+            </packagedElement>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_8ynlkLEaEe-G7d-DB-t4QQ" name="Use Cases">
+            <packagedElement xmi:type="uml:Class" xmi:id="_wkgc8LGpEe-9XusasB5PEg" name="ProduktManager" visibility="public">
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_ir9acLfYEe-gndMT2mHZCQ" name="LiefereAlleProdukte"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_jR2LYLf8Ee-F4pIvrHDnmQ" name="produktEntfernen">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_qj7VQLglEe-F4pIvrHDnmQ" name="ProduktEntity" type="_D4sqcLGqEe-9XusasB5PEg"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_69sV0LghEe-F4pIvrHDnmQ" name="produktSuchePerNr"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_ylv78LGpEe-9XusasB5PEg" name="ProduktverwaltungFactory">
+              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_4EP4ALdnEe-kCZtvOV9ZHw" client="_ylv78LGpEe-9XusasB5PEg" supplier="_obD3ILGJEe-9XusasB5PEg" contract="_obD3ILGJEe-9XusasB5PEg"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_GgYvULGzEe-9XusasB5PEg" name="ProduktAnlegen">
+              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_w7uWILdnEe-kCZtvOV9ZHw" client="_GgYvULGzEe-9XusasB5PEg" supplier="_FceS0LdnEe-kCZtvOV9ZHw" contract="_FceS0LdnEe-kCZtvOV9ZHw"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_jK1jsLdoEe-kCZtvOV9ZHw" name="produktAnlegen"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_JmY28LGzEe-9XusasB5PEg" name="ProduktLoeschen">
+              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_yScRcLdnEe-kCZtvOV9ZHw" client="_JmY28LGzEe-9XusasB5PEg" supplier="_aKRSELGJEe-9XusasB5PEg" contract="_aKRSELGJEe-9XusasB5PEg"/>
+              <ownedBehavior xmi:type="uml:Activity" xmi:id="_QoCyILgREe-F4pIvrHDnmQ" name="ProduktErfolgreichLoeschen" classifierBehavior="_SuUiILgREe-F4pIvrHDnmQ">
+                <ownedBehavior xmi:type="uml:Interaction" xmi:id="_SuUiILgREe-F4pIvrHDnmQ" name="ProduktErfolgreichLoeschen">
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_oamBULgREe-F4pIvrHDnmQ" name="" type="_XNCJILgREe-F4pIvrHDnmQ"/>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_1r0m0LgREe-F4pIvrHDnmQ" name="" type="_l52skLGzEe-9XusasB5PEg"/>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_eCAncbgSEe-F4pIvrHDnmQ" name="" type="_wkgc8LGpEe-9XusasB5PEg"/>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_pk8fILgSEe-F4pIvrHDnmQ" name="" type="_l52skLGzEe-9XusasB5PEg"/>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_eIiQwLgTEe-F4pIvrHDnmQ" name="" type="_JmY28LGzEe-9XusasB5PEg"/>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_m_ax4LgTEe-F4pIvrHDnmQ" name="" type="_qWt8ILfXEe-gndMT2mHZCQ"/>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_wLanYLgTEe-F4pIvrHDnmQ" name="" type="_D4sqcLGqEe-9XusasB5PEg"/>
+                  <lifeline xmi:type="uml:Lifeline" xmi:id="_prrOsLgREe-F4pIvrHDnmQ" name="User" represents="_oamBULgREe-F4pIvrHDnmQ" coveredBy="_OMvE8LgfEe-F4pIvrHDnmQ _ONM_AbgfEe-F4pIvrHDnmQ"/>
+                  <lifeline xmi:type="uml:Lifeline" xmi:id="_fPMMQLgSEe-F4pIvrHDnmQ" name="ProduktManager" represents="_eCAncbgSEe-F4pIvrHDnmQ" coveredBy="_7fCIULghEe-F4pIvrHDnmQ _7fcYALghEe-F4pIvrHDnmQ _s4zXYLgkEe-F4pIvrHDnmQ _s4yJQLgkEe-F4pIvrHDnmQ _00cKgLgfEe-F4pIvrHDnmQ _U7YfgLglEe-F4pIvrHDnmQ _s4z-cLgkEe-F4pIvrHDnmQ _7fZUsLghEe-F4pIvrHDnmQ"/>
+                  <lifeline xmi:type="uml:Lifeline" xmi:id="_tY1AcLgSEe-F4pIvrHDnmQ" name="ProduktSuchen" represents="_1r0m0LgREe-F4pIvrHDnmQ" coveredBy="_OMwTELgfEe-F4pIvrHDnmQ _7fBhQLghEe-F4pIvrHDnmQ _7fc_ELghEe-F4pIvrHDnmQ _00Ch4LgfEe-F4pIvrHDnmQ _U7ZtoLglEe-F4pIvrHDnmQ _ONM_ALgfEe-F4pIvrHDnmQ _ONJ7sLgfEe-F4pIvrHDnmQ"/>
+                  <lifeline xmi:type="uml:Lifeline" xmi:id="_pSGmMLgTEe-F4pIvrHDnmQ" name="ProduktdatenPflegen" represents="_m_ax4LgTEe-F4pIvrHDnmQ" coveredBy="_00DI8LgfEe-F4pIvrHDnmQ _00bjcbgfEe-F4pIvrHDnmQ _00ZuQLgfEe-F4pIvrHDnmQ"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_OMvE8LgfEe-F4pIvrHDnmQ" name="Message14SendEvent" covered="_prrOsLgREe-F4pIvrHDnmQ" message="_OMtPwLgfEe-F4pIvrHDnmQ"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_OMwTELgfEe-F4pIvrHDnmQ" name="Message14ReceiveEvent" covered="_tY1AcLgSEe-F4pIvrHDnmQ" message="_OMtPwLgfEe-F4pIvrHDnmQ"/>
+                  <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_ONJ7sLgfEe-F4pIvrHDnmQ" name="BehaviorExecutionSpecification17" covered="_tY1AcLgSEe-F4pIvrHDnmQ" finish="_ONM_ALgfEe-F4pIvrHDnmQ" start="_OMwTELgfEe-F4pIvrHDnmQ"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_7fBhQLghEe-F4pIvrHDnmQ" name="Message28SendEvent" covered="_tY1AcLgSEe-F4pIvrHDnmQ" message="_7fA6MLghEe-F4pIvrHDnmQ"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_7fCIULghEe-F4pIvrHDnmQ" name="Message28ReceiveEvent" covered="_fPMMQLgSEe-F4pIvrHDnmQ" message="_7fA6MLghEe-F4pIvrHDnmQ"/>
+                  <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_7fZUsLghEe-F4pIvrHDnmQ" name="BehaviorExecutionSpecification31" covered="_fPMMQLgSEe-F4pIvrHDnmQ" finish="_7fcYALghEe-F4pIvrHDnmQ" start="_7fCIULghEe-F4pIvrHDnmQ"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_7fcYALghEe-F4pIvrHDnmQ" name="Message33SendEvent" covered="_fPMMQLgSEe-F4pIvrHDnmQ" message="_7fbw8LghEe-F4pIvrHDnmQ"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_7fc_ELghEe-F4pIvrHDnmQ" name="Message33ReceiveEvent" covered="_tY1AcLgSEe-F4pIvrHDnmQ" message="_7fbw8LghEe-F4pIvrHDnmQ"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_00Ch4LgfEe-F4pIvrHDnmQ" name="Message21SendEvent" covered="_tY1AcLgSEe-F4pIvrHDnmQ" message="_00B60LgfEe-F4pIvrHDnmQ"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_00DI8LgfEe-F4pIvrHDnmQ" name="Message21ReceiveEvent" covered="_pSGmMLgTEe-F4pIvrHDnmQ" message="_00B60LgfEe-F4pIvrHDnmQ"/>
+                  <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_00ZuQLgfEe-F4pIvrHDnmQ" name="BehaviorExecutionSpecification24" covered="_pSGmMLgTEe-F4pIvrHDnmQ" finish="_00bjcbgfEe-F4pIvrHDnmQ" start="_00DI8LgfEe-F4pIvrHDnmQ"/>
+                  <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_s4zXYLgkEe-F4pIvrHDnmQ" name="BehaviorExecutionSpecification33Start" covered="_fPMMQLgSEe-F4pIvrHDnmQ" execution="_s4yJQLgkEe-F4pIvrHDnmQ"/>
+                  <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_s4yJQLgkEe-F4pIvrHDnmQ" name="BehaviorExecutionSpecification33" covered="_fPMMQLgSEe-F4pIvrHDnmQ" finish="_s4z-cLgkEe-F4pIvrHDnmQ" start="_s4zXYLgkEe-F4pIvrHDnmQ"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_00bjcbgfEe-F4pIvrHDnmQ" name="Message26SendEvent" covered="_pSGmMLgTEe-F4pIvrHDnmQ" message="_00bjcLgfEe-F4pIvrHDnmQ"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_00cKgLgfEe-F4pIvrHDnmQ" name="Message26ReceiveEvent" covered="_fPMMQLgSEe-F4pIvrHDnmQ" message="_00bjcLgfEe-F4pIvrHDnmQ"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_U7YfgLglEe-F4pIvrHDnmQ" name="Message36SendEvent" covered="_fPMMQLgSEe-F4pIvrHDnmQ" message="_U7XRYLglEe-F4pIvrHDnmQ"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_U7ZtoLglEe-F4pIvrHDnmQ" name="Message36ReceiveEvent" covered="_tY1AcLgSEe-F4pIvrHDnmQ" message="_U7XRYLglEe-F4pIvrHDnmQ"/>
+                  <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_s4z-cLgkEe-F4pIvrHDnmQ" name="BehaviorExecutionSpecification33Finish" covered="_fPMMQLgSEe-F4pIvrHDnmQ" execution="_s4yJQLgkEe-F4pIvrHDnmQ"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ONM_ALgfEe-F4pIvrHDnmQ" name="Message19SendEvent" covered="_tY1AcLgSEe-F4pIvrHDnmQ" message="_ONMX8LgfEe-F4pIvrHDnmQ"/>
+                  <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ONM_AbgfEe-F4pIvrHDnmQ" name="Message19ReceiveEvent" covered="_prrOsLgREe-F4pIvrHDnmQ" message="_ONMX8LgfEe-F4pIvrHDnmQ"/>
+                  <message xmi:type="uml:Message" xmi:id="_OMtPwLgfEe-F4pIvrHDnmQ" name="produktSuchenUeberProduktnumer" receiveEvent="_OMwTELgfEe-F4pIvrHDnmQ" sendEvent="_OMvE8LgfEe-F4pIvrHDnmQ" signature="_dRQhMLdoEe-kCZtvOV9ZHw"/>
+                  <message xmi:type="uml:Message" xmi:id="_ONMX8LgfEe-F4pIvrHDnmQ" name="ProduktErfolgreichGeloescht" messageSort="reply" receiveEvent="_ONM_AbgfEe-F4pIvrHDnmQ" sendEvent="_ONM_ALgfEe-F4pIvrHDnmQ"/>
+                  <message xmi:type="uml:Message" xmi:id="_00B60LgfEe-F4pIvrHDnmQ" name="Message21" receiveEvent="_00DI8LgfEe-F4pIvrHDnmQ" sendEvent="_00Ch4LgfEe-F4pIvrHDnmQ" signature="_ftdf0LgWEe-F4pIvrHDnmQ"/>
+                  <message xmi:type="uml:Message" xmi:id="_00bjcLgfEe-F4pIvrHDnmQ" messageSort="reply" receiveEvent="_00cKgLgfEe-F4pIvrHDnmQ" sendEvent="_00bjcbgfEe-F4pIvrHDnmQ" signature="_wFakULfXEe-gndMT2mHZCQ"/>
+                  <message xmi:type="uml:Message" xmi:id="_7fA6MLghEe-F4pIvrHDnmQ" name="Message28" receiveEvent="_7fCIULghEe-F4pIvrHDnmQ" sendEvent="_7fBhQLghEe-F4pIvrHDnmQ" signature="_69sV0LghEe-F4pIvrHDnmQ"/>
+                  <message xmi:type="uml:Message" xmi:id="_7fbw8LghEe-F4pIvrHDnmQ" name="Produkt" messageSort="reply" receiveEvent="_7fc_ELghEe-F4pIvrHDnmQ" sendEvent="_7fcYALghEe-F4pIvrHDnmQ"/>
+                  <message xmi:type="uml:Message" xmi:id="_U7XRYLglEe-F4pIvrHDnmQ" name="Message36" messageSort="reply" receiveEvent="_U7ZtoLglEe-F4pIvrHDnmQ" sendEvent="_U7YfgLglEe-F4pIvrHDnmQ" signature="_jR2LYLf8Ee-F4pIvrHDnmQ"/>
+                </ownedBehavior>
+              </ownedBehavior>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_gqcqkLdoEe-kCZtvOV9ZHw" name="produktLoeschen"/>
+              <nestedClassifier xmi:type="uml:Actor" xmi:id="_XNCJILgREe-F4pIvrHDnmQ" name="User"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_l52skLGzEe-9XusasB5PEg" name="ProduktSuchen">
+              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_5qmx0LdnEe-kCZtvOV9ZHw" client="_l52skLGzEe-9XusasB5PEg" supplier="_mOOMILGJEe-9XusasB5PEg" contract="_mOOMILGJEe-9XusasB5PEg"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_dRQhMLdoEe-kCZtvOV9ZHw" name="produktSucheUeberProduktnummer"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_nwmLwLGzEe-9XusasB5PEg" name="ProduktAendern">
+              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_5IXncLdnEe-kCZtvOV9ZHw" client="_nwmLwLGzEe-9XusasB5PEg" supplier="_dhlzMLGJEe-9XusasB5PEg" contract="_dhlzMLGJEe-9XusasB5PEg"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_aFuZULdoEe-kCZtvOV9ZHw" name="produktAendern"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_qWt8ILfXEe-gndMT2mHZCQ" name="ProduktdatenPflegen">
+              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_s8hgwLfXEe-gndMT2mHZCQ" client="_qWt8ILfXEe-gndMT2mHZCQ" supplier="_ojYWQLfXEe-gndMT2mHZCQ" contract="_ojYWQLfXEe-gndMT2mHZCQ"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_wFakULfXEe-gndMT2mHZCQ" name="produktLoeschen">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_eO2O8LglEe-F4pIvrHDnmQ" name="Produktnummer">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_xQPYsLfXEe-gndMT2mHZCQ" name="produktSuchenUeberProduktnummer"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_yNymELfXEe-gndMT2mHZCQ" name="produktAendern"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_zt-mcLfXEe-gndMT2mHZCQ" name="produktAnlegen"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_ftdf0LgWEe-F4pIvrHDnmQ" name="istLoeschbar">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_auaVcLgiEe-F4pIvrHDnmQ" name="ProduktEntity" type="_D4sqcLGqEe-9XusasB5PEg"/>
+              </ownedOperation>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_Iykk4Lh4Ee-Ca7TsvuDn6Q" client="_tHVYcLEaEe-G7d-DB-t4QQ" supplier="_Kl2E4LEbEe-G7d-DB-t4QQ"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_NgxHMK9VEe-4nqbYHuLA4w" name="Persistence">
+      <packagedElement xmi:type="uml:Component" xmi:id="_I05fEK-DEe-4nqbYHuLA4w" name="Dh Policeverwaltung">
+        <packagedElement xmi:type="uml:Package" xmi:id="_rZOn0LKOEe-kF_6Oyf7PhQ" name="Außensicht">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_wnqbkLKOEe-kF_6Oyf7PhQ" name="IPoliceverwaltungDAO"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_tCoOkLKOEe-kF_6Oyf7PhQ" name="Innensicht">
+          <packagedElement xmi:type="uml:Class" xmi:id="_2bSnELKOEe-kF_6Oyf7PhQ" name="PoliceverwaltungDAO">
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_MP3GoLKPEe-kF_6Oyf7PhQ" client="_2bSnELKOEe-kF_6Oyf7PhQ" supplier="_wnqbkLKOEe-kF_6Oyf7PhQ" contract="_wnqbkLKOEe-kF_6Oyf7PhQ"/>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Component" xmi:id="_Kl2E4LEbEe-G7d-DB-t4QQ" name="Dh Produktverwaltung">
+        <packagedElement xmi:type="uml:Package" xmi:id="_OsXOULEbEe-G7d-DB-t4QQ" name="Außensicht">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_VCRngLEbEe-G7d-DB-t4QQ" name="IProduktverwaltungDAO"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_Qr75YLEbEe-G7d-DB-t4QQ" name="Innensicht">
+          <packagedElement xmi:type="uml:Class" xmi:id="_YcE04LEbEe-G7d-DB-t4QQ" name="ProduktverwaltungDAO">
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_XxthkLdjEe-kCZtvOV9ZHw" client="_YcE04LEbEe-G7d-DB-t4QQ" supplier="_VCRngLEbEe-G7d-DB-t4QQ" contract="_VCRngLEbEe-G7d-DB-t4QQ"/>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Model" href="../Gruppe04Versicherungsprojekt03/Gruppe04Versicherungsprojekt03.uml#_3p7DsLDpEe-sf8zLLQ-LVQ"/>
+  </uml:Model>
+  <Entwurfsmodell_Profil:Entity xmi:id="_vRIVgLh4Ee-Ca7TsvuDn6Q" base_Class="_TDEVQLKOEe-kF_6Oyf7PhQ"/>
+</xmi:XMI>
