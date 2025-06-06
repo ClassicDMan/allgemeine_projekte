@@ -1,0 +1,95 @@
+"Main Klasse
+
+PARAMETERS: lv_zahl1 TYPE i DEFAULT 20,
+            lv_zahl2 TYPE i DEFAULT 5,
+            lv_op    TYPE c LENGTH 1 DEFAULT '+'.
+
+DATA: lv_erg TYPE i.
+
+
+CASE lv_op.
+  WHEN '+'.
+    "F +
+    CALL FUNCTION 'Z_018_03_ADDITION'
+      EXPORTING
+        operand_1 = lv_zahl1
+        operand_2 = lv_zahl2
+      IMPORTING
+        ergebnis  = lv_erg.
+
+
+  WHEN '-'.
+    "F -
+    CALL FUNCTION 'Z_018_03_SUBTRAKTION'
+      EXPORTING
+        operand_1 = lv_zahl1
+        operand_2 = lv_zahl2
+      IMPORTING
+        ergebnis  = lv_erg.
+
+  WHEN '*'.
+    "F *
+    CALL FUNCTION 'Z_018_03_MULTIPLIKATION'
+      EXPORTING
+        operand_1 = lv_zahl1
+        operand_2 = lv_zahl2
+      IMPORTING
+        ergebnis  = lv_erg.
+
+  WHEN '/'.
+    "F /
+    CALL FUNCTION 'Z_018_03_DIVISION'
+      EXPORTING
+        operand_1     = lv_zahl1
+        operand_2     = lv_zahl2
+      IMPORTING
+        ergebnis      = lv_erg
+      EXCEPTIONS
+        nullexception = 1
+        OTHERS        = 2.
+
+  WHEN '%'.
+    "F %
+    CALL FUNCTION 'Z_018_03_MODULO'
+      EXPORTING
+        operand_1 = lv_zahl1
+        operand_2 = lv_zahl2
+      IMPORTING
+        ergebnis  = lv_erg.
+
+  WHEN OTHERS.
+ENDCASE.
+
+
+
+" Funktion 1:
+ERGEBNIS = operand_1 + operand_2.
+WRITE:/, 'das ERG ist: ', ergebnis.
+
+
+" Funktion 2:
+ERGEBNIS = operand_1 - operand_2.
+WRITE:/, 'das ERG ist: ', ergebnis.
+
+
+" Funktion 3:
+ERGEBNIS = operand_1 * operand_2.
+WRITE:/, 'das ERG ist: ', ergebnis.
+
+
+" Funktion 4:
+IF operand_2 = 0.
+  RAISE nullexception.
+  ELSE.
+    ERGEBNIS = operand_1 / operand_2.
+    WRITE:/, 'das ERGEBNIS ist: ', ergebnis.
+ENDIF.
+
+
+" Funktion 5:
+ERGEBNIS = operand_1 MOD operand_2.
+WRITE:/, 'das ERG ist: ', ergebnis.
+
+
+
+

@@ -1,0 +1,57 @@
+CLASS lcl_car  DEFINITION.
+  PUBLIC SECTION.
+    METHODS: print_hello_world,
+      prit_andere, constructor.
+
+    CLASS-METHODS: get_no_of_cars.
+    DATA: lv_gear  TYPE i.
+
+  PRIVATE SECTION.
+    DATA: lv_color TYPE c.
+
+    CLASS-DATA: gv_no_of_cars TYPE i.
+
+ENDCLASS.
+
+CLASS lcl_car IMPLEMENTATION.
+  METHOD: constructor.
+    gv_no_of_cars = gv_no_of_cars + 1.
+    WRITE: gv_no_of_cars.
+  ENDMETHOD.
+
+  METHOD: print_hello_world.
+    WRITE: 'Hello World'.
+  ENDMETHOD.
+
+  METHOD: prit_andere.
+  ENDMETHOD.
+
+
+  METHOD: get_no_of_cars.
+    WRITE: gv_no_of_cars.
+  ENDMETHOD.
+
+ENDCLASS.
+
+"Klassische Variable
+DATA: lv_farbe TYPE c LENGTH 10.
+
+"Referenzvariable
+DATA: lref_car1 TYPE REF TO lcl_car,
+      lref_car2 TYPE REF TO lcl_car.
+
+START-OF-SELECTION.
+
+  lref_car1 = NEW lcl_car( ).
+  CREATE OBJECT lref_car2.
+
+  "Instnaz-Attrib
+  lref_car1->lv_gear = 5.
+  "Instanzmethode
+  lref_car1->print_hello_world( ).
+  WRITE: /, lref_car1->lv_gear.
+
+  "Statische Methode
+  CALL METHOD lcl_car=>get_no_of_cars( ).
+  "Instanz-Methode
+  lref_car1->get_no_of_cars( ).

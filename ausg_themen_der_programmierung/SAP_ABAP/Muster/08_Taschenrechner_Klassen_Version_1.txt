@@ -1,0 +1,99 @@
+
+" Version 1
+
+PARAMETERS: lv_zahl1 TYPE i DEFAULT 25,
+            lv_zahl2 TYPE i DEFAULT 5,
+            lv_op    TYPE c LENGTH 1 DEFAULT '+'.
+
+DATA: lv_erg TYPE i.
+
+
+CASE lv_op.
+  WHEN '+'.
+    "M +
+    CALL METHOD z018_tag3_tasch_rech_klasse=>get_addition
+      EXPORTING
+        lv_operand_1 = lv_zahl1
+        lv_operand_2 = lv_zahl2
+      IMPORTING
+        lv_ergebnis  = lv_erg.
+
+
+
+  WHEN '-'.
+    "M -
+    CALL METHOD z018_tag3_tasch_rech_klasse=>get_subtraktion
+      EXPORTING
+        lv_operand_1 = lv_zahl1
+        lv_operand_2 = lv_zahl2
+      IMPORTING
+        lv_ergebnis  = lv_erg.
+
+
+  WHEN '*'.
+    "M *
+    CALL METHOD z018_tag3_tasch_rech_klasse=>get_multiplikation
+      EXPORTING
+        lv_operand_1 = lv_zahl1
+        lv_operand_2 = lv_zahl2
+      IMPORTING
+        lv_ergebnis  = lv_erg.
+
+
+  WHEN '/'.
+    "M /
+    CALL METHOD z018_tag3_tasch_rech_klasse=>get_division
+      EXPORTING
+        lv_operand_1  = lv_zahl1
+        lv_operand_2  = lv_zahl2
+      IMPORTING
+        lv_ergebnis   = lv_erg
+      EXCEPTIONS
+        nullexception = 1
+        OTHERS        = 2.
+
+
+  WHEN '%'.
+    "M %
+    CALL METHOD z018_tag3_tasch_rech_klasse=>get_moudulo
+      EXPORTING
+        lv_operand_1 = lv_zahl1
+        lv_operand_2 = lv_zahl2
+      IMPORTING
+        lv_ergebnis  = lv_erg.
+
+
+  WHEN OTHERS.
+ENDCASE.
+
+
+"METHODS:
+
+ method GET_ADDITION.
+    lv_ergebnis = lv_operand_1 + lv_operand_2.
+    WRITE:/, 'das ERG ist: ', lv_ergebnis.
+  endmethod.
+
+ method GET_ADDITION.
+    lv_ergebnis = lv_operand_1 - lv_operand_2.
+    WRITE:/, 'das ERG ist: ', lv_ergebnis.
+  endmethod.
+
+ method GET_ADDITION.
+    lv_ergebnis = lv_operand_1 * lv_operand_2.
+    WRITE:/, 'das ERG ist: ', lv_ergebnis.
+  endmethod.
+
+  METHOD get_division.
+    IF lv_operand_2 = 0.
+      RAISE nullexception.
+    ELSE.
+    lv_ergebnis = lv_operand_1 / lv_operand_2.
+    WRITE:/, 'das ERG ist: ', lv_ergebnis.
+    ENDIF.
+  ENDMETHOD.
+
+ method GET_ADDITION.
+    lv_ergebnis = lv_operand_1 MOD lv_operand_2.
+    WRITE:/, 'das ERG ist: ', lv_ergebnis.
+  endmethod.

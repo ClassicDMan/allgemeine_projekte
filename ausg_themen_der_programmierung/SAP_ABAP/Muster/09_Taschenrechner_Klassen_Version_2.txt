@@ -1,0 +1,96 @@
+" Version 1:
+
+DATA: p_zahl1 TYPE d,
+
+      p_zahl2 TYPE d,
+
+      lv_erg  TYPE d.
+
+CLASS lcl_rechner DEFINITION.
+
+  PUBLIC SECTION.
+
+    METHODS: add IMPORTING im_zahl1 TYPE d
+
+                           im_zahl2 TYPE d
+
+                 EXPORTING ex_erg   TYPE d.
+ENDCLASS.
+
+CLASS lcl_rechner IMPLEMENTATION.
+
+  METHOD: add.
+
+    ex_erg = im_zahl1 + im_zahl2.
+
+  ENDMETHOD.
+ENDCLASS.
+
+DATA: ref_tr type ref to lcl_rechner.
+
+START-OF-SELECTION.
+
+
+p_zahl1 = '12.5'.
+
+p_zahl2 = '14.2'.
+
+
+
+ref_tr = new lcl_rechner( ).
+ref_tr->add(
+
+  EXPORTING
+
+    im_zahl1 = p_zahl1
+
+    im_zahl2 = p_zahl2
+
+  IMPORTING
+
+    ex_erg   = lv_erg
+).
+
+WRITE: /, 'Ergebnis ist', lv_erg.
+
+
+
+
+
+"Version2
+TYPES: ty_zahl type decfloat34."p DECIMALS 2. " decfloat34.
+
+PARAMETERS: p_zahl1 TYPE ty_zahl DEFAULT '11.99',
+      p_zahl2 TYPE ty_zahl  DEFAULT '1.99'.
+
+DATA: lv_erg TYPE ty_zahl.
+
+CLASS lcl_rechner DEFINITION.
+  PUBLIC SECTION.
+    METHODS: add IMPORTING im_zahl1 TYPE ty_zahl
+                           im_zahl2 TYPE ty_zahl
+                 EXPORTING ex_erg   TYPE ty_zahl.
+ENDCLASS.
+
+CLASS lcl_rechner IMPLEMENTATION.
+  METHOD: add.
+    ex_erg = im_zahl1 + im_zahl2.
+  ENDMETHOD.
+ENDCLASS.
+
+DATA: ref_tr type ref to lcl_rechner.
+
+START-OF-SELECTION.
+
+ref_tr = new lcl_rechner( ).
+ref_tr->add(
+  EXPORTING
+    im_zahl1 = p_zahl1
+    im_zahl2 = p_zahl2
+  IMPORTING
+    ex_erg   = lv_erg
+).
+
+WRITE: /, 'Ergebnis ist', lv_erg.
+
+

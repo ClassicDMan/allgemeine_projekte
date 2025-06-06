@@ -1,0 +1,108 @@
+"Include Datei:
+
+CLASS lcl_car DEFINITION.
+  PUBLIC SECTION.
+    DATA: gv_gear  TYPE i.
+    METHODS:  constructor IMPORTING im_name TYPE string,
+      print,
+      set_colour IMPORTING im_colour TYPE c,
+      set_gear IMPORTING im_gear TYPE i,
+      get_attributes EXPORTING ex_name TYPE string ex_colour TYPE c ex_gear TYPE i,
+      rv_colour RETURNING VALUE(result) TYPE string.
+
+    CLASS-METHODS: get_no_of_cars.
+
+  PRIVATE SECTION.
+    DATA: lv_name TYPE string.
+    DATA: lv_colour TYPE c LENGTH 10.
+
+    CLASS-DATA: gv_no_of_cars TYPE i.
+
+ENDCLASS.
+
+CLASS lcl_car IMPLEMENTATION.
+  METHOD: constructor.
+    lv_name = im_name.
+    gv_no_of_cars = gv_no_of_cars + 1.
+    WRITE: /, 'Instanz erstellt...: ', im_name.
+  ENDMETHOD.
+
+  METHOD: set_colour.
+    me->lv_colour = im_colour.
+    WRITE:/, 'Set Farbe...: ', lv_name, im_colour .
+  ENDMETHOD.
+
+  METHOD: set_gear.
+    me->gv_gear = im_gear.
+    WRITE:/, 'Set Gear...: ', lv_name, im_gear.
+  ENDMETHOD.
+
+  METHOD: print.
+    WRITE: /, 'Methode PRINT_', ' Name: ', lv_name, 'Farbe: ', lv_colour, ' Schaltung: ', gv_gear.
+  ENDMETHOD.
+
+  METHOD: get_attributes.
+    ex_name = lv_name.
+    ex_colour = lv_colour.
+    ex_gear = gv_gear.
+  ENDMETHOD.
+
+  METHOD: rv_colour.
+    result = me->lv_colour.
+    WRITE:/, 'Return Farbe...: ', lv_colour.
+  ENDMETHOD.
+
+  METHOD: get_no_of_cars.
+    WRITE: gv_no_of_cars.
+  ENDMETHOD.
+
+ENDCLASS.
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"Klasse (Main):
+
+INCLUDE ------.
+
+"Klassische Variable
+DATA: lv_farbe TYPE c LENGTH 10.
+
+"Referenzvariable
+DATA: lref_car TYPE REF TO lcl_car,
+      itab     TYPE TABLE OF REF TO lcl_car.
+
+START-OF-SELECTION.
+
+  lref_car = NEW lcl_car( im_name = 'Porsche' ).
+  lref_car->set_colour( im_colour = 'Schwarz').
+
+  "Instnaz-Attrib
+  lref_car->gv_gear = 5.
+  "Instanzmethode
+  lref_car->get_no_of_cars( ).
+  "globale statische Methode
+  lcl_car=>get_no_of_cars( ).
+
+  APPEND lref_car TO itab.
+
+  CREATE OBJECT lref_car
+    EXPORTING
+      im_name = 'Mercedes'.
+  lref_car->set_colour( im_colour = 'Gruen' ).
+  APPEND lref_car TO itab.
+
+  "Statische Methode
+  CALL METHOD lcl_car=>get_no_of_cars( ).
+  "Instanz-Methode
+  WRITE: 'Anzahl Autos: '.
+  lref_car->get_no_of_cars( ).
+
+  LOOP AT itab INTO lref_car.
+    lref_car->print( ).
+    WRITE: /, 'PRINT: ', lref_car->rv_colour( ).
+  ENDLOOP.

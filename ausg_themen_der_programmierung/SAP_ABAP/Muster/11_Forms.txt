@@ -1,0 +1,30 @@
+TABLES: spfli.
+
+*SELECT * FROM spfli.
+*  WRITE:/, sy-dbcnt, spfli-airpfrom, spfli-cityfrom , spfli-airpto.
+*ENDSELECT.
+
+*WRITE: sy-subrc.
+
+DATA: itab TYPE TABLE OF spfli,
+      wa   LIKE LINE OF itab.
+
+FORM var3.
+  SELECT * FROM spfli INTO TABLE itab.
+    APPEND wa TO itab.
+  ENDSELECT.
+ENDFORM.
+
+FORM var2.
+  SELECT * FROM spfli INTO TABLE itab.
+    LOOP AT itab INTO wa.
+      WRITE: /, sy-tabix, wa-carrid, wa-cityfrom, wa-cityto.
+    ENDLOOP.
+  ENDSELECT.
+ENDFORM.
+
+FORM var1.
+  SELECT * FROM spfli INTO wa.
+    WRITE: /, sy-dbcnt, wa-carrid, wa-cityfrom, wa-cityto.
+  ENDSELECT.
+ENDFORM.

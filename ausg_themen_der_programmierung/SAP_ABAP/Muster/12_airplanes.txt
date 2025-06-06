@@ -1,0 +1,71 @@
+CLASS lcl_airplane_02 DEFINITION.
+  PUBLIC SECTION.
+
+    METHODS: set_attributes IMPORTING im_name      TYPE string
+                                      im_planetype TYPE sTRING,
+      get_attributes.
+
+
+  PRIVATE SECTION.
+
+    DATA: gv_name      TYPE string,
+          gv_planetype TYPE string.
+
+ENDCLASS.
+
+
+CLASS lcl_airplane_02 IMPLEMENTATION.
+
+  METHOD set_attributes.
+    gv_name = im_name.
+    gv_planetype = im_planetype.
+  ENDMETHOD.
+
+  METHOD get_attributes.
+    WRITE:/, 'Flight name: ', gv_name,
+    / 'Flight type: ', gv_planetype.
+  ENDMETHOD.
+
+ENDCLASS.
+
+
+DATA: r_plane TYPE REF TO lcl_airplane_02,
+      it_plane_list TYPE TABLE OF REF TO lcl_airplane_02.
+
+START-OF-SELECTION.
+
+CREATE OBJECT r_plane.
+r_plane->set_attributes(
+  EXPORTING
+    im_name = 'Hamburg'
+    im_planetype = 'Boeing 737' ).
+APPEND r_plane TO it_plane_list.
+
+CREATE OBJECT r_plane.
+r_plane->set_attributes(
+  EXPORTING
+    im_name = 'Munich'
+    im_planetype = 'irbus 380' ).
+APPEND r_plane TO it_plane_list.
+
+LOOP AT it_plane_list INTO r_plane.
+  r_plane->get_attributes( ).
+  ENDLOOP.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

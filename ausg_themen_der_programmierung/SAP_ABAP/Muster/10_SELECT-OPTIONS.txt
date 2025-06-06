@@ -1,0 +1,32 @@
+DATA: itab_scarr TYPE TABLE OF scarr,
+      wa_scarr   LIKE LINE OF itab_scarr.
+
+
+PARAMETERS: pa_srrid TYPE scarr-carrid.
+
+*Hier SO-Merkmal soll als "Fremdschlüssel" das VARRID-Merkmal der Tabelle SCARR haben!
+SELECT-OPTIONS: s_carrid FOR wa_scarr-carrid.
+
+INITIALIZATION.
+
+s_carrid-sign = 'I'. "I entspricht Including, E entsoricht Excluding
+s_carrid-option = 'BT'. "BT = Between, EQ = Equal, CP = ContainsPatter L*
+s_carrid-low = 'AA'.
+s_carrid-high = 'AZ'.
+
+append s_carrid TO s_carrid.
+
+s_carrid-sign = 'I'. "I entspricht Including, E entsoricht Excluding
+s_carrid-option = 'BT'. "BT = Between, EQ = Equal, CP = ContainsPatter L*
+s_carrid-low = 'LL'.
+s_carrid-high = 'ZZ'.
+
+append s_carrid TO s_carrid.
+
+
+
+START-OF-SELECTION.
+
+  SELECT * FROM scarr INTO CORRESPONDING FIELDS OF wa_scarr WHERE carrid IN s_carrid.
+    WRITE: /, 'CARRID', wa_scarr-carrid, wa_scarr-carrname.
+  ENDSELECT.

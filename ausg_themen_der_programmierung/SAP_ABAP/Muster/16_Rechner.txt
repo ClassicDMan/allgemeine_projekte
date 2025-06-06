@@ -1,0 +1,101 @@
+CODE: Rechner 
+
+DATA: p_zahl1 TYPE i,
+      p_zahl2 TYPE i,
+      lv_erg  TYPE i.
+
+
+CLASS lcl_rechner DEFINITION.
+  PUBLIC SECTION.
+    METHODS: add IMPORTING
+                           im_zahl1 TYPE i
+                           im_zahl2 TYPE i
+                EXPORTING  ex_erg   TYPE i,
+             delete IMPORTING
+                           im_zahl1 TYPE i
+                           im_zahl2 TYPE i
+                 EXPORTING ex_erg   TYPE i,
+
+             Multiplication IMPORTING
+                           im_zahl1 TYPE i
+                           im_zahl2 TYPE i
+                 EXPORTING ex_erg   TYPE i,
+
+             divide IMPORTING
+                           im_zahl1 TYPE i
+                           im_zahl2 TYPE i
+                 EXPORTING ex_erg   TYPE i.
+
+
+
+ENDCLASS.
+
+CLASS lcl_rechner IMPLEMENTATION.
+
+  METHOD: add.
+    ex_erg = im_zahl1 + im_zahl2.
+  ENDMETHOD.
+
+  METHOD: delete.
+    ex_erg = im_zahl1 - im_zahl2.
+  ENDMETHOD.
+
+  METHOD multiplication.
+        ex_erg = im_zahl1 * im_zahl2.
+  ENDMETHOD.
+
+  METHOD divide.
+        IF im_zahl2 = 0.
+          ex_erg = 'nan'. "Fehlerbehandlung fuer division durch 0
+          else.
+            ex_erg = im_zahl1 / im_zahl2.
+         ENDIF.
+  ENDMETHOD.
+
+ENDCLASS.
+
+DATA: ref_tr TYPE REF TO lcl_rechner.
+
+START-OF-SELECTION.
+  p_zahl1 = 4.
+  p_zahl2 = 2.
+
+  ref_tr = NEW lcl_rechner( ).
+  ref_tr->add(
+    EXPORTING
+      im_zahl1 =  p_zahl1
+      im_zahl2 =  p_zahl2
+    IMPORTING
+      ex_erg   = lv_erg
+  ).
+  WRITE: /, 'Ergebnis ist bei Addition', lv_erg.
+
+  ref_tr->delete(
+  EXPORTING
+      im_zahl1 =  p_zahl1
+      im_zahl2 =  p_zahl2
+    IMPORTING
+      ex_erg   = lv_erg
+  ).
+  WRITE: /, 'Ergebnis ist bei Subtration', lv_erg.
+
+
+
+  ref_tr->Multiplication(
+    EXPORTING
+      im_zahl1 =  p_zahl1
+      im_zahl2 =  p_zahl2
+    IMPORTING
+      ex_erg   = lv_erg
+  ).
+  WRITE: /, 'Ergebnis ist bei Multiplication', lv_erg.
+
+  ref_tr->divide(
+    EXPORTING
+      im_zahl1 = p_zahl1
+      im_zahl2 = p_zahl2
+     IMPORTING
+       ex_erg   = lv_erg
+  ).
+
+  WRITE: /, 'Ergebnis ist bei divide', lv_erg.

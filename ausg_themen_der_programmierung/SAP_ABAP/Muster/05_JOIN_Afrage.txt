@@ -1,0 +1,80 @@
+"Beispiel 1:
+
+TABLES: scarr, spfli.
+
+"Alias: f c
+
+TYPES: BEGIN OF str_fluege,
+
+         connid   TYPE spfli-connid,
+
+         carrid   TYPE scarr-carrid,
+
+         carrname TYPE scarr-carrname,
+
+         cityfrom TYPE spfli-cityfrom,
+
+         cityto   TYPE spfli-cityto,
+
+       END OF str_fluege.
+
+DATA: itab TYPE TABLE OF str_fluege,
+
+      wa   LIKE LINE OF itab.
+
+
+SELECT f~connid, c~carrid, c~carrname, f~cityfrom, f~cityto
+
+  FROM spfli AS f JOIN scarr AS c ON f~carrid = c~carrid
+
+  INTO CORRESPONDING FIELDS OF TABLE @itab
+
+  GROUP BY f~connid, c~carrid, c~carrname, f~cityfrom, f~cityto.
+
+
+LOOP AT itab INTO wa.
+
+  WRITE: /, wa-connid, wa-carrid, wa-carrname, wa-cityfrom, wa-cityto.
+ENDLOOP.
+
+
+"Beispiel 2:
+
+
+"relevante Tabellen
+TABLES: sflight, spfli.
+
+"Struktur der Tabelle
+TYPES: BEGIN OF flugdaten,
+         connid  TYPE sflight-connid,
+         fldate   TYPE sflight-fldate,
+         cityfrom    TYPE spfli-cityfrom,
+         cityto      TYPE spfli-cityto,
+         seatsmax TYPE sflight-seatsmax,
+         seatsocc TYPE sflight-seatsocc,
+       END OF flugdaten.
+
+" interne Tablle
+DATA: itab TYPE TABLE OF flugdaten,
+      wa LIKE LINE OF itab.
+
+DATA verfuegbare_plaetze TYPE i.
+
+"Read Table unter bestimmte Vorraussetzungen
+SELECT f~connid, f~fldate, sp~cityfrom, sp~cityto, f~seatsmax, f~seatsocc
+  FROM sflight AS f JOIN spfli AS sp ON f~connid = sp~connid
+  
+  INTO CORRESPONDING FIELDS OF TABLE @itab
+  
+  GROUP BY f~connid, f~fldate, sp~cityfrom, sp~cityto, f~seatsmax, f~seatsocc.
+
+"Aufruf Form Operation
+PERFORM operation.
+
+" Form Operation
+FORM operation.
+  LOOP AT itab INTO wa.
+    verfuegbare_plaetze = wa-seatsmax - wa-seatsocc.
+    WRITE: /, sy-tabix, wa-connid, wa-fldate, wa-cityfrom, wa-cityto, wa-seatsmax, wa-seatsocc, 'verfügbare Plätze: ', verfuegbare_plaetze.
+  ENDLOOP.
+ENDFORM.

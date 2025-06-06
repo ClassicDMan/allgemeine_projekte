@@ -1,0 +1,74 @@
+*&---------------------------------------------------------------------*
+*& Report Z018_DB_UEBUNG_WAEHRUNG
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+REPORT Z018_DB_UEBUNG_WAEHRUNG.
+
+PARAMETERS: p_from  TYPE tcurr-fcurr DEFAULT 'EUR',
+            p_to    TYPE tcurr-tcurr DEFAULT 'AUD',
+            p_value TYPE tcurr-ukurs DEFAULT '100'.
+
+" Texttabelle f.Währungen: TCURT
+
+TYPES: BEGIN OF t_currency_conversion,
+         fcurr    TYPE tcurr-fcurr,
+         tcurr     TYPE tcurr-tcurr,
+         from_name TYPE z000_str_curr-from_name,
+         to_name   TYPE z000_str_curr-to_name,
+         ukurs     TYPE tcurr-ukurs,
+         gdatu      type tcurr-gdatu,
+       END OF t_currency_conversion.
+
+**********************************************************************
+"Array - interne Tablle
+DATA: itab TYPE TABLE OF t_currency_conversion,
+      wa   LIKE LINE OF itab.
+**********************************************************************
+DATA: lv_ergebnis TYPE p DECIMALS 4.
+
+*SELECT * FROM tcurr INTO CORRESPONDING FIELDS OF wa.
+*  APPEND wa TO itab.
+*ENDSELECT.
+
+SELECT MIN( gdatu ) as gdatu, fcurr, tcurr FROM tcurr WHERE
+  fcurr = @p_from AND tcurr = @p_to GROUP BY fcurr, tcurr into CORRESPONDING FIELDS OF @wa.
+ENDSELECT.
+
+*
+*READ TABLE itab WITH KEY
+* fcurr = p_from
+* tcurr = p_to
+* INTO wa.
+
+
+lv_ergebnis = p_value * wa-ukurs.
+
+WRITE: /, 'Ausgangswährung:', p_from,
+       /, 'Zielwährung:', p_to,
+       /, 'Eingabewert', p_value,
+       /, 'Kurs', wa-ukurs,
+       /, lv_ergebnis.
+
+
+
+
+
+
+
+
+TYPES: BEGIN OF flugdaten,
+      carrid_sflight TYPE sflight-carrid,
+      connid_sflight TYPE sflight-connid,
+      flugdatum TYPE sflight-fldate,
+      maxsitz TYPE sflight-seatsmax,
+      belegtesitz TYPE sflight-seatsocc,
+END OF flugdaten.
+
+DATA: itab TYPE TABLE OF flugdaten,
+      wa LIKE LINE OF itab.
+
+SELECT * FROM sflight INTO wa.
+APPEND wa to itab.
+ENDSELECT.
+

@@ -1,0 +1,50 @@
+"interne Tabelle erstellen zur Speicherungszwecken
+DATA: itab TYPE TABLE OF z018_va04_pr_ts,
+      wa   LIKE LINE OF itab.
+
+SELECT * FROM z018_va04_pr_ts INTO wa.
+  WRITE:/, wa-matrikel, wa-nachname, wa-vorname, wa-gdatum.
+ENDSELECT.
+
+wa-matrikel = '10001234'.
+wa-nachname = 'Nachname_Stud1'.
+wa-vorname = 'Vorname_Stud1'.
+wa-gdatum = '20240928'.
+
+"Create
+"DATA tt TYPE dats.
+INSERT z018_va04_pr_ts FROM wa.
+
+"READ
+SELECT * FROM z018_va04_pr_ts INTO wa.
+  WRITE:/, wa-matrikel, wa-nachname, wa-vorname, wa-gdatum.
+ENDSELECT.
+
+IF sy-subrc = 0.
+    WRITE: /, 'Insert Erfolgreich!'.
+    ELSE.
+      WRITE: /, 'Eintrag Vorhanden'.
+    ENDIF.
+
+"Update
+wa-vorname = 'Max'.
+wa-nachname = 'Neumann'.
+MODIFY z018_va04_pr_ts from wa.
+
+"READ
+SELECT * FROM z018_va04_pr_ts INTO wa.
+  WRITE:/, wa-matrikel, wa-nachname, wa-vorname, wa-gdatum.
+ENDSELECT.
+
+"DELETE
+DELETE FROM z018_va04_pr_ts WHERE matrikel = '1234'.
+
+IF sy-subrc = 0.
+    WRITE: /, 'ein Datensatz wurde gelöscht!'.
+    ELSE.
+      WRITE: /, 'keine Datensätze wurden gelöscht'.
+    ENDIF.
+
+SELECT * FROM z018_va04_pr_ts INTO wa.
+  WRITE:/, wa-matrikel, wa-nachname, wa-vorname, wa-gdatum.
+ENDSELECT.

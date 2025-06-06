@@ -1,0 +1,87 @@
+"Main Klasse
+
+INCLUDE z018_02_class_include_db_ueb.
+
+PARAMETERS: matrikel TYPE z018_va04_probe_matr,
+            loeschen TYPE z018_va04_probe_matr,
+            nachname TYPE c LENGTH 20,
+            vorname  TYPE c LENGTH 20,
+            g_datum  TYPE dats.
+
+
+START-OF-SELECTION.
+
+DATA(lokale_db) = NEW db_manipulation( ).
+
+  lokale_db->print( ).
+
+  lokale_db->insert_met(
+  im_matrikel = matrikel
+  im_nachname = nachname
+  im_vorname = vorname
+  im_gdatum = g_datum
+  ).
+  lokale_db->print( ).
+
+  lokale_db->delete_met( im_matrikel = loeschen ).
+
+  lokale_db->print( ).
+
+
+"Include Klasse
+
+CLASS db_manipulation DEFINITION.
+    PUBLIC SECTION.
+      DATA: lv_matrikel, lv_nachname, lv_vorname, lv_gdatum.
+      "DATA eingaben TYPE z018_va04_pr_ts.
+
+      DATA: itab TYPE TABLE OF z018_va04_pr_ts,
+            wa   LIKE LINE OF itab.
+
+
+      METHODS:
+        delete_met IMPORTING im_matrikel TYPE z018_va04_probe_matr,
+        insert_met IMPORTING im_matrikel TYPE z018_va04_probe_matr
+                             im_nachname TYPE c
+                             im_vorname  TYPE c
+                             im_gdatum   TYPE dats,
+        print.
+
+  ENDCLASS.
+
+  CLASS db_manipulation IMPLEMENTATION.
+
+    METHOD: insert_met.
+
+      wa-matrikel = im_matrikel.
+      wa-nachname = im_nachname.
+      wa-vorname = im_vorname.
+      wa-gdatum = im_gdatum.
+
+      INSERT INTO z018_va04_pr_ts VALUES wa.
+      IF sy-subrc = 0.
+        WRITE: /, 'Insert Erfolgreich!'.
+      ELSE.
+        WRITE: /, 'Eintrag Vorhanden'.
+      ENDIF.
+
+    ENDMETHOD.
+
+    METHOD: delete_met.
+      DELETE FROM z018_va04_pr_ts WHERE matrikel = im_matrikel.
+    ENDMETHOD.
+
+    METHOD: print.
+      SELECT * FROM z018_va04_pr_ts INTO wa.
+        WRITE:/, wa-matrikel, wa-nachname, wa-vorname, wa-gdatum.
+      ENDSELECT.
+      IF sy-subrc = 0.
+        WRITE: /, 'Datensatz erfolgreich gelöscht!'.
+      ELSE.
+        WRITE: /, 'keine Datensätze gelöscht'.
+      ENDIF.
+
+    ENDMETHOD.
+
+  ENDCLASS.
+

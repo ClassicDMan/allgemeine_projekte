@@ -1,0 +1,57 @@
+DATA: itab TYPE TABLE OF z000_03dbstud,
+      wa   LIKE LINE OF itab.
+
+
+wa-id = '001'.
+wa-vorname = 'ABAP'.
+wa-nachname = 'SAP'.
+
+
+INSERT z000_03dbstud FROM wa. WRITE: 'Will einfügen'.
+PERFORM subrc.
+PERFORM ausgabe.
+
+DELETE z000_03dbstud FROM wa. WRITE: 'Will Löschen'.
+PERFORM subrc.
+PERFORM ausgabe.
+
+MODIFY z000_03dbstud FROM wa. WRITE: 'Will MODIFY'.
+PERFORM subrc.
+PERFORM ausgabe.
+
+wa-nachname = 'Ojects'.
+MODIFY z000_03dbstud FROM wa. WRITE: 'Will MODIFY'.
+PERFORM subrc.
+PERFORM ausgabe.
+
+PERFORM delete_all.
+
+FORM subrc.
+
+  IF sy-subrc = 0.
+    WRITE: /, 'CRUD erfolgreich', 'für ID:', wa-id.
+  ELSE.
+    WRITE: /, 'Eintrag vorhanden', 'für ID:', wa-id.
+  ENDIF.
+
+ENDFORM.
+
+
+FORM ausgabe.
+  WRITE: /, '***', 'Ausgabe der Tabelle'.
+  SELECT * FROM z000_03dbstud INTO wa.
+    WRITE: /, wa-id, wa-nachname, wa-vorname.
+  ENDSELECT.
+  WRITE: / .
+ENDFORM.
+
+FORM delete_all.
+  WRITE: /, 'Lösche alle Tabelleneinträge'.
+  SELECT * FROM z000_03dbstud INTO TABLE itab.
+  LOOP AT itab INTO wa.
+    WRITE: /, 'Lösche', wa-id.
+    DELETE z000_03dbstud FROM wa.
+    PERFORM subrc.
+  ENDLOOP.
+  PERFORM ausgabe.
+ENDFORM.

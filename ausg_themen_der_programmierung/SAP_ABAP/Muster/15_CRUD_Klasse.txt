@@ -1,0 +1,68 @@
+CLASS z000_cl_person_handler DEFINITION.
+  PUBLIC SECTION.
+
+    DATA: gv_id      TYPE String,
+          gv_vn      TYPE String,
+          gv_nn      TYPE String,
+
+          lv_success TYPE abap_bool.
+
+
+    METHODS: insert_person RETURNING VALUE(data) TYPE i.
+
+
+ENDCLASS.
+
+CLASS z000_cl_person_handler IMPLEMENTATION.
+
+
+  METHOD: insert_person.
+
+    DATA: BEGIN OF lv_stud,
+            vn TYPE z000_tab_stud-vorname,
+            nn TYPE z000_tab_stud-nachname,
+          END OF lv_stud.
+
+    lv_stud-vn = me->gv_vn.
+    lv_stud-nn = me->gv_nn.
+
+    MODIFY z000_tab_stud FROM lv_stud.
+    IF sy-subrc = 0.
+      lv_success = abap_true.
+      WRITE:/, 'CRUD OKAY'.
+    ELSE.
+      WRITE 'Fehler'.
+    ENDIF.
+
+    data = sy-subrc.
+
+
+  ENDMETHOD.
+
+
+ENDCLASS.
+
+
+
+START-OF-SELECTION.
+
+
+  DATA: lo_person_handler TYPE REF TO z000_cl_person_handler.
+
+
+  " Instanz der Klasse erstellen
+  CREATE OBJECT lo_person_handler.
+
+  " Attribute der Klasse mit Personendaten befüllen
+  lo_person_handler->gv_id = '1423828'.
+  lo_person_handler->gv_vn = 'Abdul'.
+  lo_person_handler->gv_nn = 'Baath'.
+
+  " Methode Daten einfügen
+  lo_person_handler->insert_person( ).
+
+  " Erfolg oder Fehler melden
+  IF lo_person_handler->lv_success = abap_true.
+    WRITE: 'Person vorhanden, erfolgreich hinzugefügt oder geändert.'.
+  ELSE.
+    WRITE: 'Fehler beim Hinzufügen der Person.'.
