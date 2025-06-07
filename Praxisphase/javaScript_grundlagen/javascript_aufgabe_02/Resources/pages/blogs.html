@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan HyBlogs</title>
+    <link rel="stylesheet" href="../css/blogs.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="icon" type="image/png" href="../../assets/Logo/J.png">
+
+</head>
+
+<body>
+    
+    <header>
+        <div class="logo-div">
+            <a href="../home.html"><img src="../../assets/Logo/J.png" alt="Logo of the Site" id="logo"></a>
+            <h1>Juan HyBlogs</h1>
+        </div>
+    </header>
+    <main>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../home.html">Home</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section class="blog-overview">
+            <h2>Unsere neuesten Blog-Beiträge</h2>
+
+            <!-- Einzelne Blog-Beiträge -->
+            <article class="blog-post">
+                <h3><a href="blogs/blog01.html">Transformation der Arbeit durch die Einführung neuer digitaler Technologien</a></h3>
+                <p class="teaser">Die Megatrends unserer Zeit – der Klimawandel, der demografische Wandel und der damit in Verbindung stehende Fachkräftemangel – 
+                    stellen Unternehmen vor immense Herausforderungen. Bestehende Produkte und Dienstleistungen werden grundlegend infrage gestellt...</p>
+                <a href="blogs/blog01.html" class="read-more">Weiterlesen</a>
+            </article>
+
+            <article class="blog-post">
+                <h3><a href="blogs/blog02.html">Zwischen Wahrheit und Täuschung: Wie Technologie im Kampf gegen Desinformation hilft</a></h3>
+                <p class="teaser">Soziale Netzwerke fördern den schnellen Informationsaustausch, begünstigen aber auch die Verbreitung von Des- und Fehlinformationen – mit 
+                    gravierenden Folgen. Technische Ansätze wie die Verwendung von Indikatoren können helfen, Grauzonen im Wahrheitsgehalt zu entschlüsseln...</p>
+
+                <a href="blogs/blog02.html" class="read-more">Weiterlesen</a>
+            </article>
+
+            <section class="new-blog">
+                <h2 class="myH2">Neuen Blog-Artikel erstellen</h2>
+                <form>
+                    <label for="titel">Titel:</label>
+                    <input type="text" class="titel" id="titel" name="titel" required>
+    
+                    <label for="content">Inhalt:</label>
+                    <textarea id="content" class="inhalt" name="content" rows="5" required></textarea>
+    
+                    <button type="submit">Veröffentlichen</button>
+                </form>
+            </section>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <hr>
+        author: Juan
+        <br>
+        &copy; Copy Rights reserved
+        <br>
+
+    </footer>
+
+    <script src="../js/home.js" defer></script>
+
+</body>
+
+</html>

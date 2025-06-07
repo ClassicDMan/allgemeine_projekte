@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <h3 class="h3">Temp Converter</h3>
+        <input type="text" value="0" id="textBox">
+
+        <br>
+        <input type="radio" id="toFer" name="unit">
+        <label for="toFer">Celecius --> Fehrenheit</label>
+
+        <br>
+        <input type="radio" id="toCel" name="unit">
+        <label for="toCel"> Fehrenheit --> Celecius</label>
+
+        <br>
+        <button type="button" onclick="convert()">submit</button>
+        <p id="convertResult">Select a Unit</p>
+
+    </form>
+    <hr>
+    <hr>
+
+    <div class="overflow-auto">
+        <nav aria-label="breadcrumb" style="--pico-nav-breadcrumb-divider: '✨';">
+            <ul>
+                <li><strong>Acme Corp</strong></li>
+            </ul>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Karriere</a></li>
+                <li><a href="#">Kontakt</a></li>
+
+            </ul>
+        </nav>
+
+    </div>
+
+
+    <script src="index.js" defer></script>
+</body>
+
+</html>

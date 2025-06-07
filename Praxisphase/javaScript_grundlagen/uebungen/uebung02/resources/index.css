@@ -1,0 +1,87 @@
+
+#myH1-div{
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    height: 200px;
+    background-color: brown;
+
+}
+
+#myH1{
+    border-style: outset;
+    border-color: black;
+    border-width: 5px;
+    font-size: 50px;
+    text-align: center;
+
+}
+
+#text-area-text{
+    display: block;
+    padding: 20px;
+}
+#dice-text-area{
+    border-radius: 20px;
+    box-shadow: 2px 5px;
+}
+
+.roller-div{
+    padding-top: 20px;
+    border-style: outset;
+    border-color: black;
+    border-width: 5px;
+    background-color: chartreuse;
+    text-align: center;
+
+}
+
+#button-div{
+    height: 50px;
+    background-color: yellow;
+    border-radius: 20px;
+    padding-top: 20px;
+    text-align: center;
+
+}
+#box{
+    height: 100px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+}
+
+.container{
+    display: flex;
+    border: 10px solid;
+    height: 90vh;
+
+
+}
+
+.box{
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    font-size: 8em;
+    border-radius: 15px;
+
+}
+
+#box1{
+    background-color: chartreuse;
+    align-self: center;
+}
+#box2{
+    background-color: red;
+}
+#box3{
+    background-color: aqua;
+}
+#box4{
+    background-color: coral;
+}
+
+
