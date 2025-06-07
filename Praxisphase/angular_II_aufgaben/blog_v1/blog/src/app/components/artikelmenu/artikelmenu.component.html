@@ -1,0 +1,38 @@
+<div class="blog-container">
+    <main class="main-bereich">
+        <div class="artikel-header">
+            <h2>Artikelübersicht</h2>
+            <button routerLink="/artikelmenu/artikel-builder" class="outline">Artikel erstellen</button>
+        </div>
+
+        <div *ngFor="let post of articles; trackBy: trackPost">
+            <section>
+                <article class="card">
+                    <div>
+                        <a id="titel" [routerLink]="['/artikelmenu/artikel-details', post.id]"><h3>{{post.title}}</h3></a>
+                        <h5>{{post.date}}</h5>
+                    </div>
+                    <p>{{shortenText(post.content)}}</p>
+                    <a id="mehrLesen" [routerLink]="['/artikelmenu/artikel-details', post.id]" role="button">{{mehrLesenButton}}</a>
+                    <div class="artikel-options">
+                        <a id="artikel-bearbeiten" [routerLink]="['/artikelmenu/artikel/artikel-bearbeiten-formular', post.id]" role="button"> {{artikelBearbeitenButton}}</a>
+                        <a id="artikel-loeschen" (click)="openDeleteModal(post)" role="button">{{artikelLoeschenButton}}</a>
+                    </div>
+                </article>
+            </section>
+        </div>
+
+        <section class="joke-card" *ngIf="witz">
+            <h3>Witz</h3>
+            <p>{{ witz.setup }}</p>
+            <p><strong>{{ witz.punchline }}</strong></p>
+            <button (click)="loadJoke()">Neuen Witz laden</button>
+        </section>
+    </main>
+    <app-modal 
+        [isVisible]="showModal" 
+        [message]="deleteMessage" 
+        (onConfirm)="deleteArticle()" 
+        (onCancel)="closeDeleteModal()">
+    </app-modal>
+</div>

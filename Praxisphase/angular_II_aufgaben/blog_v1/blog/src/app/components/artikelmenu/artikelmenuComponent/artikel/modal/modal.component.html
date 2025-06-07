@@ -1,0 +1,14 @@
+@if(isVisible){
+  <div class="modal-overlay">
+    <div class="modal-content">
+      <h2>Bestätigung</h2>
+      <p>{{ message }}</p>
+      <div class="modal-actions">
+        <button (click)="confirmDelete()">Löschen</button>
+        <button (click)="closeModal()">Abbrechen</button>
+      </div>
+    </div>
+  </div>
+  
+}
+

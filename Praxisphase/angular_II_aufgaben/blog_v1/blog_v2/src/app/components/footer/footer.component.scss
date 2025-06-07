@@ -1,0 +1,19 @@
+footer{
+    position: absolute;
+    top: 500px;    
+    left: 50%;
+    transform: translateX(-50%);
+    width: 980px;
+    max-width: 980px;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.6); /* Gleiche Transparenz wie Navbar */
+    backdrop-filter: blur(10px); /* Weicher Glas-Effekt */
+    color: #e1e1e1; /* Schriftfarbe der Navbar */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sanfter Schatten */
+
+}
+
+footer p {
+    color: #e1e1e1;
+}

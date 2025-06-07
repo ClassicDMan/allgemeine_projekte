@@ -1,0 +1,65 @@
+footer {
+    background-color: #f8fafc;
+    padding: 20px 20px;
+    text-align: center;
+    border-top: 3px solid #004080;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    border-radius: 12px;
+    animation: fadeIn 1s ease-in-out;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f8fafc;
+    border-top: 3px solid #004080;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 30px auto;
+    max-width: 980px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+footer hr {
+    width: 50px;
+    border: 2px solid #004080;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+footer p {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+}
+
+footer p strong {
+    font-weight: bold;
+}
+
+footer p a {
+    color: #0666bc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+    color: #004080;
+}
+
+/* Fade-In animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 980px) {
+    footer p {
+        font-size: 14px;
+    }
+}

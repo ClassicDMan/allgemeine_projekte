@@ -1,0 +1,29 @@
+<main>
+    <section class="contact-container">
+        <h2>Kontaktieren Sie uns</h2>
+
+        <form class="contact-form">
+            <label for="first-name">Vorname:</label>
+            <input type="text" id="first-name" name="first-name" required>
+
+            <label for="last-name">Nachname:</label>
+            <input type="text" id="last-name" name="last-name" required>
+
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Nachricht:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Nachricht senden</button>
+        </form>
+        <br>
+        <div class="map-container">
+            <h3>📍 Unser Standort</h3>
+            <p>Besuchen Sie uns in unserem Büro! Sie finden uns hier:</p>
+            <div class="map-box">
+                <app-adress></app-adress> 
+            </div>
+        </div>
+    </section>
+</main>

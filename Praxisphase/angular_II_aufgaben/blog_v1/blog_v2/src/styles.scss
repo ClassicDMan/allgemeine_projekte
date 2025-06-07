@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+html, body{
+    /* Farbenverlauf, lösche es später*/
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #dddfe4, #b0b2b7, #cad9f1, #7c8997);
+    animation: gradientAnimation 5s ease infinite;
+    background-size: 400% 400%;
+}
+/* Farbverlauf-Animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+

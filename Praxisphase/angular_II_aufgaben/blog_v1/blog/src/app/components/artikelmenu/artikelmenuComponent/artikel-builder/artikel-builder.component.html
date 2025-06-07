@@ -1,0 +1,23 @@
+<section>
+  <h2>Neuen Blog-Artikel erstellen</h2>
+  <form (ngSubmit)="onSubmit()">
+
+    <label for="title">Titel:</label>
+    <input type="text" id="title" [(ngModel)]="title" name="title" [class.invalid]="!titleValid" required />
+    @if (!titleValid) {
+    <small class="error">Titel darf nicht leer sein!</small>
+    }
+
+    <label for="content">Inhalt:</label>
+    <textarea id="content" [(ngModel)]="content" name="content" rows="5" [class.invalid]="!contentValid"
+      required></textarea>
+    @if (!contentValid) {
+    <small class="error">Text muss mindestens 10 Zeichen enthalten!</small>
+    }
+    <div>
+      <label for="date">Datum:</label>
+      <input type="text" id="date" [value]="date" disabled />
+    </div>
+    <button type="submit">Veröffentlichen</button>
+  </form>
+</section>

@@ -1,0 +1,244 @@
+
+.main-bereich {
+    background-color: #f8fafc;
+    padding: 40px 20px;
+    display: block;
+    justify-content: center;
+    border-radius: 8px;
+    margin: 30px auto;
+    border-top: 3px solid #004080;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .blog-container{
+    animation: fadeIn 0.8s ease-in-out;
+  }
+
+.artikel-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.artikel-options button {
+    background-color: #0666bc;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.artikel-options button:hover {
+    background-color: #004080;
+    box-shadow: 0 4px 10px rgba(0, 64, 128, 0.3);
+}
+
+.artikel-options button:active {
+    transform: scale(0.96);
+}
+
+.joke-card {
+  background-color: #ffffff;
+  border: 2px solid #004080;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 980px;
+  text-align: center;
+  margin: 20px auto;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.joke-card h3 {
+  font-size: 24px;
+  color: #004080;
+  margin-bottom: 15px;
+}
+
+.joke-card p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.joke-card button {
+  display: inline-block;
+  background-color: #0666bc;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 8px;
+  margin-top: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.joke-card button:hover {
+  background-color: #004080;
+  box-shadow: 0 4px 10px rgba(0, 64, 128, 0.3);
+}
+
+.joke-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+///* Fade-In animation */
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.card {
+  background-color: #ffffff;
+  border: 2px solid #004080;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 980px;
+  min-height: 300px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 20px;
+  width: 100%;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+#titel {
+  display: inline-block;
+  background-color: #ffffff;
+  padding: 12px 16px;
+  max-width: 90%;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #1c1d1d;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#titel:hover {
+  background-color: #eef3f7;
+}
+
+.card h3 {
+  font-size: 24px;
+  color: #004080;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 18px;
+  color: #004080;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+#mehrLesen {
+  display: inline-block;
+  background-color: #0666bc;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 8px;
+  margin-top: 15px;
+  transform: scale(0.96);
+  transition: all 0.3s ease-in-out;
+}
+
+#mehrLesen:hover {
+  background-color: #004080;
+  box-shadow: 0 4px 10px rgba(0, 64, 128, 0.3);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+.artikel-options {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.artikel-options a {
+  cursor: pointer;
+  display: inline-block;
+  background-color: #0666bc;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.artikel-options a:hover {
+  background-color: #004080;
+  box-shadow: 0 4px 10px rgba(0, 64, 128, 0.3);
+}
+
+.artikel-options a:active {
+  transform: scale(0.96);
+}
+
+.artikel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eef3f7;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 64, 128, 0.1);
+  margin-bottom: 20px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.artikel-header h2 {
+  font-size: 26px;
+  color: #004080;
+  font-weight: bold;
+  margin: 0;
+}
+
+.artikel-header button {
+  background-color: #0666bc;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.artikel-header button:hover {
+  background-color: #004080;
+  box-shadow: 0 4px 12px rgba(0, 64, 128, 0.3);
+}
+
+.artikel-header button:active {
+  transform: scale(0.96);
+}
+

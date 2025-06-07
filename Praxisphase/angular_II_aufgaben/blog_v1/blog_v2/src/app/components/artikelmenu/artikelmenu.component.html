@@ -1,0 +1,25 @@
+<div class="blog-container">
+    <main class="main-bereich">
+
+        <div *ngFor="let post of articles; trackBy: trackPost">
+            <app-artikel [postId]="post.id" [titel]="post.title" [artikelText]="shortenText(post.content)"
+                [mehrLesenButton]="mehrLesenButton">
+
+            </app-artikel>
+        </div>
+
+        <section class="joke-card" *ngIf="witz">
+            <h3>Witz</h3>
+            <p>{{ witz.setup }}</p>
+            <p><strong>{{ witz.punchline }}</strong></p>
+            <button (click)="loadJoke()">Neuen Witz laden</button>
+        </section>
+
+    </main>
+
+    <div class="artikel-options">
+        <button routerLink="/artikelmenu/artikel-builder" class="outline">Artikel erstellen</button>
+        <button class="outline secondary">Artikel löschen</button>
+        <button class="outline contrast">Artikel bearbeiten</button>
+    </div>
+</div>

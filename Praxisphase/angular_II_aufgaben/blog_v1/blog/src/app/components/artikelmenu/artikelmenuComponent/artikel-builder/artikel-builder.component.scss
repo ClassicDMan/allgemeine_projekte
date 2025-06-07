@@ -1,0 +1,90 @@
+section {
+    background-color: #f8fafc;
+    padding: 30px;
+    max-width: 980px;
+    margin: 30px auto;
+    border-radius: 8px;
+    border-top: 3px solid #004080;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-in-out;
+  }
+
+  h2 {
+    font-size: 28px;
+    color: #004080;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input[type="text"], textarea {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #004080;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+  }
+  
+  input[type="text"]:focus, textarea:focus {
+    border-color: #0666bc;
+    box-shadow: 0 0 8px rgba(6, 102, 188, 0.3);
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  button[type="submit"] {
+    background-color: #0666bc;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 15px;
+    align-self: center;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #004080;
+    box-shadow: 0 4px 10px rgba(0, 64, 128, 0.3);
+  }
+
+  .error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+  }
+  
+  .invalid {
+    border-color: red;
+    background-color: #ffe5e5;
+  }
+  
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }

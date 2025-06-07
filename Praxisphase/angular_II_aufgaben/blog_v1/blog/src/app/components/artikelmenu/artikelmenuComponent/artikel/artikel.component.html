@@ -1,0 +1,14 @@
+<section>
+    <article class="card">
+        <div>
+            <a id="titel" [routerLink]="['/artikelmenu/artikel-details', postId]"><h3>{{titel}}</h3></a>
+            <h5>{{datum}}</h5>
+        </div>
+        <p>{{artikelText}}</p>
+        <a id="mehrLesen" [routerLink]="['/artikelmenu/artikel-details', postId]" role="button">{{mehrLesenButton}}</a>
+        <div class="artikel-options">
+            <a id="artikel-bearbeiten" [routerLink]="['/artikelmenu/artikel/artikel-bearbeiten-formular', postId]" role="button"> {{artikelBearbeitenButton}}</a>
+            <a id="artikel-loeschen">{{artikelLoeschenButton}}</a>
+        </div>
+    </article>
+</section>

@@ -1,0 +1,8 @@
+<div class="artikel-detail-container" *ngIf="artikel">
+    <h1>{{ artikel?.title }}</h1>
+    <p><strong>Veröffentlicht am:</strong></p>
+    <p>{{ artikel?.content }}</p>
+  
+    <button (click)="backToOverview()">Zurück zur Übersicht</button>
+  </div>
+  

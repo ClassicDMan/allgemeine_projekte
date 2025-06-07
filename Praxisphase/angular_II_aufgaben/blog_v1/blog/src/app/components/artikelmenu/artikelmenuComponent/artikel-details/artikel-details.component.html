@@ -1,0 +1,13 @@
+<div class="artikel-detail-container" *ngIf="artikel">
+  <h1>{{ artikel.title }}</h1>
+  <p><strong>Veröffentlicht am:</strong> {{ artikel.date }}</p>
+  <p>{{ artikel.content }}</p>
+
+  <div class="artikel-options">
+    <button (click)="backToOverview()" class="back-button">Zurück zur Übersicht</button>
+  </div>
+</div>
+
+<div *ngIf="!artikel">
+  <p>Lädt...</p>
+</div>

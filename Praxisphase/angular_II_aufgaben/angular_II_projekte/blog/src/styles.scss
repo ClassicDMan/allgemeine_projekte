@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+
+    padding: 20px;
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+
+main {
+    width: 100%; 
+    max-width: 980px;
+    flex-grow: 1;
+    box-sizing: border-box;
+}
+
+
+/*
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    width: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+    */

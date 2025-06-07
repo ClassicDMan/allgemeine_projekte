@@ -1,0 +1,15 @@
+<section class="edit-container">
+    <h2>Artikel bearbeiten</h2>
+    <form [formGroup]="artikelForm" (ngSubmit)="onSubmit()">
+        <label for="titel">Titel:</label>
+        <input type="text" id="titel" [(ngModel)]="titel" name="titel" formControlName="titel" required>
+
+        <label for="artikelText">Inhalt:</label>
+        <textarea id="artikelText" [(ngModel)]="artikelText" name="artikelText" rows="5" formControlName="artikelText" required></textarea>
+
+        <label for="datum">Datum:</label>
+        <input type="date" id="datum" formControlName="datum" required>
+
+        <button type="submit" [disabled]="artikelForm.invalid">Speichern</button>
+    </form>
+</section>

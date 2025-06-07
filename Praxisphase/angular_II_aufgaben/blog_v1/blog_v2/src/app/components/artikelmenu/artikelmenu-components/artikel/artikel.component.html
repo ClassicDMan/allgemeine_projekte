@@ -1,0 +1,9 @@
+<section>
+    <article class="card">
+        <div>
+            <a id="titel" [routerLink]="['/artikelmenu/artikel-details', postId]"><h3>{{titel}}</h3></a>
+        </div>
+        <p>{{artikelText}}</p>
+        <a id="mehrLesen" [routerLink]="['/artikelmenu/artikel-details', postId]" role="button">{{mehrLesenButton}}</a>
+    </article>
+</section>
