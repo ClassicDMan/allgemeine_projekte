@@ -1,0 +1,17 @@
+[
+    {
+      "titel": "Erster Artikel",
+      "artikelText": "Dies ist eine Vorschau des ersten Artikels. Lorem ipsum dolor sit amet...",
+      "mehrLesenText": "Mehr lesen"
+    },
+    {
+      "titel": "Zweiter Artikel",
+      "artikelText": "Hier steht der Inhalt des zweiten Artikels. Interessante Informationen...",
+      "mehrLesenText": "Mehr lesen"
+    },
+    {
+      "titel": "Dritter Artikel",
+      "artikelText": "Ein dritter Artikel mit spannenden Inhalten und Erkenntnissen...",
+      "mehrLesenText": "Mehr lesen"
+    }
+  ]

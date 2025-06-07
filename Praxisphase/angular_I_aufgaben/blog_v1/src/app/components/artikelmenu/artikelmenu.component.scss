@@ -1,0 +1,103 @@
+.main-bereich {
+    background-color: #f8fafc;
+    padding: 40px 20px;
+    display: block;
+    justify-content: center;
+    border-radius: 8px;
+    margin: 30px auto;
+    border-top: 3px solid #004080;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .blog-container{
+    animation: fadeIn 0.8s ease-in-out;
+  }
+
+.artikel-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.artikel-options button {
+    background-color: #0666bc;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.artikel-options button:hover {
+    background-color: #004080;
+    box-shadow: 0 4px 10px rgba(0, 64, 128, 0.3);
+}
+
+.artikel-options button:active {
+    transform: scale(0.96);
+}
+
+.joke-card {
+  background-color: #ffffff;
+  border: 2px solid #004080;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 980px;
+  text-align: center;
+  margin: 20px auto;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.joke-card h3 {
+  font-size: 24px;
+  color: #004080;
+  margin-bottom: 15px;
+}
+
+.joke-card p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.joke-card button {
+  display: inline-block;
+  background-color: #0666bc;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 8px;
+  margin-top: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.joke-card button:hover {
+  background-color: #004080;
+  box-shadow: 0 4px 10px rgba(0, 64, 128, 0.3);
+}
+
+.joke-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Fade-In animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
