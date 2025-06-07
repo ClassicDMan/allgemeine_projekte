@@ -1,0 +1,15 @@
+.main-container{
+    display: flex;
+    flex-direction: row;
+    padding: 40px 2px;
+    border: 2px solid rgb(0, 4, 255);
+
+}
+
+.main-card{
+    flex: 5;
+}
+
+.main-sidebar{
+    flex: 1;
+}

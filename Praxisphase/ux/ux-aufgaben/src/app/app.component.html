@@ -1,0 +1,15 @@
+<div class="app-container flex flex-col items-center max-w-full sm:overflow-x-hidden md:overflow-x-hidden bg-gray-50 min-h-screen text-gray-800">
+
+    <div class="app-header-container lg:flex flex-col items-center max-w-full sm:w-fit md:w-fit bg-white text-gray-800 dark:bg-customDark dark:text-gray-100 shadow-md rounded-2xl mt-4 p-4">
+        <app-navigation-bar></app-navigation-bar>
+    </div>
+
+    <div class="app-main-container flex flex-col justify-center bg-white text-gray-800 dark:bg-customDark dark:text-gray-100 shadow-sm rounded-2xl my-6 p-6 w-full max-w-4xl">
+        <router-outlet></router-outlet>
+    </div>
+
+    <div class="app-footer-container flex flex-col justify-center bg-white text-gray-800 dark:bg-customDark dark:text-gray-100 shadow-inner rounded-2xl mb-6 p-4 w-full max-w-4xl">
+        <app-footer></app-footer>
+    </div>
+
+</div>

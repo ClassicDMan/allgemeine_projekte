@@ -1,0 +1,42 @@
+<div class="card flex justify-center">
+  <p-button label="Check" />
+</div>
+
+<br><p-card [style]="{ width: '25rem', overflow: 'hidden' }">
+  <ng-template #header>
+      <img alt="Card" class="w-full" src="https://primefaces.org/cdn/primeng/images/card-ng.jpg" />
+  </ng-template>
+  <ng-template #title> Advanced Card </ng-template>
+  <ng-template #subtitle> Card subtitle </ng-template>
+  <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+      quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!
+  </p>
+  <ng-template #footer>
+      <div class="flex gap-4 mt-1">
+          <p-button label="Cancel" severity="secondary" class="w-full" [outlined]="true" styleClass="w-full" />
+          <p-button label="Save" class="w-full" styleClass="w-full" />
+      </div>
+  </ng-template>
+</p-card>
+
+<br>
+
+<p-table [value]="products" [tableStyle]="{ 'min-width': '50rem' }">
+  <ng-template #header>
+      <tr>
+          <th>Code</th>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Quantity</th>
+      </tr>
+  </ng-template>
+  <ng-template #body let-product>
+      <tr>
+          <td>{{ product.code }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.category }}</td>
+          <td>{{ product.quantity }}</td>
+      </tr>
+  </ng-template>
+</p-table>

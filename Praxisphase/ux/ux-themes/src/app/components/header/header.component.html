@@ -1,0 +1,32 @@
+<div class="head-top-container">
+    <div class="news-bar">
+        <p>Hallo there and welcome to the Website</p>
+    </div>
+    <div class="navigation-bar-container">
+        <header class ="header-navigation-bar">
+            <div class="app-navbar-container">
+                <!-- Breadcrumb Navigation -->
+                <div class="breadcrumb-container">
+                    <p-breadcrumb class="" [model]="items" [home]="home" />
+                </div>
+            </div>
+            <div class="toolbar">
+                <p-toolbar class="w-full flex flex-wrap">
+                    <ng-template #start>
+                        <p-button icon="pi pi-plus" class="mr-2" text severity="secondary" />
+                        <p-button icon="pi pi-print" class="mr-2" text severity="secondary" />
+                        <p-button icon="pi pi-upload" text severity="secondary" />
+                    </ng-template>
+                    <ng-template #center>
+                        <p-iconfield iconPosition="left">
+                            <p-inputicon styleClass="pi pi-search" />
+                            <input type="text" pInputText placeholder="Search" />
+                        </p-iconfield>
+                    </ng-template>
+                </p-toolbar>
+            </div>
+        </header>
+        
+    </div>
+
+</div>

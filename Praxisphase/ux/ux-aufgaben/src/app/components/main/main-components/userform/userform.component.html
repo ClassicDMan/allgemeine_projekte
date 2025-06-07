@@ -1,0 +1,78 @@
+<form
+  [formGroup]="userForm"
+  (ngSubmit)="onSubmit()"
+  class="p-4 bg-white text-gray-800 dark:bg-customDark dark:text-gray-100 rounded-2xl shadow-md max-w-xl w-full mx-auto flex flex-col gap-6"
+>
+
+  <div class="flex flex-col gap-2">
+    <label for="name" class="text-sm font-medium">Name</label>
+    <input
+      id="name"
+      type="text"
+      pInputText
+      formControlName="name"
+      placeholder="Max Mustermann"
+      class="w-full"
+    />
+    <small
+      *ngIf="name?.invalid && name?.touched"
+      class="text-red-600 text-xs font-medium"
+    >Name ist erforderlich.</small>
+  </div>
+
+  <div class="flex flex-col gap-2">
+    <label for="email" class="text-sm font-medium">E-Mail</label>
+    <input
+      id="email"
+      type="email"
+      pInputText
+      formControlName="email"
+      placeholder="max@beispiel.de"
+      class="w-full"
+    />
+    <small
+      *ngIf="email?.invalid && email?.touched"
+      class="text-red-600 text-xs font-medium"
+    >Gültige E-Mail ist erforderlich.</small>
+  </div>
+
+  <div class="flex flex-col gap-2">
+    <label for="birthDate" class="text-sm font-medium">Geburtsdatum</label>
+    <p-calendar
+      id="birthDate"
+      formControlName="birthDate"
+      dateFormat="dd.mm.yy"
+      showIcon
+      class="w-full"
+    ></p-calendar>
+    <small
+      *ngIf="birthDate?.invalid && birthDate?.touched"
+      class="text-red-600 text-xs font-medium"
+    >Datum ist erforderlich.</small>
+  </div>
+
+  <div class="flex flex-col gap-2">
+    <label for="role" class="text-sm font-medium">Rolle</label>
+    <p-dropdown
+      id="role"
+      [options]="roles"
+      formControlName="role"
+      placeholder="Rolle auswählen"
+      class="w-full"
+    ></p-dropdown>
+    <small
+      *ngIf="role?.invalid && role?.touched"
+      class="text-red-600 text-xs font-medium"
+    >Bitte Rolle auswählen.</small>
+  </div>
+
+  <div class="flex justify-end mt-4">
+    <button
+      pButton
+      type="submit"
+      label="Absenden"
+      [disabled]="userForm.invalid"
+      class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-all duration-200 disabled:opacity-50"
+    ></button>
+  </div>
+</form>

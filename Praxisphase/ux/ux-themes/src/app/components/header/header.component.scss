@@ -1,0 +1,39 @@
+
+.head-top-container{
+    background-color: aqua;
+    box-sizing: border-box;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid red;
+    padding: 20px 20px;
+
+}
+.news-bar{
+    display: flex;
+    justify-content: center;
+}
+
+.header-navigation-bar{ 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.app-navbar-container{
+    flex: 2;
+    min-width: 0;
+}
+.toolbar {
+    @apply flex flex-row flex-1 items-center justify-between w-full px-4 py-2 bg-white shadow-sm w-full overflow-x-auto;
+}
+.head-top{
+    display: flex;
+    justify-content: center;
+
+}
+
