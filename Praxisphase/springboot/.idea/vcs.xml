@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/spring-projekte/store" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/spring-projekte/version_01/blog_server/blog_server" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/spring-projekte/version_03/blog_server/Blog Server" vcs="Git" />
+  </component>
+</project>
