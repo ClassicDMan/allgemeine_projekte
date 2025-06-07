@@ -1,0 +1,16 @@
+<section class="widget">
+    <h3>📋 Aufgaben Widget</h3>
+    <button (click)="addTask()">➕ Add Task</button>
+    <button (click)="triggerError(400)">🔴 Test 400</button>
+    <button (click)="triggerError(401)">🔴 Test 401</button>
+    <button (click)="triggerError(403)">🔴 Test 403</button>
+    <button (click)="triggerError(404)">🔴 Test 404</button>
+    <button (click)="triggerError(500)">🔴 Test 500</button>
+  
+    <ul>
+      @for (task of tasks; track task) {
+        <li>{{ task }}</li>
+      }
+    </ul>
+  </section>
+  

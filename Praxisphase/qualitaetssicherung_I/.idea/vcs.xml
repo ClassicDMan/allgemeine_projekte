@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/backend" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/error-handler-aufgabe02" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/hander-example/angular-global-error-handling-example" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/hander-example/error-handler-aufgabe-02" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/hander-example/error-handler-aufgabe-02-version02" vcs="Git" />
+  </component>
+</project>
