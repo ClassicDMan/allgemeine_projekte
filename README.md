@@ -1,5 +1,5 @@
 # allgemeine_projekte
-Enthält die zentralen Projekte meiner letzten drei Jahre, strukturiert und aufeinander aufbauend, welche meine fachliche Entwicklung und praktische Erfahrung dokumentieren.
+Enthält die zentralen Projekte meiner letzten drei Jahre, (unstrukturiert) aufbauend, welche meine fachliche Entwicklung und praktische Erfahrung dokumentieren.
 
 ## Hinweise zu Angular-Projekten
 
@@ -13,5 +13,4 @@ Je nach verwendetem Projekt müssen spezifische Angular-Komponenten und Biblioth
 
 Diese Bibliotheken erfordern jeweils eine projektspezifische Konfiguration und Anpassung, um eine konsistente und funktionale UI/UX sicherzustellen.
 
-
-
+diese Projekte werden nach dem September bearbeitet und korrekt wiedergestellt.
