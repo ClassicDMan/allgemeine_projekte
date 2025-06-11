@@ -3,7 +3,7 @@ Enthält die zentralen Projekte meiner letzten drei Jahre, strukturiert und aufe
 
 ## Hinweise zu Angular-Projekten
 
-In diesem Repository befinden sich Angular-Projekte auf Basis von Angular 1 und Angular 2. Die jeweiligen Angular-Verzeichnisse wurden bewusst nicht gelöscht, da sie umfangreiche Abhängigkeiten enthalten und somit Speicherplatz beanspruchen. 
+In diesem Repository befinden sich Angular-Projekte auf Basis von Angular 1 und Angular 2. Die jeweiligen Angular-Verzeichnisse wurden bewusst gelöscht, da sie umfangreiche Abhängigkeiten enthalten und somit Speicherplatz beanspruchen. 
 
 Je nach verwendetem Projekt müssen spezifische Angular-Komponenten und Bibliotheken heruntergeladen und installiert werden. Dazu zählen insbesondere:
 
